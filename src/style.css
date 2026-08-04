@@ -67,24 +67,22 @@ input{
 /* HERO */
 
 .hero{
-    min-height:95vh;
-    display:flex;
-    align-items:center;
-    padding:120px 8%;
+  min-height:95vh;
+  display:flex;
+  align-items:center;
+  padding:120px 8%;
 
-    background:
-      linear-gradient(
-        rgba(248,245,241,.55),
-        rgba(248,245,241,.82)
-      ),
-      url("/images/cream-set.png");
+  background:
+    linear-gradient(
+      rgba(248,245,241,.55),
+      rgba(248,245,241,.82)
+    ),
+    url("/images/cream-set.png");
 
-    background-size:cover;
-    background-position:center;
-    animation:heroSlider 18s infinite;
-}
   background-size:cover;
   background-position:center;
+  background-repeat:no-repeat;
+  animation:heroSlider 18s infinite;
 }
 
 .heroContent{
@@ -97,7 +95,7 @@ input{
   box-shadow:0 30px 90px rgba(45,37,33,.12);
 }
 
-.eyebrow,
+.eyebrow{
 .sectionLabel{
   text-transform:uppercase;
   letter-spacing:4px;
