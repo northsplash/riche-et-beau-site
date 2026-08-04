@@ -202,7 +202,7 @@ function HomePage() {
       <section id="collection" className="collectionSection">
         <p className="sectionLabel">Riche Et Beau Launch</p>
 
-        <h2 className="sectionTitle">The Signature Collection</h2>
+        <h2 className="sectionTitle">The Première Collection</h2>
 
         <div className="productGrid">
           {products.map((item) => (
