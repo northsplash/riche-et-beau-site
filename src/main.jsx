@@ -21,25 +21,25 @@ const products = [
       {
         name: "Cream",
         images: [
-          "/images/sports-cream-1.png",
-          "/images/sports-cream-2.png",
-          "/images/sports-cream-3.png",
+          "/images/elan-cream-1.png",
+          "/images/elan-cream-2.png",
+          "/images/elan-cream-3.png",
         ],
       },
       {
         name: "Black",
         images: [
-          "/images/sports-black-1.png",
-          "/images/sports-black-2.png",
-          "/images/sports-black-3.png",
+          "/images/elan-black-1.png",
+          "/images/elan-black-2.png",
+          "/images/elan-black-3.png",
         ],
       },
       {
         name: "Chocolate",
         images: [
-          "/images/sports-chocolate-1.png",
-          "/images/sports-chocolate-2.png",
-          "/images/sports-chocolate-3.png",
+          "/images/elan-chocolate-1.png",
+          "/images/elan-chocolate-2.png",
+          "/images/elan-chocolate-3.png",
         ],
       },
     ],
@@ -58,7 +58,7 @@ const products = [
       {
         name: "Cream",
         images: [
-          "/images/hoodie-cream-1.png",
+          "/images/serein-cream-1.png",
           "/images/hoodie-cream-2.png",
           "/images/hoodie-cream-3.png",
         ],
@@ -669,12 +669,12 @@ function Lookbook() {
       <h2 className="sectionTitle">#RicheEtBeau</h2>
 
       <div className="lookbookGrid">
-        <img src="/images/sports-cream-1.png" alt="Lookbook" />
-        <img src="/images/sports-black-1.png" alt="Lookbook" />
-        <img src="/images/sports-chocolate-1.png" alt="Lookbook" />
+        <img src="/images/elan-cream-1.png" alt="Lookbook" />
+        <img src="/images/elan-black-1.png" alt="Lookbook" />
+        <img src="/images/elan-chocolate-1.png" alt="Lookbook" />
         <img src="/images/leather-black-1.png" alt="Lookbook" />
         <img src="/images/leather-chocolate-1.png" alt="Lookbook" />
-        <img src="/images/hoodie-cream-1.png" alt="Lookbook" />
+        <img src="/images/serein-cream-1.png" alt="Lookbook" />
       </div>
     </section>
   );
