@@ -173,9 +173,9 @@ function HomePage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
         >
-          <p className="eyebrow">Preorder Collection</p>
+          <p className="eyebrow">The Première Collection</p>
 
-          <h2>Luxury Athleisure Made To Move.</h2>
+          <h2>The Première Collection.</h2>
 
           <p>
             Sculpting sports sets, elevated hoodie sets, and luxe leather looks
