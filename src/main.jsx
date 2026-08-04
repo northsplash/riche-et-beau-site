@@ -258,17 +258,17 @@ function HomePage() {
 
         <div className="infoGrid">
           <div>
-            <h3>The Sports Set</h3>
+            <h3>Élan Sculpt Set</h3>
             <p>Signature sculpting activewear in Cream, Black, and Chocolate.</p>
           </div>
 
           <div>
-            <h3>The Hoodie Set</h3>
+            <h3>Serein Lounge Set</h3>
             <p>Cropped hoodie and joggers for luxury comfort days.</p>
           </div>
 
           <div>
-            <h3>The Leather Set</h3>
+            <h3>Noir Luxe Leather Set</h3>
             <p>A statement collection made for elevated street-luxe style.</p>
           </div>
         </div>
