@@ -67,17 +67,22 @@ input{
 /* HERO */
 
 .hero{
-  min-height:92vh;
-  display:flex;
-  align-items:center;
-  padding:120px 8%;
-  background:
-    linear-gradient(
-      rgba(248,245,241,.55),
-      rgba(248,245,241,.82)
-    ),
-    url("/images/sports-cream-1.png");
+    min-height:95vh;
+    display:flex;
+    align-items:center;
+    padding:120px 8%;
 
+    background:
+      linear-gradient(
+        rgba(248,245,241,.55),
+        rgba(248,245,241,.82)
+      ),
+      url("/images/cream-set.png");
+
+    background-size:cover;
+    background-position:center;
+    animation:heroSlider 18s infinite;
+}
   background-size:cover;
   background-position:center;
 }
@@ -707,5 +712,37 @@ input{
   .vipSection h2,
   .contactSection h2{
     font-size:38px;
+  }
+}
+
+@keyframes heroSlider{
+  0%,
+  30%{
+    background-image:
+      linear-gradient(
+        rgba(248,245,241,.55),
+        rgba(248,245,241,.82)
+      ),
+      url("/images/cream-set.png");
+  }
+
+  33%,
+  63%{
+    background-image:
+      linear-gradient(
+        rgba(248,245,241,.55),
+        rgba(248,245,241,.82)
+      ),
+      url("/images/black-set.png");
+  }
+
+  66%,
+  100%{
+    background-image:
+      linear-gradient(
+        rgba(248,245,241,.55),
+        rgba(248,245,241,.82)
+      ),
+      url("/images/chocolate-set.png");
   }
 }
