@@ -194,7 +194,7 @@ function HomePage() {
       </section>
 
       <section className="preorderBanner">
-        <p>Preorders are open now. Official release begins July 4.</p>
+        <p> The Première Collection is now available for preorder. Official launch begins January 1, 2027.</p>
       </section>
 
       <Countdown />
