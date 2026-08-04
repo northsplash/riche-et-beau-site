@@ -178,8 +178,7 @@ function HomePage() {
           <h2>The Première Collection.</h2>
 
           <p>
-            Sculpting sports sets, elevated hoodie sets, and luxe leather looks
-            designed for confidence, comfort, and everyday beauty.
+            Introducing the debut collection from Riche Et Beau, featuring the Élan Sculpt Set, Serein Lounge Set, and Noir Luxe Leather Set. Designed for women who want confidence, comfort, and luxury in every moment.
           </p>
 
           <div className="heroButtons">
