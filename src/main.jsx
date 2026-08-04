@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import "./style.css";
 
 const phone = "330-990-3956";
-const releaseDate = new Date("2026-07-04T00:00:00");
+const releaseDate = new Date("2027-01-01T00:00:00");
 
 const products = [
   {
@@ -12,7 +12,7 @@ const products = [
     name: "Élan Sculpt Set",
     regularPrice: "$89.99",
     salePrice: "$64.99",
-    releaseDate: "Releases July 4",
+    releaseDate: "Releases January 1, 2027",
     description: "Sports bra, high-waist leggings, and lightweight zip jacket.",
     details:
       "A sculpting activewear set designed for movement, comfort, errands, travel, and elevated everyday wear.",
@@ -49,7 +49,7 @@ const products = [
     name: "Serein Lounge Set",
     regularPrice: "$74.99",
     salePrice: "$54.99",
-    releaseDate: "Releases July 4",
+    releaseDate: "Releases January 1, 2027",
     description: "Cropped hoodie and high-waist joggers made for elevated comfort.",
     details:
       "A soft lounge set made for relaxed days, airport outfits, coffee runs, and casual luxury.",
@@ -86,7 +86,7 @@ const products = [
     name: "Noir Luxe Leather Set",
     regularPrice: "$119.99",
     salePrice: "$89.99",
-    releaseDate: "Releases July 4",
+    releaseDate: "Releases January 1, 2027",
     description: "Statement faux leather set with a sleek luxury finish.",
     details:
       "A bold street-luxe look designed for statement styling, confidence, and elevated nights out.",
@@ -242,7 +242,7 @@ function HomePage() {
 
           <div>
             <h3>Preorder Release</h3>
-            <p>Preorders are paid today. Orders begin releasing July 4.</p>
+            <p>Preorders are paid today. Orders begin shipping January 1, 2027.</p>
           </div>
         </div>
       </section>
@@ -455,7 +455,7 @@ function ProductCard({ item }) {
         </a>
 
         <p className="preorderNote">
-          Preorders are paid today. Orders begin releasing July 4.
+          Preorders are paid today. Orders begin shipping January 1, 2027.
         </p>
       </div>
     </motion.div>
@@ -565,7 +565,7 @@ function ProductPage({ item }) {
           <div className="productTrust">
             <p>✓ Secure Square Checkout</p>
             <p>✓ Preorder paid today</p>
-            <p>✓ Orders begin releasing July 4</p>
+            <p>✓ Orders begin shipping January 1, 2027</p>
             <p>✓ Free shipping over $75</p>
           </div>
         </div>
@@ -607,7 +607,7 @@ function Countdown() {
   return (
     <section className="countdownSection">
       <p className="sectionLabel">Release Countdown</p>
-      <h2>July 4 Launch</h2>
+      <h2>The Première Collection Arrives January 1, 2027</h2>
 
       <div className="countdownGrid">
         <div><strong>{timeLeft.days}</strong><span>Days</span></div>
