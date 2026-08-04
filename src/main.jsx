@@ -213,7 +213,7 @@ function HomePage() {
 
       <section className="trustBadges">
         <div>✓ Secure Square Checkout</div>
-        <div>✓ Preorder Now, Releases July 4</div>
+        <div>✓ Founder's Preorder • Ships January 1, 2027</div>
         <div>✓ Free Shipping Over $75</div>
         <div>✓ Size Guide Available</div>
       </section>
