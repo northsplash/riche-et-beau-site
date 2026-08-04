@@ -95,7 +95,7 @@ input{
   box-shadow:0 30px 90px rgba(45,37,33,.12);
 }
 
-.eyebrow{
+.eyebrow,
 .sectionLabel{
   text-transform:uppercase;
   letter-spacing:4px;
