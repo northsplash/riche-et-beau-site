@@ -9,7 +9,7 @@ const releaseDate = new Date("2026-07-04T00:00:00");
 const products = [
   {
     slug: "sports-set",
-    name: "Luxe Comfort Sports Set",
+    name: "Élan Sculpt Set",
     regularPrice: "$89.99",
     salePrice: "$64.99",
     releaseDate: "Releases July 4",
@@ -46,7 +46,7 @@ const products = [
   },
   {
     slug: "hoodie-set",
-    name: "Luxe Comfort Hoodie Set",
+    name: "Serein Lounge Set",
     regularPrice: "$74.99",
     salePrice: "$54.99",
     releaseDate: "Releases July 4",
@@ -83,7 +83,7 @@ const products = [
   },
   {
     slug: "leather-set",
-    name: "Luxe Leather Set",
+    name: "Noir Luxe Leather Set",
     regularPrice: "$119.99",
     salePrice: "$89.99",
     releaseDate: "Releases July 4",
