@@ -166,8 +166,15 @@ function Layout({ children }) {
 function HomePage() {
   return (
     <Layout>
-      <section className="hero">
-        <motion.div
+    <section className="hero">
+  <div className="heroSlide heroCream"></div>
+  <div className="heroSlide heroBlack"></div>
+  <div className="heroSlide heroChocolate"></div>
+
+  <motion.div className="heroContent">
+    ...
+  </motion.div>
+</section>
           className="heroContent"
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
