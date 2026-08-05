@@ -743,3 +743,56 @@ input{
       url("/images/chocolate-set.png");
   }
 }
+
+/* FINAL HERO BACKGROUND FIX */
+
+.hero{
+  min-height:95vh;
+  display:flex;
+  align-items:center;
+  padding:120px 8%;
+
+  background-image:
+    linear-gradient(
+      rgba(248,245,241,.30),
+      rgba(248,245,241,.48)
+    ),
+    url("/images/cream-set.png");
+
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+  animation:heroSlider 18s ease-in-out infinite;
+}
+
+@keyframes heroSlider{
+  0%,
+  30%{
+    background-image:
+      linear-gradient(
+        rgba(248,245,241,.30),
+        rgba(248,245,241,.48)
+      ),
+      url("/images/cream-set.png");
+  }
+
+  33%,
+  63%{
+    background-image:
+      linear-gradient(
+        rgba(20,16,14,.22),
+        rgba(20,16,14,.38)
+      ),
+      url("/images/black-set.png");
+  }
+
+  66%,
+  100%{
+    background-image:
+      linear-gradient(
+        rgba(35,20,14,.20),
+        rgba(35,20,14,.36)
+      ),
+      url("/images/chocolate-set.png");
+  }
+}
