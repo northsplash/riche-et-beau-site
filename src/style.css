@@ -848,3 +848,400 @@ input{
       url("/images/chocolate-set.png");
   }
 }
+
+/* =========================================================
+   MOBILE RESPONSIVE FIXES
+   Paste at the very bottom of style.css
+========================================================= */
+
+@media (max-width: 900px){
+
+  html,
+  body{
+    overflow-x:hidden;
+  }
+
+  img{
+    max-width:100%;
+  }
+
+  /* HEADER */
+
+  .header,
+  .navbar,
+  .navBar{
+    padding:16px 5%;
+    gap:18px;
+  }
+
+  .brand{
+    font-size:22px;
+    letter-spacing:3px;
+  }
+
+  .tag{
+    font-size:9px;
+    letter-spacing:2px;
+  }
+
+  .navLinks{
+    gap:16px;
+    font-size:12px;
+    flex-wrap:wrap;
+    justify-content:flex-end;
+  }
+
+  /* HERO */
+
+  .hero{
+    min-height:780px;
+    padding:110px 5% 60px;
+    align-items:flex-end;
+  }
+
+  .heroSlide{
+    background-position:68% center;
+    transform:scale(1.01);
+  }
+
+  .heroContent{
+    width:100%;
+    max-width:560px;
+    padding:34px;
+    border-radius:28px;
+  }
+
+  .hero h2{
+    font-size:54px;
+  }
+
+  .hero p{
+    font-size:16px;
+  }
+
+  /* COLLECTION */
+
+  .collectionSection{
+    padding:90px 5%;
+  }
+
+  .sectionTitle{
+    font-size:46px;
+    margin-bottom:44px;
+  }
+
+  .productGrid{
+    grid-template-columns:repeat(2, minmax(0, 1fr));
+    gap:22px;
+  }
+
+  .imageWrap img{
+    height:420px;
+  }
+
+  /* PRODUCT PAGE */
+
+  .productPage,
+  .productLayout,
+  .productDetailsGrid{
+    grid-template-columns:1fr;
+  }
+
+  .productGallery,
+  .productInfo{
+    width:100%;
+  }
+
+  .productInfo{
+    position:static;
+  }
+
+  .galleryGrid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  /* FORMS */
+
+  .contactGrid,
+  .customGrid,
+  .vipGrid,
+  .aboutGrid{
+    grid-template-columns:1fr;
+  }
+
+  /* FOOTER */
+
+  .footer,
+  .luxuryFooter{
+    padding:60px 5%;
+    gap:35px;
+    flex-wrap:wrap;
+  }
+}
+
+
+/* =========================================================
+   PHONES
+========================================================= */
+
+@media (max-width: 600px){
+
+  /* HEADER */
+
+  .header,
+  .navbar,
+  .navBar{
+    align-items:flex-start;
+    flex-direction:column;
+    padding:14px 20px;
+  }
+
+  .navLinks{
+    width:100%;
+    justify-content:flex-start;
+    gap:10px 18px;
+    padding-top:8px;
+  }
+
+  .navLinks a{
+    font-size:11px;
+  }
+
+  /* HERO */
+
+  .hero{
+    min-height:720px;
+    padding:115px 18px 28px;
+    align-items:flex-end;
+  }
+
+  .heroSlide{
+    background-position:72% center;
+  }
+
+  .heroContent{
+    padding:26px 22px;
+    border-radius:24px;
+    background:rgba(255,255,255,.76);
+    backdrop-filter:blur(12px);
+  }
+
+  .eyebrow,
+  .sectionLabel{
+    font-size:10px;
+    letter-spacing:2.5px;
+  }
+
+  .hero h2{
+    font-size:42px;
+    line-height:1.02;
+    margin:14px 0;
+  }
+
+  .hero p{
+    font-size:14px;
+    line-height:1.65;
+  }
+
+  .heroButtons{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:10px;
+    margin-top:22px;
+  }
+
+  .primaryBtn,
+  .secondaryBtn,
+  .cartBtn,
+  .waitlistForm button{
+    width:100%;
+    text-align:center;
+    padding:15px 20px;
+  }
+
+  /* COLLECTION */
+
+  .collectionSection{
+    padding:70px 16px;
+  }
+
+  .sectionTitle{
+    font-size:38px;
+    margin:16px 0 35px;
+  }
+
+  .productGrid{
+    grid-template-columns:1fr;
+    gap:24px;
+  }
+
+  .productCard{
+    border-radius:25px;
+  }
+
+  .imageWrap img{
+    height:auto;
+    aspect-ratio:4 / 5;
+    object-fit:cover;
+  }
+
+  .productContent,
+  .productBody,
+  .cardContent{
+    padding:22px;
+  }
+
+  /* THUMBNAILS */
+
+  .thumbRow{
+    display:flex;
+    gap:9px;
+    overflow-x:auto;
+    padding-bottom:5px;
+    scrollbar-width:none;
+  }
+
+  .thumbRow::-webkit-scrollbar{
+    display:none;
+  }
+
+  .thumbRow button{
+    width:72px;
+    height:72px;
+    flex:0 0 72px;
+  }
+
+  /* COLOR AND SIZE BUTTONS */
+
+  .colorOptions,
+  .sizeOptions,
+  .optionButtons{
+    display:flex;
+    flex-wrap:wrap;
+    gap:9px;
+  }
+
+  .colorBtn,
+  .sizeBtn,
+  .optionButton{
+    min-width:46px;
+    padding:11px 14px;
+  }
+
+  /* PRODUCT PAGE */
+
+  .productPage,
+  .productLayout,
+  .productDetailsGrid{
+    display:block;
+    padding:25px 16px 60px;
+  }
+
+  .productGallery{
+    margin-bottom:28px;
+  }
+
+  .galleryGrid{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:10px;
+  }
+
+  .galleryGrid img,
+  .mainProductImage{
+    width:100%;
+    height:auto;
+    aspect-ratio:4 / 5;
+    object-fit:cover;
+  }
+
+  .productInfo{
+    padding:0;
+  }
+
+  .productInfo h1,
+  .productInfo h2{
+    font-size:36px;
+    line-height:1.08;
+  }
+
+  .productPrice{
+    font-size:25px;
+  }
+
+  /* PREORDER BUTTON */
+
+  .cartBtn,
+  .preorderBtn,
+  .squareBtn{
+    width:100%;
+    min-height:52px;
+  }
+
+  /* MODALS */
+
+  .modal,
+  .modalContent,
+  .sizeGuideModal{
+    width:calc(100% - 28px);
+    max-height:85vh;
+    overflow-y:auto;
+    padding:24px 18px;
+  }
+
+  /* FORMS */
+
+  input,
+  select,
+  textarea{
+    width:100%;
+    font-size:16px;
+  }
+
+  .formRow{
+    grid-template-columns:1fr;
+  }
+
+  /* FOOTER */
+
+  .footer,
+  .luxuryFooter{
+    display:grid;
+    grid-template-columns:1fr;
+    padding:50px 20px;
+    text-align:left;
+  }
+
+  .footerLinks{
+    display:grid;
+    gap:14px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 390px){
+
+  .hero{
+    min-height:680px;
+  }
+
+  .heroContent{
+    padding:22px 18px;
+  }
+
+  .hero h2{
+    font-size:36px;
+  }
+
+  .sectionTitle{
+    font-size:34px;
+  }
+
+  .brand{
+    font-size:20px;
+  }
+}
