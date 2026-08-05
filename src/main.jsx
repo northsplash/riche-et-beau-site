@@ -166,15 +166,12 @@ function Layout({ children }) {
 function HomePage() {
   return (
     <Layout>
-    <section className="hero">
-  <div className="heroSlide heroCream"></div>
-  <div className="heroSlide heroBlack"></div>
-  <div className="heroSlide heroChocolate"></div>
+      <section className="hero">
+        <div className="heroSlide heroCream"></div>
+        <div className="heroSlide heroBlack"></div>
+        <div className="heroSlide heroChocolate"></div>
 
-  <motion.div className="heroContent">
-    ...
-  </motion.div>
-</section>
+        <motion.div
           className="heroContent"
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
@@ -185,7 +182,10 @@ function HomePage() {
           <h2>The Première Collection.</h2>
 
           <p>
-            Introducing the debut collection from Riche Et Beau, featuring the Élan Sculpt Set, Serein Lounge Set, and Noir Luxe Leather Set. Designed for women who want confidence, comfort, and luxury in every moment.
+            Introducing the debut collection from Riche Et Beau, featuring the
+            Élan Sculpt Set, Serein Lounge Set, and Noir Luxe Leather Set.
+            Designed for women who want confidence, comfort, and luxury in
+            every moment.
           </p>
 
           <div className="heroButtons">
