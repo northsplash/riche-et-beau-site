@@ -240,6 +240,16 @@ input{
 }
 
 .thumbRow button{
+    width:92px;
+    height:92px;
+    border:none;
+    border-radius:16px;
+    overflow:hidden;
+    background:#f5f2ee;
+    cursor:pointer;
+    transition:.25s;
+    flex-shrink:0;
+}
   width:64px;
   height:64px;
   padding:0;
