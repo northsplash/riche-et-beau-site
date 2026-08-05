@@ -71,21 +71,60 @@ input{
   display:flex;
   align-items:center;
   padding:120px 8%;
+  position:relative;
+  overflow:hidden;
+  background:#2d2521;
+}
 
-  background:
-    linear-gradient(
-      rgba(248,245,241,.55),
-      rgba(248,245,241,.82)
-    ),
-    url("/images/cream-set.png");
-
+.heroSlide{
+  position:absolute;
+  inset:0;
   background-size:cover;
   background-position:center;
   background-repeat:no-repeat;
-  animation:heroSlider 18s infinite;
+  opacity:0;
+  transform:scale(1.03);
+  animation-duration:18s;
+  animation-iteration-count:infinite;
+  animation-timing-function:ease-in-out;
+}
+
+.heroCream{
+  background-image:
+    linear-gradient(
+      rgba(248,245,241,.20),
+      rgba(248,245,241,.38)
+    ),
+    url("/images/cream-set.png");
+
+  animation-name:fadeCream;
+}
+
+.heroBlack{
+  background-image:
+    linear-gradient(
+      rgba(15,12,10,.14),
+      rgba(15,12,10,.28)
+    ),
+    url("/images/black-set.png");
+
+  animation-name:fadeBlack;
+}
+
+.heroChocolate{
+  background-image:
+    linear-gradient(
+      rgba(35,20,14,.12),
+      rgba(35,20,14,.26)
+    ),
+    url("/images/chocolate-set.png");
+
+  animation-name:fadeChocolate;
 }
 
 .heroContent{
+  position:relative;
+  z-index:2;
   max-width:760px;
   padding:52px;
   border-radius:38px;
@@ -95,40 +134,53 @@ input{
   box-shadow:0 30px 90px rgba(45,37,33,.12);
 }
 
-.eyebrow,
-.sectionLabel{
-  text-transform:uppercase;
-  letter-spacing:4px;
-  font-size:12px;
-  font-weight:800;
-  color:#9b7c63;
+@keyframes fadeCream{
+  0%,
+  28%{
+    opacity:1;
+  }
+
+  33%,
+  95%{
+    opacity:0;
+  }
+
+  100%{
+    opacity:1;
+  }
 }
 
-.sectionLabel{
-  text-align:center;
+@keyframes fadeBlack{
+  0%,
+  28%{
+    opacity:0;
+  }
+
+  33%,
+  61%{
+    opacity:1;
+  }
+
+  66%,
+  100%{
+    opacity:0;
+  }
 }
 
-.sectionLabel.left{
-  text-align:left;
-}
+@keyframes fadeChocolate{
+  0%,
+  61%{
+    opacity:0;
+  }
 
-.hero h2{
-  font-family:'Playfair Display', Georgia, serif;
-  font-size:76px;
-  line-height:1;
-  margin:18px 0;
-}
+  66%,
+  94%{
+    opacity:1;
+  }
 
-.hero p{
-  font-size:18px;
-  line-height:1.8;
-}
-
-.heroButtons{
-  display:flex;
-  gap:16px;
-  flex-wrap:wrap;
-  margin-top:32px;
+  100%{
+    opacity:0;
+  }
 }
 
 /* BUTTONS */
