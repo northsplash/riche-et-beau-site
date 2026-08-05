@@ -250,17 +250,7 @@ input{
     transition:.25s;
     flex-shrink:0;
 }
-  width:64px;
-  height:64px;
-  padding:0;
-  border-radius:16px;
-  border:1px solid rgba(45,37,33,.12);
-  background:#f8f5f1;
-  overflow:hidden;
-  cursor:pointer;
-  opacity:.65;
-  transition:.25s ease;
-}
+
 
 .thumbRow button:hover,
 .thumbRow .activeThumb{
