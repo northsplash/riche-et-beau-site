@@ -196,164 +196,339 @@ function HomePage() {
         </motion.div>
       </section>
 
-      <section className="preorderBanner">
-        <p> The Première Collection is now available for preorder. Official launch begins January 1, 2027.</p>
-      </section>
+    <section className="preorderBanner">
+  <span>Founder’s Preorder</span>
 
-      <Countdown />
+  <p>
+    The Première Collection is now available for preorder.
+    Shipping begins January 1, 2027.
+  </p>
 
-      <section id="collection" className="collectionSection">
-        <p className="sectionLabel">Riche Et Beau Launch</p>
+  <a href="#collection">Shop the collection</a>
+</section>
 
-        <h2 className="sectionTitle">The Première Collection</h2>
+<Countdown />
 
-        <div className="productGrid">
-          {products.map((item) => (
-            <ProductCard key={item.name} item={item} />
-          ))}
-        </div>
-      </section>
+<section id="collection" className="collectionSection">
+  <div className="sectionHeading">
+    <p className="sectionLabel">The Debut Collection</p>
 
-      <section className="trustBadges">
-        <div>✓ Secure Square Checkout</div>
-        <div>✓ Founder's Preorder • Ships January 1, 2027</div>
-        <div>✓ Free Shipping Over $75</div>
-        <div>✓ Size Guide Available</div>
-      </section>
+    <h2 className="sectionTitle">The Première Collection</h2>
 
-      <section id="details" className="detailsSection">
-        <div>
-          <p className="sectionLabel left">Designed For The Woman Who Moves</p>
-          <h2>Soft power, sculpted comfort, and luxe everyday style.</h2>
-        </div>
+    <p className="sectionIntro">
+      Three signature sets. Three elevated moods. Designed to move from
+      everyday comfort to unforgettable moments.
+    </p>
+  </div>
 
-        <div className="detailsGrid">
-          <div>
-            <h3>Premium Feel</h3>
-            <p>Soft-touch fabrics and flattering silhouettes designed to feel elevated.</p>
-          </div>
+  <div className="productGrid">
+    {products.map((item) => (
+      <ProductCard key={item.slug} item={item} />
+    ))}
+  </div>
+</section>
 
-          <div>
-            <h3>Everyday Wear</h3>
-            <p>From errands to travel to casual days out, each set is made to move with you.</p>
-          </div>
+<section className="trustBadges">
+  <div className="trustBadge">
+    <span className="trustIcon">◇</span>
+    <div>
+      <strong>Secure Checkout</strong>
+      <p>Protected payments through Square</p>
+    </div>
+  </div>
 
-          <div>
-            <h3>Signature Colors</h3>
-            <p>Cream, Black, and Chocolate create a timeless luxury color story.</p>
-          </div>
+  <div className="trustBadge">
+    <span className="trustIcon">01</span>
+    <div>
+      <strong>Founder’s Preorder</strong>
+      <p>Shipping begins January 1, 2027</p>
+    </div>
+  </div>
 
-          <div>
-            <h3>Preorder Release</h3>
-            <p>Preorders are paid today. Orders begin shipping January 1, 2027.</p>
-          </div>
-        </div>
-      </section>
+  <div className="trustBadge">
+    <span className="trustIcon">↗</span>
+    <div>
+      <strong>Complimentary Shipping</strong>
+      <p>Available on orders over $75</p>
+    </div>
+  </div>
 
-      <Reviews />
+  <div className="trustBadge">
+    <span className="trustIcon">⌁</span>
+    <div>
+      <strong>Fit Support</strong>
+      <p>Use our size guide before ordering</p>
+    </div>
+  </div>
+</section>
 
-      <FutureDrops />
+<section id="details" className="detailsSection">
+  <div className="detailsIntro">
+    <p className="sectionLabel left">The Riche Et Beau Standard</p>
 
-      <section id="collections" className="brandSection">
-        <p className="sectionLabel">Collections</p>
-        <h2 className="sectionTitle">Designed in drops, released with intention.</h2>
+    <h2>
+      Soft power, sculpted comfort, and effortless luxury.
+    </h2>
 
-        <div className="infoGrid">
-          <div>
-            <h3>Élan Sculpt Set</h3>
-            <p>Signature sculpting activewear in Cream, Black, and Chocolate.</p>
-          </div>
+    <p>
+      Every piece is designed to feel polished without sacrificing comfort.
+      These are the sets you reach for when you want to look finished without
+      feeling restricted.
+    </p>
+  </div>
 
-          <div>
-            <h3>Serein Lounge Set</h3>
-            <p>Cropped hoodie and joggers for luxury comfort days.</p>
-          </div>
+  <div className="detailsGrid">
+    <article className="detailCard">
+      <span>01</span>
+      <h3>Premium Feel</h3>
+      <p>
+        Soft-touch fabrics, refined finishes, and silhouettes designed to
+        flatter.
+      </p>
+    </article>
 
-          <div>
-            <h3>Noir Luxe Leather Set</h3>
-            <p>A statement collection made for elevated street-luxe style.</p>
-          </div>
-        </div>
-      </section>
+    <article className="detailCard">
+      <span>02</span>
+      <h3>Everyday Versatility</h3>
+      <p>
+        Made for travel, errands, casual plans, lounging, and elevated
+        everyday wear.
+      </p>
+    </article>
 
-      <section id="vip" className="vipSection">
-        <p className="sectionLabel">VIP Club</p>
+    <article className="detailCard">
+      <span>03</span>
+      <h3>Signature Color Story</h3>
+      <p>
+        Cream, Black, and Chocolate create a timeless neutral wardrobe.
+      </p>
+    </article>
 
-        <h2>Get early access before everyone else.</h2>
+    <article className="detailCard">
+      <span>04</span>
+      <h3>Limited First Release</h3>
+      <p>
+        Preorders are paid today and begin shipping January 1, 2027.
+      </p>
+    </article>
+  </div>
+</section>
 
-        <p>
-          VIP members receive first access to preorder drops, private discounts,
-          color voting, and exclusive future releases.
-        </p>
+<Reviews />
 
-        <a className="primaryBtn" href="#waitlist">
-          Join VIP List
-        </a>
-      </section>
+<FutureDrops />
 
-      <section id="custom" className="customSection">
-        <p className="sectionLabel">Custom Requests</p>
+<section id="collections" className="brandSection">
+  <div className="sectionHeading">
+    <p className="sectionLabel">Signature Sets</p>
 
-        <h2 className="sectionTitle">Help shape future drops.</h2>
+    <h2 className="sectionTitle">
+      Designed in drops. Released with intention.
+    </h2>
 
-        <form className="requestForm">
-          <input placeholder="Name" />
-          <input type="email" placeholder="Email" />
+    <p className="sectionIntro">
+      Each collection carries its own energy while remaining unmistakably
+      Riche Et Beau.
+    </p>
+  </div>
 
-          <select>
-            <option>What would you like to request?</option>
-            <option>New Color</option>
-            <option>Plus Sizes</option>
-            <option>New Style</option>
-            <option>Restock Request</option>
-            <option>Personalization Request</option>
-          </select>
+  <div className="collectionStoryGrid">
+    <article className="collectionStoryCard">
+      <span>Movement</span>
+      <h3>Élan Sculpt Set</h3>
+      <p>
+        Sculpting activewear designed for training, travel, errands, and
+        confident everyday movement.
+      </p>
+      <a href="/products/sports-set">Discover Élan</a>
+    </article>
 
-          <input placeholder="Color / Size / Style Request" />
+    <article className="collectionStoryCard">
+      <span>Ease</span>
+      <h3>Serein Lounge Set</h3>
+      <p>
+        A refined three-piece lounge set created for soft structure and
+        elevated comfort.
+      </p>
+      <a href="/products/hoodie-set">Discover Serein</a>
+    </article>
 
-          <textarea placeholder="Tell us what you want to see in a future drop." />
+    <article className="collectionStoryCard">
+      <span>Statement</span>
+      <h3>Noir Luxe Leather Set</h3>
+      <p>
+        A bold faux-leather look made for nights out, statement styling, and
+        unapologetic confidence.
+      </p>
+      <a href="/products/leather-set">Discover Noir</a>
+    </article>
+  </div>
+</section>
 
-          <button type="submit">Submit Request</button>
-        </form>
-      </section>
+<section id="vip" className="vipSection">
+  <div className="vipContent">
+    <p className="sectionLabel left">Riche Et Beau VIP</p>
 
-      <section id="about" className="aboutSection">
-        <p className="sectionLabel">About</p>
+    <h2>Be first in line for every drop.</h2>
 
-        <h2 className="sectionTitle">Riche Et Beau means rich and beautiful.</h2>
+    <p>
+      VIP members receive early preorder access, private promotions, color
+      voting opportunities, and first notice of limited releases.
+    </p>
 
-        <p>
-          Riche Et Beau was created for women who want comfort, confidence,
-          and luxury in the same look. Every drop is built around soft power,
-          beautiful movement, and everyday elegance.
-        </p>
-      </section>
+    <div className="vipBenefits">
+      <span>Early Access</span>
+      <span>Private Offers</span>
+      <span>Color Voting</span>
+      <span>Limited Releases</span>
+    </div>
 
-      <Lookbook />
+    <a className="primaryBtn" href="#waitlist">
+      Join the VIP List
+    </a>
+  </div>
+</section>
 
-      <section id="waitlist" className="waitlistSection">
-        <p className="sectionLabel">VIP Launch List</p>
+<section id="custom" className="customSection">
+  <div className="customIntro">
+    <p className="sectionLabel left">Custom Requests</p>
 
-        <h2>Be First To Shop Riche Et Beau.</h2>
+    <h2>Help shape what comes next.</h2>
 
-        <p>
-          Join the VIP list for early access, launch discounts, and first pick
-          of Cream, Black, and Chocolate.
-        </p>
+    <p>
+      Tell us which colors, sizes, styles, and personalization options you
+      would love to see in a future Riche Et Beau drop.
+    </p>
+  </div>
 
-        <form className="waitlistForm">
-          <input type="email" placeholder="Enter your email" required />
-          <button type="submit">Join Waitlist</button>
-        </form>
+  <form className="requestForm">
+    <div className="formRow">
+      <input name="name" placeholder="Full name" required />
 
-        <p className="phoneText">Questions? Text or call {phone}</p>
-      </section>
+      <input
+        name="email"
+        type="email"
+        placeholder="Email address"
+        required
+      />
+    </div>
 
-      <section id="contact" className="contactSection">
-        <p className="sectionLabel">Contact</p>
-        <h2>Questions before preorder?</h2>
-        <p>Text or call {phone}</p>
-      </section>
+    <select name="requestType" defaultValue="" required>
+      <option value="" disabled>
+        Select a request type
+      </option>
+
+      <option value="new-color">New Color</option>
+      <option value="extended-sizing">Extended Sizing</option>
+      <option value="new-style">New Style</option>
+      <option value="restock">Restock Request</option>
+      <option value="personalization">Personalization Request</option>
+    </select>
+
+    <input
+      name="requestDetails"
+      placeholder="Preferred color, size, or style"
+    />
+
+    <textarea
+      name="message"
+      rows="6"
+      placeholder="Tell us what you would like to see in a future drop."
+      required
+    />
+
+    <button type="submit">Submit Request</button>
+  </form>
+</section>
+
+<section id="about" className="aboutSection">
+  <div className="aboutContent">
+    <p className="sectionLabel left">The Brand</p>
+
+    <h2>Riche Et Beau means rich and beautiful.</h2>
+
+    <p className="aboutLead">
+      A celebration of confidence, comfort, and personal power.
+    </p>
+
+    <p>
+      Riche Et Beau was created for women who want clothing that feels as
+      elevated as it looks. Every drop is built around soft power, beautiful
+      movement, rich neutral tones, and effortless everyday style.
+    </p>
+
+    <p>
+      The goal is simple: create pieces that help women feel polished,
+      comfortable, and unmistakably confident.
+    </p>
+  </div>
+
+  <div className="aboutQuote">
+    <p>
+      “Luxury should not only be seen. It should be felt.”
+    </p>
+  </div>
+</section>
+
+<Lookbook />
+
+<section id="waitlist" className="waitlistSection">
+  <div className="waitlistContent">
+    <p className="sectionLabel">The Private List</p>
+
+    <h2>Be first to shop Riche Et Beau.</h2>
+
+    <p>
+      Join the VIP list for early access, launch announcements, private
+      discounts, and first pick of Cream, Black, and Chocolate.
+    </p>
+
+    <form className="waitlistForm">
+      <input
+        name="email"
+        type="email"
+        placeholder="Enter your email address"
+        required
+      />
+
+      <button type="submit">Join the VIP List</button>
+    </form>
+
+    <p className="phoneText">
+      Questions? Text or call {phone}
+    </p>
+  </div>
+</section>
+
+<section id="contact" className="contactSection">
+  <div className="contactContent">
+    <p className="sectionLabel left">Contact</p>
+
+    <h2>Questions before placing your preorder?</h2>
+
+    <p>
+      Our team is available to assist with sizing, color selection,
+      preorder details, and general questions.
+    </p>
+
+    <a className="contactPhone" href={`tel:${phone}`}>
+      {phone}
+    </a>
+  </div>
+
+  <div className="contactCard">
+    <span>Customer Care</span>
+    <h3>We are here to help.</h3>
+    <p>
+      Reach out before ordering and we will help you choose the best set,
+      color, and size.
+    </p>
+
+    <a className="secondaryBtn" href={`tel:${phone}`}>
+      Call Riche Et Beau
+    </a>
+  </div>
+</section>
     </Layout>
   );
 }
