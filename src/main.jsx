@@ -44,7 +44,7 @@ const products = [
       },
     ],
   },
- {
+{
   slug: "hoodie-set",
   name: "Serein Lounge Set",
   regularPrice: "$74.99",
@@ -55,27 +55,32 @@ const products = [
     "A soft lounge set made for relaxed days, airport outfits, coffee runs, and casual luxury.",
   squareLink: "#",
 
-  colors: ["Cream", "Black", "Chocolate"],
-
-  images: {
-    Cream: [
-      "/images/serein-cream-1.png",
-      "/images/serein-cream-2.png",
-      "/images/serein-cream-3.png",
-    ],
-
-    Black: [
-      "/images/serein-black-1.png",
-      "/images/serein-black-2.png",
-      "/images/serein-black-3.png",
-    ],
-
-    Chocolate: [
-      "/images/serein-chocolate-1.png",
-      "/images/serein-chocolate-2.png",
-      "/images/serein-chocolate-3.png",
-    ],
-  },
+  colors: [
+    {
+      name: "Cream",
+      images: [
+        "/images/serein-cream-1.png",
+        "/images/serein-cream-2.png",
+        "/images/serein-cream-3.png",
+      ],
+    },
+    {
+      name: "Black",
+      images: [
+        "/images/serein-black-1.png",
+        "/images/serein-black-2.png",
+        "/images/serein-black-3.png",
+      ],
+    },
+    {
+      name: "Chocolate",
+      images: [
+        "/images/serein-chocolate-1.png",
+        "/images/serein-chocolate-2.png",
+        "/images/serein-chocolate-3.png",
+      ],
+    },
+  ],
 },
   {
     slug: "leather-set",
