@@ -2792,3 +2792,142 @@ textarea:focus{
     padding:15px 0;
   }
 }
+
+/* =========================================================
+   LUXURY FOOTER
+========================================================= */
+
+.luxuryFooter{
+  padding:80px 7% 28px;
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(167,123,79,.16),
+      transparent 32%
+    ),
+    #171310;
+  color:#f7f1eb;
+}
+
+.footerTop{
+  display:grid;
+  grid-template-columns:1.4fr 1fr 1fr 1fr;
+  gap:50px;
+  padding-bottom:55px;
+  border-bottom:1px solid rgba(255,255,255,.10);
+}
+
+.footerBrand h3{
+  margin:0 0 16px;
+  font-family:'Playfair Display',Georgia,serif;
+  font-size:34px;
+  letter-spacing:5px;
+}
+
+.footerTagline{
+  margin:0 0 16px;
+  color:#d9c7b7;
+  font-size:13px;
+  letter-spacing:1.2px;
+  text-transform:uppercase;
+}
+
+.footerStatement{
+  max-width:360px;
+  margin:0 0 25px;
+  color:rgba(255,255,255,.62);
+  line-height:1.75;
+}
+
+.footerPhone{
+  color:#d2aa7e;
+  font-weight:800;
+  font-size:18px;
+}
+
+.footerColumn{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+
+.footerHeading{
+  margin:0 0 8px;
+  color:#d2aa7e;
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+.footerColumn a{
+  color:rgba(255,255,255,.72);
+  font-size:14px;
+  transition:.25s ease;
+}
+
+.footerColumn a:hover{
+  color:white;
+  transform:translateX(4px);
+}
+
+.footerBottom{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:25px;
+  padding-top:28px;
+  color:rgba(255,255,255,.45);
+  font-size:12px;
+}
+
+.footerBottom p{
+  margin:0;
+}
+
+.footerBottomLinks{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:flex-end;
+  gap:18px;
+}
+
+.footerBottomLinks span{
+  position:relative;
+}
+
+.footerBottomLinks span:not(:last-child)::after{
+  content:"•";
+  margin-left:18px;
+  color:#8e6d53;
+}
+
+@media(max-width:900px){
+  .footerTop{
+    grid-template-columns:1fr 1fr;
+  }
+}
+
+@media(max-width:600px){
+  .luxuryFooter{
+    padding:65px 22px 25px;
+  }
+
+  .footerTop{
+    grid-template-columns:1fr;
+    gap:34px;
+  }
+
+  .footerBottom{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+  .footerBottomLinks{
+    justify-content:flex-start;
+  }
+
+  .footerBottomLinks span:not(:last-child)::after{
+    display:none;
+  }
+}
