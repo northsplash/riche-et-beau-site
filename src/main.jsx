@@ -421,34 +421,34 @@ function HomePage() {
 
 <section className="trustBadges">
   <div className="trustBadge">
-    <span className="trustIcon">◇</span>
+    <span className="trustNumber">01</span>
     <div>
       <strong>Secure Checkout</strong>
-      <p>Protected payments through Square</p>
+      <p>Protected payments through Square.</p>
     </div>
   </div>
 
   <div className="trustBadge">
-    <span className="trustIcon">01</span>
+    <span className="trustNumber">02</span>
     <div>
       <strong>Founder’s Preorder</strong>
-      <p>Shipping begins January 1, 2027</p>
+      <p>Shipping begins January 1, 2027.</p>
     </div>
   </div>
 
   <div className="trustBadge">
-    <span className="trustIcon">↗</span>
+    <span className="trustNumber">03</span>
     <div>
       <strong>Complimentary Shipping</strong>
-      <p>Available on orders over $75</p>
+      <p>Available on qualifying orders over $75.</p>
     </div>
   </div>
 
   <div className="trustBadge">
-    <span className="trustIcon">⌁</span>
+    <span className="trustNumber">04</span>
     <div>
       <strong>Fit Support</strong>
-      <p>Use our size guide before ordering</p>
+      <p>Use our size guide before placing your preorder.</p>
     </div>
   </div>
 </section>
