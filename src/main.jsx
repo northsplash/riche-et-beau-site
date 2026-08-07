@@ -708,31 +708,41 @@ function HomePage() {
 </section>
       
 <section id="about" className="aboutSection">
-  <div className="aboutContent">
-    <p className="sectionLabel left">The Brand</p>
+  <div className="aboutEditorial">
+    <div className="aboutVisual">
+      <img
+        src="/images/cream-set.png"
+        alt="Riche Et Beau luxury athleisure"
+      />
+    </div>
 
-    <h2>Riche Et Beau means rich and beautiful.</h2>
+    <div className="aboutContent">
+      <p className="sectionLabel left">The House of Riche Et Beau</p>
 
-    <p className="aboutLead">
-      A celebration of confidence, comfort, and personal power.
-    </p>
+      <h2>
+        Rich in confidence. Beautiful in movement.
+      </h2>
 
-    <p>
-      Riche Et Beau was created for women who want clothing that feels as
-      elevated as it looks. Every drop is built around soft power, beautiful
-      movement, rich neutral tones, and effortless everyday style.
-    </p>
+      <p className="aboutLead">
+        Riche Et Beau means rich and beautiful.
+      </p>
 
-    <p>
-      The goal is simple: create pieces that help women feel polished,
-      comfortable, and unmistakably confident.
-    </p>
-  </div>
+      <p>
+        The brand was created around the idea that comfort and luxury do not
+        have to compete. Every collection is designed to feel polished,
+        wearable, feminine, and confident.
+      </p>
 
-  <div className="aboutQuote">
-    <p>
-      “Luxury should not only be seen. It should be felt.”
-    </p>
+      <p>
+        From sculpted activewear to elevated lounge pieces and statement
+        collections, Riche Et Beau is designed for the woman who wants her
+        everyday wardrobe to feel intentional.
+      </p>
+
+      <blockquote>
+        Luxury should not only be seen. It should be felt.
+      </blockquote>
+    </div>
   </div>
 </section>
 
