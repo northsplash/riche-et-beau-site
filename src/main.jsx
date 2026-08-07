@@ -118,11 +118,11 @@ function App() {
   const productSlug = path.replace("/products/", "");
   const product = products.find((item) => item.slug === productSlug);
 
-  if (path.startsWith("/products/") && product) {
-    return <ProductPage item={product} />;
-  }
+ if (path.startsWith("/products/") && product) {
+  return <ProductPage item={product} />;
+}
 
-  return <HomePage />;
+return <HomePage />;
 }
 function LuxuryNav() {
   const [menuOpen, setMenuOpen] = React.useState(false);
