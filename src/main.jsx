@@ -288,20 +288,64 @@ function Layout({ children }) {
 
       {children}
 
-      <footer className="footer luxuryFooter">
-        <div>
-          <h3>RICHE ET BEAU</h3>
-          <p>Luxury Athleisure For Modern Women</p>
-          <p>{phone}</p>
-        </div>
+     <footer className="footer luxuryFooter">
+  <div className="footerTop">
+    <div className="footerBrand">
+      <h3>RICHE ET BEAU</h3>
 
-        <div className="footerLinks">
-          <a href="/#collection">Shop</a>
-          <a href="/#vip">VIP Club</a>
-          <a href="/#custom">Custom Requests</a>
-          <a href="/#contact">Contact</a>
-        </div>
-      </footer>
+      <p className="footerTagline">
+        Luxury Athleisure For Modern Women
+      </p>
+
+      <p className="footerStatement">
+        Elevated pieces designed for confidence, comfort, and effortless style.
+      </p>
+
+      <a className="footerPhone" href={`tel:${phone}`}>
+        {phone}
+      </a>
+    </div>
+
+    <div className="footerColumn">
+      <p className="footerHeading">Shop</p>
+
+      <a href="/#collection">The Première Collection</a>
+      <a href="/products/sports-set">Élan Sculpt Set</a>
+      <a href="/products/hoodie-set">Serein Lounge Set</a>
+      <a href="/products/leather-set">Noir Luxe Leather Set</a>
+    </div>
+
+    <div className="footerColumn">
+      <p className="footerHeading">Customer Care</p>
+
+      <a href="/#contact">Contact</a>
+      <a href="/#custom">Custom Requests</a>
+      <a href="/#waitlist">VIP List</a>
+      <a href="/#collection">Size Guide</a>
+    </div>
+
+    <div className="footerColumn">
+      <p className="footerHeading">Company</p>
+
+      <a href="/#about">About Riche Et Beau</a>
+      <a href="/#vip">VIP Club</a>
+      <a href="/#collections">Collections</a>
+      <a href="/#waitlist">Future Drops</a>
+    </div>
+  </div>
+
+  <div className="footerBottom">
+    <p>
+      © 2026 Riche Et Beau. All rights reserved.
+    </p>
+
+    <div className="footerBottomLinks">
+      <span>Secure Square Checkout</span>
+      <span>Founder’s Preorder</span>
+      <span>Shipping January 1, 2027</span>
+    </div>
+  </div>
+</footer>
     </div>
   );
 }
