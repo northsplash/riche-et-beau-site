@@ -1081,160 +1081,168 @@ function ProductPage({ item }) {
     setActiveImage(color.images[0]);
   }
 
-  function handlePreorder() {
-    if (!selectedSize) {
-      alert("Please choose a size before preorder.");
-      return;
-    }
-
-    if (item.squareLink && item.squareLink !== "#") {
-      window.location.href = item.squareLink;
-      return;
-    }
-
-    alert(
-      `Square checkout will be connected here for ${item.name} - ${selectedColor.name} - Size ${selectedSize}.`
-    );
+ function handlePreorder() {
+  if (!selectedSize) {
+    alert("Please choose a size before preorder.");
+    return;
   }
 
-  return (
-    <Layout>
-      <section className="luxuryProductPage">
-        <div className="luxuryProductGallery">
-         <div className="mainImageFrame">
-  <img
-    className="luxuryMainImage"
-    src={activeImage}
-    alt={`${item.name} in ${selectedColor.name}`}
-  />
+  if (item.squareLink && item.squareLink !== "#") {
+    window.location.href = item.squareLink;
+    return;
+  }
 
-  <span className="productPageBadge">
-    Founder’s Preorder
-  </span>
-</div>
+  alert(
+    `Square checkout will be connected here for ${item.name} - ${selectedColor.name} - Size ${selectedSize}.`
+  );
+}
 
-<div className="luxuryThumbnailRow">
-  {selectedColor.images.map((image, index) => (
-    <button
-      key={image}
-      type="button"
-      aria-label={`View product image ${index + 1}`}
-      className={
-        activeImage === image
-          ? "luxuryThumbnail activeLuxuryThumbnail"
-          : "luxuryThumbnail"
-      }
-      onClick={() => setActiveImage(image)}
-    >
-      <img
-        src={image}
-        alt={`${item.name} ${selectedColor.name} view ${index + 1}`}
-      />
-    </button>
-  ))}
-</div>
-        <aside className="luxuryProductPanel">
-          <p className="productEyebrow">
-            The Première Collection
-          </p>
+return (
+  <Layout>
+    <section className="luxuryProductPage">
 
-          <h1>{item.name}</h1>
+      <div className="luxuryProductGallery">
+        <div className="mainImageFrame">
+          <img
+            className="luxuryMainImage"
+            src={activeImage}
+            alt={`${item.name} in ${selectedColor.name}`}
+          />
 
-          <p className="selectedColorLabel">
-            Color: <strong>{selectedColor.name}</strong>
-          </p>
+          <span className="productPageBadge">
+            Founder’s Preorder
+          </span>
+        </div>
 
-          <div className="luxuryPriceRow">
-            <span>{item.regularPrice}</span>
-            <strong>{item.salePrice}</strong>
+        <div className="luxuryThumbnailRow">
+          {selectedColor.images.map((image, index) => (
+            <button
+              key={image}
+              type="button"
+              aria-label={`View product image ${index + 1}`}
+              className={
+                activeImage === image
+                  ? "luxuryThumbnail activeLuxuryThumbnail"
+                  : "luxuryThumbnail"
+              }
+              onClick={() => setActiveImage(image)}
+            >
+              <img
+                src={image}
+                alt={`${item.name} ${selectedColor.name} view ${index + 1}`}
+              />
+            </button>
+          ))}
+        </div>
+      </div>
+
+      <aside className="luxuryProductPanel">
+
+        <p className="productEyebrow">
+          The Première Collection
+        </p>
+
+        <h1>{item.name}</h1>
+
+        <p className="selectedColorLabel">
+          Color: <strong>{selectedColor.name}</strong>
+        </p>
+
+        <div className="luxuryPriceRow">
+          <span>{item.regularPrice}</span>
+          <strong>{item.salePrice}</strong>
+        </div>
+
+        <p className="luxuryProductDescription">
+          {item.details}
+        </p>
+
+        <div className="releaseMessage">
+          <span>Preorder</span>
+
+          <div>
+            <strong>Shipping January 1, 2027</strong>
+            <p>
+              Payment is collected when your preorder is placed.
+            </p>
+          </div>
+        </div>
+
+        <div className="productOptionSection">
+          <div className="optionHeading">
+            <p>Choose Color</p>
+            <span>{selectedColor.name}</span>
           </div>
 
-          <p className="luxuryProductDescription">
-            {item.details}
-          </p>
-
-          <div className="releaseMessage">
-            <span>Preorder</span>
-
-            <div>
-              <strong>Shipping January 1, 2027</strong>
-              <p>Payment is collected when your preorder is placed.</p>
-            </div>
-          </div>
-
-          <div className="productOptionSection">
-            <div className="optionHeading">
-              <p>Choose Color</p>
-              <span>{selectedColor.name}</span>
-            </div>
-
-            <div className="luxuryColorOptions">
-              {item.colors.map((color) => (
-                <button
-                  key={color.name}
-                  type="button"
-                  className={
-                    selectedColor.name === color.name
-                      ? "luxuryColorButton activeLuxuryColor"
-                      : "luxuryColorButton"
-                  }
-                  onClick={() => chooseColor(color)}
-                >
-                  <span
-                    className={`colorSwatch swatch${color.name}`}
-                  ></span>
-
-                  {color.name}
-                </button>
-              ))}
-            </div>
-          </div>
-
-          <div className="productOptionSection">
-            <div className="optionHeading">
-              <p>Choose Size</p>
-
+          <div className="luxuryColorOptions">
+            {item.colors.map((color) => (
               <button
-                className="inlineSizeGuide"
+                key={color.name}
                 type="button"
-                onClick={() => setShowSizeGuide(true)}
+                className={
+                  selectedColor.name === color.name
+                    ? "luxuryColorButton activeLuxuryColor"
+                    : "luxuryColorButton"
+                }
+                onClick={() => chooseColor(color)}
               >
-                Size Guide
-              </button>
-            </div>
+                <span
+                  className={`colorSwatch swatch${color.name}`}
+                ></span>
 
-            <div className="luxurySizeOptions">
-              {["XS", "S", "M", "L", "XL"].map((size) => (
-                <button
-                  key={size}
-                  type="button"
-                  className={
-                    selectedSize === size
-                      ? "luxurySizeButton activeLuxurySize"
-                      : "luxurySizeButton"
-                  }
-                  onClick={() => setSelectedSize(size)}
-                >
-                  {size}
-                </button>
-              ))}
-            </div>
+                {color.name}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        <div className="productOptionSection">
+          <div className="optionHeading">
+            <p>Choose Size</p>
+
+            <button
+              className="inlineSizeGuide"
+              type="button"
+              onClick={() => setShowSizeGuide(true)}
+            >
+              Size Guide
+            </button>
           </div>
 
-          <button
-            className="luxuryPreorderButton"
-            type="button"
-            onClick={handlePreorder}
-          >
-            Preorder With Square
-          </button>
+          <div className="luxurySizeOptions">
+            {["XS", "S", "M", "L", "XL"].map((size) => (
+              <button
+                key={size}
+                type="button"
+                className={
+                  selectedSize === size
+                    ? "luxurySizeButton activeLuxurySize"
+                    : "luxurySizeButton"
+                }
+                onClick={() => setSelectedSize(size)}
+              >
+                {size}
+              </button>
+            ))}
+          </div>
+        </div>
 
-          <p className="selectionSummary">
-            {selectedColor.name}
-            {selectedSize ? ` • Size ${selectedSize}` : " • Select a size"}
-          </p>
+        <button
+          className="luxuryPreorderButton"
+          type="button"
+          onClick={handlePreorder}
+        >
+          Preorder With Square
+        </button>
 
-          <div className="productAssurances">
+        <p className="selectionSummary">
+          {selectedColor.name}
+          {selectedSize
+            ? ` • Size ${selectedSize}`
+            : " • Select a size"}
+        </p>
+
+        <div className="productAssurances">
             <div>
               <span>◇</span>
               <p>
