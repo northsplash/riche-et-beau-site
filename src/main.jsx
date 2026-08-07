@@ -124,25 +124,167 @@ function App() {
 
   return <HomePage />;
 }
+function LuxuryNav() {
+  const [menuOpen, setMenuOpen] = React.useState(false);
+  const [scrolled, setScrolled] = React.useState(false);
+
+  React.useEffect(() => {
+    function handleScroll() {
+      setScrolled(window.scrollY > 30);
+    }
+
+    handleScroll();
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  function closeMenu() {
+    setMenuOpen(false);
+  }
+
+  return (
+    <>
+      <nav className={scrolled ? "nav navScrolled" : "nav"}>
+        <a
+          href="/"
+          className="brandLink"
+          onClick={closeMenu}
+        >
+          <h1 className="brand">
+            RICHE ET BEAU
+          </h1>
+
+          <p className="tag">
+            Luxe Confidence Beauty
+          </p>
+        </a>
+
+        <div className="desktopNavLinks">
+          <a href="/#collection">
+            Shop
+          </a>
+
+          <a href="/#collections">
+            Collections
+          </a>
+
+          <a href="/#vip">
+            VIP Club
+          </a>
+
+          <a href="/#custom">
+            Custom Requests
+          </a>
+
+          <a href="/#about">
+            About
+          </a>
+
+          <a href="/#contact">
+            Contact
+          </a>
+        </div>
+
+        <button
+          className={
+            menuOpen
+              ? "menuButton menuOpen"
+              : "menuButton"
+          }
+          type="button"
+          aria-label="Toggle navigation menu"
+          aria-expanded={menuOpen}
+          onClick={() =>
+            setMenuOpen((current) => !current)
+          }
+        >
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
+
+      <div
+        className={
+          menuOpen
+            ? "mobileMenu mobileMenuOpen"
+            : "mobileMenu"
+        }
+      >
+        <div className="mobileMenuInner">
+          <p className="mobileMenuLabel">
+            Explore Riche Et Beau
+          </p>
+
+          <a
+            href="/#collection"
+            onClick={closeMenu}
+          >
+            <span>01</span>
+            Shop
+          </a>
+
+          <a
+            href="/#collections"
+            onClick={closeMenu}
+          >
+            <span>02</span>
+            Collections
+          </a>
+
+          <a
+            href="/#vip"
+            onClick={closeMenu}
+          >
+            <span>03</span>
+            VIP Club
+          </a>
+
+          <a
+            href="/#custom"
+            onClick={closeMenu}
+          >
+            <span>04</span>
+            Custom Requests
+          </a>
+
+          <a
+            href="/#about"
+            onClick={closeMenu}
+          >
+            <span>05</span>
+            About
+          </a>
+
+          <a
+            href="/#contact"
+            onClick={closeMenu}
+          >
+            <span>06</span>
+            Contact
+          </a>
+
+          <div className="mobileMenuFooter">
+            <p>Questions?</p>
+
+            <a href={`tel:${phone}`}>
+              {phone}
+            </a>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}
 
 function Layout({ children }) {
   return (
     <div className="page">
-      <nav className="nav">
-        <a href="/">
-          <h1 className="brand">RICHE ET BEAU</h1>
-          <p className="tag">Luxe Confidence Beauty</p>
-        </a>
-
-        <div className="navLinks">
-          <a href="/#collection">Shop</a>
-          <a href="/#collections">Collections</a>
-          <a href="/#vip">VIP Club</a>
-          <a href="/#custom">Custom Requests</a>
-          <a href="/#about">About</a>
-          <a href="/#contact">Contact</a>
-        </div>
-      </nav>
+     
+      <LuxuryNav />
 
       {children}
 
