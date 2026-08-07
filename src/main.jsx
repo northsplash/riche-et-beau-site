@@ -1368,16 +1368,25 @@ function FutureDrops() {
 function Lookbook() {
   return (
     <section className="lookbookSection">
-      <p className="sectionLabel">Lookbook</p>
-      <h2 className="sectionTitle">#RicheEtBeau</h2>
+      <div className="lookbookHeader">
+        <div>
+          <p className="sectionLabel left">The Lookbook</p>
+          <h2>Styled in the world of Riche Et Beau.</h2>
+        </div>
 
-      <div className="lookbookGrid">
-        <img src="/images/elan-cream-1.png" alt="Lookbook" />
-        <img src="/images/elan-black-1.png" alt="Lookbook" />
-        <img src="/images/elan-chocolate-1.png" alt="Lookbook" />
-        <img src="/images/leather-black-1.png" alt="Lookbook" />
-        <img src="/images/leather-chocolate-1.png" alt="Lookbook" />
-        <img src="/images/serein-cream-1.png" alt="Lookbook" />
+        <p>
+          A closer look at the textures, silhouettes, and neutral tones
+          defining the Première Collection.
+        </p>
+      </div>
+
+      <div className="lookbookGrid editorialLookbook">
+        <img src="/images/elan-cream-1.png" alt="Élan Sculpt Set in Cream" />
+        <img src="/images/elan-black-1.png" alt="Élan Sculpt Set in Black" />
+        <img src="/images/elan-chocolate-1.png" alt="Élan Sculpt Set in Chocolate" />
+        <img src="/images/serein-cream-1.png" alt="Serein Lounge Set in Cream" />
+        <img src="/images/serein-black-1.png" alt="Serein Lounge Set in Black" />
+        <img src="/images/serein-chocolate-1.png" alt="Serein Lounge Set in Chocolate" />
       </div>
     </section>
   );
