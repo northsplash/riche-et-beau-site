@@ -823,7 +823,9 @@ function HomePage() {
 <section id="custom" className="customSection">
   <div className="customLayout">
     <div className="customIntro">
-      <p className="sectionLabel left">The Design Conversation</p>
+      <p className="sectionLabel left">
+        The Design Conversation
+      </p>
 
       <h2>
         Tell us what you want to wear next.
@@ -843,69 +845,7 @@ function HomePage() {
       </div>
     </div>
 
-    <form className="requestForm">
-      <div className="formHeading">
-        <span>Request Form</span>
-        <p>Future Drop Suggestions</p>
-      </div>
-
-      <div className="formRow">
-        <input
-          name="name"
-          placeholder="Full name"
-          required
-        />
-
-        <input
-          name="email"
-          type="email"
-          placeholder="Email address"
-          required
-        />
-      </div>
-
-      <select name="requestType" defaultValue="" required>
-        <option value="" disabled>
-          What would you like to request?
-        </option>
-
-        <option value="new-color">
-          New Color
-        </option>
-
-        <option value="extended-sizing">
-          Extended Sizing
-        </option>
-
-        <option value="new-style">
-          New Style
-        </option>
-
-        <option value="restock">
-          Restock Request
-        </option>
-
-        <option value="personalization">
-          Personalization Request
-        </option>
-      </select>
-
-      <input
-        name="requestDetails"
-        placeholder="Preferred color, size, or style"
-      />
-
-      <textarea
-        name="message"
-        rows="6"
-        placeholder="Tell us what you would love to see from Riche Et Beau."
-        required
-      />
-
-      <button type="submit">
-        Submit Request
-      </button>
-    </form>
+    <CustomRequestForm />
   </div>
 </section>
       
