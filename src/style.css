@@ -2931,3 +2931,167 @@ textarea:focus{
     display:none;
   }
 }
+
+/* =========================================================
+   PREORDER + TRUST POLISH
+========================================================= */
+
+.preorderBanner{
+  padding:28px 6%;
+  background:#eee7df;
+}
+
+.preorderInner{
+  max-width:1380px;
+  margin:0 auto;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:35px;
+  padding:34px 40px;
+  border-radius:26px;
+  background:#1b1613;
+  color:white;
+  box-shadow:0 22px 60px rgba(36,29,25,.16);
+}
+
+.preorderKicker{
+  display:block;
+  margin-bottom:8px;
+  color:#c9a47d;
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:2.6px;
+  text-transform:uppercase;
+}
+
+.preorderInner h3{
+  margin:0 0 7px;
+  font-family:'Playfair Display',Georgia,serif;
+  font-size:30px;
+  font-weight:600;
+}
+
+.preorderInner p{
+  margin:0;
+  color:rgba(255,255,255,.65);
+  line-height:1.6;
+}
+
+.preorderLink{
+  flex:0 0 auto;
+  padding:14px 24px;
+  border-radius:999px;
+  background:#c7a178;
+  color:#211914;
+  font-size:12px;
+  font-weight:800;
+  letter-spacing:.6px;
+  transition:.3s ease;
+}
+
+.preorderLink:hover{
+  transform:translateY(-3px);
+  background:#d8b58b;
+}
+
+/* TRUST STRIP */
+
+.trustBadges{
+  max-width:1450px;
+  margin:0 auto;
+  padding:42px 6% 72px;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:0;
+  background:#f8f5f1;
+}
+
+.trustBadge{
+  display:flex;
+  align-items:flex-start;
+  gap:16px;
+  padding:18px 26px;
+  border-right:1px solid rgba(36,29,25,.10);
+}
+
+.trustBadge:last-child{
+  border-right:none;
+}
+
+.trustNumber{
+  color:#a77b4f;
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:1px;
+}
+
+.trustBadge strong{
+  display:block;
+  margin-bottom:4px;
+  color:#241d19;
+  font-size:14px;
+}
+
+.trustBadge p{
+  margin:0;
+  color:#7a6c63;
+  font-size:12px;
+  line-height:1.6;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+  .preorderInner{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+  .trustBadges{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .trustBadge:nth-child(2){
+    border-right:none;
+  }
+
+  .trustBadge:nth-child(1),
+  .trustBadge:nth-child(2){
+    border-bottom:1px solid rgba(36,29,25,.10);
+  }
+}
+
+@media(max-width:600px){
+  .preorderBanner{
+    padding:18px 16px;
+  }
+
+  .preorderInner{
+    padding:28px 24px;
+  }
+
+  .preorderInner h3{
+    font-size:25px;
+  }
+
+  .preorderLink{
+    width:100%;
+    text-align:center;
+  }
+
+  .trustBadges{
+    grid-template-columns:1fr;
+    padding:24px 16px 55px;
+  }
+
+  .trustBadge{
+    border-right:none;
+    border-bottom:1px solid rgba(36,29,25,.10);
+    padding:20px 4px;
+  }
+
+  .trustBadge:last-child{
+    border-bottom:none;
+  }
+}
