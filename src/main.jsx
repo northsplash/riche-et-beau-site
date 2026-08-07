@@ -1231,14 +1231,57 @@ function Reviews() {
 function FutureDrops() {
   return (
     <section className="futureSection">
-      <p className="sectionLabel">Future Drops</p>
-      <h2 className="sectionTitle">Vote with your wishlist.</h2>
+      <div className="futureHeader">
+        <div>
+          <p className="sectionLabel left">Future Drops</p>
+
+          <h2>
+            You help decide what comes next.
+          </h2>
+        </div>
+
+        <p>
+          Riche Et Beau future colorways will be shaped by customer interest,
+          waitlist demand, and VIP voting.
+        </p>
+      </div>
 
       <div className="futureGrid">
-        <div>Burgundy</div>
-        <div>Olive</div>
-        <div>Mocha</div>
-        <div>Midnight Blue</div>
+        <article className="futureCard burgundyDrop">
+          <span>01</span>
+          <div>
+            <p>Color Study</p>
+            <h3>Burgundy</h3>
+          </div>
+          <button type="button">Vote For This</button>
+        </article>
+
+        <article className="futureCard oliveDrop">
+          <span>02</span>
+          <div>
+            <p>Color Study</p>
+            <h3>Olive</h3>
+          </div>
+          <button type="button">Vote For This</button>
+        </article>
+
+        <article className="futureCard mochaDrop">
+          <span>03</span>
+          <div>
+            <p>Color Study</p>
+            <h3>Mocha</h3>
+          </div>
+          <button type="button">Vote For This</button>
+        </article>
+
+        <article className="futureCard blueDrop">
+          <span>04</span>
+          <div>
+            <p>Color Study</p>
+            <h3>Midnight Blue</h3>
+          </div>
+          <button type="button">Vote For This</button>
+        </article>
       </div>
     </section>
   );
