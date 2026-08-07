@@ -1101,40 +1101,38 @@ function ProductPage({ item }) {
     <Layout>
       <section className="luxuryProductPage">
         <div className="luxuryProductGallery">
-          <div className="mainImageFrame">
-            <img
-              className="luxuryMainImage"
-              src={activeImage}
-              alt={`${item.name} in ${selectedColor.name}`}
-            />
+         <div className="mainImageFrame">
+  <img
+    className="luxuryMainImage"
+    src={activeImage}
+    alt={`${item.name} in ${selectedColor.name}`}
+  />
 
-            <span className="productPageBadge">
-              Founder’s Preorder
-            </span>
-          </div>
+  <span className="productPageBadge">
+    Founder’s Preorder
+  </span>
+</div>
 
-          <div className="luxuryThumbnailRow">
-            {selectedColor.images.map((image, index) => (
-              <button
-                key={image}
-                type="button"
-                aria-label={`View product image ${index + 1}`}
-                className={
-                  activeImage === image
-                    ? "luxuryThumbnail activeLuxuryThumbnail"
-                    : "luxuryThumbnail"
-                }
-                onClick={() => setActiveImage(image)}
-              >
-                <img
-                  src={image}
-                  alt={`${item.name} view ${index + 1}`}
-                />
-              </button>
-            ))}
-          </div>
-        </div>
-
+<div className="luxuryThumbnailRow">
+  {selectedColor.images.map((image, index) => (
+    <button
+      key={image}
+      type="button"
+      aria-label={`View product image ${index + 1}`}
+      className={
+        activeImage === image
+          ? "luxuryThumbnail activeLuxuryThumbnail"
+          : "luxuryThumbnail"
+      }
+      onClick={() => setActiveImage(image)}
+    >
+      <img
+        src={image}
+        alt={`${item.name} ${selectedColor.name} view ${index + 1}`}
+      />
+    </button>
+  ))}
+</div>
         <aside className="luxuryProductPanel">
           <p className="productEyebrow">
             The Première Collection
