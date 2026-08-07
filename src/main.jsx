@@ -350,6 +350,208 @@ function Layout({ children }) {
   );
 }
 
+function WaitlistForm() {
+  const [email, setEmail] = React.useState("");
+  const [status, setStatus] = React.useState("");
+
+  async function handleSubmit(e) {
+    e.preventDefault();
+
+    setStatus("sending");
+
+    try {
+      const response = await fetch(
+        "https://formspree.io/f/YOUR_WAITLIST_FORM_ID",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify({
+            email,
+            source: "Riche Et Beau VIP Waitlist",
+          }),
+        }
+      );
+
+      if (!response.ok) {
+        throw new Error("Submission failed");
+      }
+
+      setStatus("success");
+      setEmail("");
+    } catch (error) {
+      console.error(error);
+      setStatus("error");
+    }
+  }
+
+  return (
+    <form className="waitlistForm" onSubmit={handleSubmit}>
+      <input
+        name="email"
+        type="email"
+        placeholder="Enter your email address"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+        required
+      />
+
+      <button type="submit" disabled={status === "sending"}>
+        {status === "sending"
+          ? "Joining..."
+          : "Join the Private List"}
+      </button>
+
+      {status === "success" && (
+        <p className="formSuccess">
+          Welcome to the Riche Et Beau private list.
+        </p>
+      )}
+
+      {status === "error" && (
+        <p className="formError">
+          Something went wrong. Please try again.
+        </p>
+      )}
+    </form>
+  );
+}
+
+
+function CustomRequestForm() {
+  const [status, setStatus] = React.useState("");
+
+  async function handleSubmit(e) {
+    e.preventDefault();
+
+    setStatus("sending");
+
+    const form = e.currentTarget;
+
+    const data = {
+      name: form.name.value,
+      email: form.email.value,
+      requestType: form.requestType.value,
+      requestDetails: form.requestDetails.value,
+      message: form.message.value,
+      source: "Riche Et Beau Custom Request",
+    };
+
+    try {
+      const response = await fetch(
+        "https://formspree.io/f/YOUR_CUSTOM_FORM_ID",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify(data),
+        }
+      );
+
+      if (!response.ok) {
+        throw new Error("Submission failed");
+      }
+
+      setStatus("success");
+      form.reset();
+    } catch (error) {
+      console.error(error);
+      setStatus("error");
+    }
+  }
+
+  return (
+    <form className="requestForm" onSubmit={handleSubmit}>
+      <div className="formHeading">
+        <span>Request Form</span>
+        <p>Future Drop Suggestions</p>
+      </div>
+
+      <div className="formRow">
+        <input
+          name="name"
+          placeholder="Full name"
+          required
+        />
+
+        <input
+          name="email"
+          type="email"
+          placeholder="Email address"
+          required
+        />
+      </div>
+
+      <select
+        name="requestType"
+        defaultValue=""
+        required
+      >
+        <option value="" disabled>
+          What would you like to request?
+        </option>
+
+        <option value="new-color">
+          New Color
+        </option>
+
+        <option value="extended-sizing">
+          Extended Sizing
+        </option>
+
+        <option value="new-style">
+          New Style
+        </option>
+
+        <option value="restock">
+          Restock Request
+        </option>
+
+        <option value="personalization">
+          Personalization Request
+        </option>
+      </select>
+
+      <input
+        name="requestDetails"
+        placeholder="Preferred color, size, or style"
+      />
+
+      <textarea
+        name="message"
+        rows="6"
+        placeholder="Tell us what you would love to see from Riche Et Beau."
+        required
+      />
+
+      <button
+        type="submit"
+        disabled={status === "sending"}
+      >
+        {status === "sending"
+          ? "Sending..."
+          : "Submit Request"}
+      </button>
+
+      {status === "success" && (
+        <p className="formSuccess">
+          Your request was received. Thank you for helping shape future drops.
+        </p>
+      )}
+
+      {status === "error" && (
+        <p className="formError">
+          Something went wrong. Please try again.
+        </p>
+      )}
+    </form>
+  );
+}
+
 function HomePage() {
   return (
     <Layout>
