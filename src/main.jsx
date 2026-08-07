@@ -1181,24 +1181,48 @@ function Countdown() {
 function Reviews() {
   return (
     <section className="reviewsSection">
-      <p className="sectionLabel">Early Buzz</p>
-      <h2 className="sectionTitle">Made to feel expensive.</h2>
+      <div className="sectionHeading">
+        <p className="sectionLabel">Early Buzz</p>
+
+        <h2 className="sectionTitle">
+          The mood is already set.
+        </h2>
+
+        <p className="sectionIntro">
+          First impressions from women watching the Première Collection come to life.
+        </p>
+      </div>
 
       <div className="reviewGrid">
-        <div>
-          <span>★★★★★</span>
-          <p>“The colors feel so luxe. I already know the chocolate set is mine.”</p>
-        </div>
+        <article className="reviewCard">
+          <span className="reviewStars">★★★★★</span>
 
-        <div>
-          <span>★★★★★</span>
-          <p>“This looks like comfort, confidence, and rich-girl errands.”</p>
-        </div>
+          <p className="reviewQuote">
+            “The chocolate color feels rich, polished, and expensive without trying too hard.”
+          </p>
 
-        <div>
-          <span>★★★★★</span>
-          <p>“I love that the preorder drop feels exclusive.”</p>
-        </div>
+          <span className="reviewMeta">Première Preview</span>
+        </article>
+
+        <article className="reviewCard featuredReview">
+          <span className="reviewStars">★★★★★</span>
+
+          <p className="reviewQuote">
+            “This is exactly the kind of set I want for travel, errands, and still looking put together.”
+          </p>
+
+          <span className="reviewMeta">Première Preview</span>
+        </article>
+
+        <article className="reviewCard">
+          <span className="reviewStars">★★★★★</span>
+
+          <p className="reviewQuote">
+            “The neutral palette makes every piece feel easy to wear but still special.”
+          </p>
+
+          <span className="reviewMeta">Première Preview</span>
+        </article>
       </div>
     </section>
   );
