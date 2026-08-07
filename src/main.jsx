@@ -647,9 +647,12 @@ function ProductCard({ item }) {
 
 function ProductPage({ item }) {
   const [selectedColor, setSelectedColor] = React.useState(item.colors[0]);
-  const [activeImage, setActiveImage] = React.useState(item.colors[0].images[0]);
+  const [activeImage, setActiveImage] = React.useState(
+    item.colors[0].images[0]
+  );
   const [selectedSize, setSelectedSize] = React.useState("");
   const [showSizeGuide, setShowSizeGuide] = React.useState(false);
+  const [activeDetail, setActiveDetail] = React.useState("details");
 
   function chooseColor(color) {
     setSelectedColor(color);
@@ -662,6 +665,11 @@ function ProductPage({ item }) {
       return;
     }
 
+    if (item.squareLink && item.squareLink !== "#") {
+      window.location.href = item.squareLink;
+      return;
+    }
+
     alert(
       `Square checkout will be connected here for ${item.name} - ${selectedColor.name} - Size ${selectedSize}.`
     );
@@ -669,88 +677,264 @@ function ProductPage({ item }) {
 
   return (
     <Layout>
-      <section className="productPage">
-        <div className="productGallery">
-          <img className="mainProductImage" src={activeImage} alt={item.name} />
+      <section className="luxuryProductPage">
+        <div className="luxuryProductGallery">
+          <div className="mainImageFrame">
+            <img
+              className="luxuryMainImage"
+              src={activeImage}
+              alt={`${item.name} in ${selectedColor.name}`}
+            />
 
-          <div className="productThumbGrid">
-            {selectedColor.images.map((image) => (
+            <span className="productPageBadge">
+              Founder’s Preorder
+            </span>
+          </div>
+
+          <div className="luxuryThumbnailRow">
+            {selectedColor.images.map((image, index) => (
               <button
                 key={image}
-                onClick={() => setActiveImage(image)}
                 type="button"
-                className={activeImage === image ? "activeThumb" : ""}
+                aria-label={`View product image ${index + 1}`}
+                className={
+                  activeImage === image
+                    ? "luxuryThumbnail activeLuxuryThumbnail"
+                    : "luxuryThumbnail"
+                }
+                onClick={() => setActiveImage(image)}
               >
-                <img src={image} alt="Product thumbnail" />
+                <img
+                  src={image}
+                  alt={`${item.name} view ${index + 1}`}
+                />
               </button>
             ))}
           </div>
         </div>
 
-        <div className="productPanel">
-          <p className="sectionLabel left">Preorder</p>
+        <aside className="luxuryProductPanel">
+          <p className="productEyebrow">
+            The Première Collection
+          </p>
+
           <h1>{item.name}</h1>
-          <p>{item.details}</p>
 
-          <p className="releaseDate">{item.releaseDate}</p>
+          <p className="selectedColorLabel">
+            Color: <strong>{selectedColor.name}</strong>
+          </p>
 
-          <div className="priceRow">
+          <div className="luxuryPriceRow">
             <span>{item.regularPrice}</span>
             <strong>{item.salePrice}</strong>
           </div>
 
-          <p className="optionLabel">Choose Color</p>
+          <p className="luxuryProductDescription">
+            {item.details}
+          </p>
 
-          <div className="colorChoiceRow">
-            {item.colors.map((color) => (
-              <button
-                key={color.name}
-                type="button"
-                className={
-                  selectedColor.name === color.name
-                    ? "colorChoice activeColor"
-                    : "colorChoice"
-                }
-                onClick={() => chooseColor(color)}
-              >
-                {color.name}
-              </button>
-            ))}
+          <div className="releaseMessage">
+            <span>Preorder</span>
+
+            <div>
+              <strong>Shipping January 1, 2027</strong>
+              <p>Payment is collected when your preorder is placed.</p>
+            </div>
           </div>
 
-          <p className="optionLabel">Choose Size</p>
+          <div className="productOptionSection">
+            <div className="optionHeading">
+              <p>Choose Color</p>
+              <span>{selectedColor.name}</span>
+            </div>
 
-          <div className="sizeRow">
-            {["XS", "S", "M", "L", "XL"].map((size) => (
+            <div className="luxuryColorOptions">
+              {item.colors.map((color) => (
+                <button
+                  key={color.name}
+                  type="button"
+                  className={
+                    selectedColor.name === color.name
+                      ? "luxuryColorButton activeLuxuryColor"
+                      : "luxuryColorButton"
+                  }
+                  onClick={() => chooseColor(color)}
+                >
+                  <span
+                    className={`colorSwatch swatch${color.name}`}
+                  ></span>
+
+                  {color.name}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          <div className="productOptionSection">
+            <div className="optionHeading">
+              <p>Choose Size</p>
+
               <button
-                key={size}
+                className="inlineSizeGuide"
                 type="button"
-                className={selectedSize === size ? "activeSize" : ""}
-                onClick={() => setSelectedSize(size)}
+                onClick={() => setShowSizeGuide(true)}
               >
-                {size}
+                Size Guide
               </button>
-            ))}
+            </div>
+
+            <div className="luxurySizeOptions">
+              {["XS", "S", "M", "L", "XL"].map((size) => (
+                <button
+                  key={size}
+                  type="button"
+                  className={
+                    selectedSize === size
+                      ? "luxurySizeButton activeLuxurySize"
+                      : "luxurySizeButton"
+                  }
+                  onClick={() => setSelectedSize(size)}
+                >
+                  {size}
+                </button>
+              ))}
+            </div>
           </div>
 
           <button
-            className="sizeGuideBtn"
+            className="luxuryPreorderButton"
             type="button"
-            onClick={() => setShowSizeGuide(true)}
+            onClick={handlePreorder}
           >
-            View Size Guide
-          </button>
-
-          <button className="cartBtn" onClick={handlePreorder}>
             Preorder With Square
           </button>
 
-          <div className="productTrust">
-            <p>✓ Secure Square Checkout</p>
-            <p>✓ Preorder paid today</p>
-            <p>✓ Orders begin shipping January 1, 2027</p>
-            <p>✓ Free shipping over $75</p>
+          <p className="selectionSummary">
+            {selectedColor.name}
+            {selectedSize ? ` • Size ${selectedSize}` : " • Select a size"}
+          </p>
+
+          <div className="productAssurances">
+            <div>
+              <span>◇</span>
+              <p>
+                <strong>Secure Checkout</strong>
+                Protected payments through Square
+              </p>
+            </div>
+
+            <div>
+              <span>↗</span>
+              <p>
+                <strong>Free Shipping</strong>
+                On qualifying orders over $75
+              </p>
+            </div>
+
+            <div>
+              <span>01</span>
+              <p>
+                <strong>Limited First Drop</strong>
+                Founder’s preorder quantities are limited
+              </p>
+            </div>
           </div>
+
+          <div className="productAccordion">
+            <button
+              type="button"
+              onClick={() =>
+                setActiveDetail(
+                  activeDetail === "details" ? "" : "details"
+                )
+              }
+            >
+              <span>Product Details</span>
+              <span>{activeDetail === "details" ? "−" : "+"}</span>
+            </button>
+
+            {activeDetail === "details" && (
+              <div className="accordionContent">
+                <p>{item.description}</p>
+                <p>{item.details}</p>
+              </div>
+            )}
+
+            <button
+              type="button"
+              onClick={() =>
+                setActiveDetail(
+                  activeDetail === "care" ? "" : "care"
+                )
+              }
+            >
+              <span>Fabric & Care</span>
+              <span>{activeDetail === "care" ? "−" : "+"}</span>
+            </button>
+
+            {activeDetail === "care" && (
+              <div className="accordionContent">
+                <p>
+                  Wash cold with similar colors. Use a gentle cycle.
+                  Do not bleach. Lay flat or tumble dry on low.
+                </p>
+              </div>
+            )}
+
+            <button
+              type="button"
+              onClick={() =>
+                setActiveDetail(
+                  activeDetail === "shipping" ? "" : "shipping"
+                )
+              }
+            >
+              <span>Preorder & Shipping</span>
+              <span>{activeDetail === "shipping" ? "−" : "+"}</span>
+            </button>
+
+            {activeDetail === "shipping" && (
+              <div className="accordionContent">
+                <p>
+                  Preorders are paid when placed. Orders are expected
+                  to begin shipping January 1, 2027. Tracking details
+                  will be sent when your order leaves our facility.
+                </p>
+              </div>
+            )}
+          </div>
+        </aside>
+      </section>
+
+      <section className="completeLookSection">
+        <p className="sectionLabel">The Riche Et Beau Standard</p>
+
+        <h2>Luxury designed for real life.</h2>
+
+        <div className="completeLookGrid">
+          <article>
+            <span>01</span>
+            <h3>Soft Structure</h3>
+            <p>
+              Comfortable fabrics shaped into polished silhouettes.
+            </p>
+          </article>
+
+          <article>
+            <span>02</span>
+            <h3>Signature Neutrals</h3>
+            <p>
+              Timeless Cream, Black, and Chocolate colorways.
+            </p>
+          </article>
+
+          <article>
+            <span>03</span>
+            <h3>Limited Release</h3>
+            <p>
+              A carefully planned first drop created with intention.
+            </p>
+          </article>
         </div>
       </section>
 
@@ -760,7 +944,6 @@ function ProductPage({ item }) {
     </Layout>
   );
 }
-
 function Countdown() {
   const [timeLeft, setTimeLeft] = React.useState(getTimeLeft());
 
