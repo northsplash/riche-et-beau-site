@@ -749,15 +749,17 @@ function HomePage() {
 <Lookbook />
 
 <section id="waitlist" className="waitlistSection">
-  <div className="waitlistContent">
-    <p className="sectionLabel">The Private List</p>
+  <div className="waitlistEditorial">
+    <div className="waitlistCopy">
+      <p className="sectionLabel left">The Private List</p>
 
-    <h2>Be first to shop Riche Et Beau.</h2>
+      <h2>Be first to know what drops next.</h2>
 
-    <p>
-      Join the VIP list for early access, launch announcements, private
-      discounts, and first pick of Cream, Black, and Chocolate.
-    </p>
+      <p>
+        Join the Riche Et Beau private list for launch announcements,
+        early access, private offers, and future colorway voting.
+      </p>
+    </div>
 
     <form className="waitlistForm">
       <input
@@ -767,7 +769,9 @@ function HomePage() {
         required
       />
 
-      <button type="submit">Join the VIP List</button>
+      <button type="submit">
+        Join the Private List
+      </button>
     </form>
 
     <p className="phoneText">
