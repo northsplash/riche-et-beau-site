@@ -953,9 +953,13 @@ function HomePage() {
 <section id="waitlist" className="waitlistSection">
   <div className="waitlistEditorial">
     <div className="waitlistCopy">
-      <p className="sectionLabel left">The Private List</p>
+      <p className="sectionLabel left">
+        The Private List
+      </p>
 
-      <h2>Be first to know what drops next.</h2>
+      <h2>
+        Be first to know what drops next.
+      </h2>
 
       <p>
         Join the Riche Et Beau private list for launch announcements,
@@ -963,18 +967,7 @@ function HomePage() {
       </p>
     </div>
 
-    <form className="waitlistForm">
-      <input
-        name="email"
-        type="email"
-        placeholder="Enter your email address"
-        required
-      />
-
-      <button type="submit">
-        Join the Private List
-      </button>
-    </form>
+    <WaitlistForm />
 
     <p className="phoneText">
       Questions? Text or call {phone}
