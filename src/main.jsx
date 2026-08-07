@@ -564,26 +564,57 @@ function HomePage() {
 </section>
 
 <section id="vip" className="vipSection">
-  <div className="vipContent">
-    <p className="sectionLabel left">Riche Et Beau VIP</p>
+  <div className="vipEditorial">
+    <div className="vipCopy">
+      <p className="sectionLabel left">Riche Et Beau VIP</p>
 
-    <h2>Be first in line for every drop.</h2>
+      <h2>
+        Access the brand before the rest of the world.
+      </h2>
 
-    <p>
-      VIP members receive early preorder access, private promotions, color
-      voting opportunities, and first notice of limited releases.
-    </p>
+      <p>
+        VIP members receive first access to future drops, private promotions,
+        color voting, launch announcements, and limited releases.
+      </p>
 
-    <div className="vipBenefits">
-      <span>Early Access</span>
-      <span>Private Offers</span>
-      <span>Color Voting</span>
-      <span>Limited Releases</span>
+      <div className="vipBenefits">
+        <div>
+          <span>01</span>
+          <strong>Early Access</strong>
+        </div>
+
+        <div>
+          <span>02</span>
+          <strong>Private Offers</strong>
+        </div>
+
+        <div>
+          <span>03</span>
+          <strong>Color Voting</strong>
+        </div>
+
+        <div>
+          <span>04</span>
+          <strong>Limited Drops</strong>
+        </div>
+      </div>
+
+      <a className="primaryBtn" href="#waitlist">
+        Join the Private List
+      </a>
     </div>
 
-    <a className="primaryBtn" href="#waitlist">
-      Join the VIP List
-    </a>
+    <div className="vipVisual">
+      <img
+        src="/images/chocolate-set.png"
+        alt="Riche Et Beau Première Collection"
+      />
+
+      <div className="vipImageLabel">
+        <span>Private Access</span>
+        <p>Riche Et Beau VIP</p>
+      </div>
+    </div>
   </div>
 </section>
 
