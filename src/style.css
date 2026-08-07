@@ -3996,3 +3996,79 @@ textarea:focus{
 .thumb.active{
     outline:2px solid #b58a60;
 }
+
+/* MOBILE STICKY PREORDER BAR */
+
+.mobileStickyCart{
+  display:none;
+}
+
+@media(max-width:700px){
+
+  body{
+    padding-bottom:88px;
+  }
+
+  .mobileStickyCart{
+    position:fixed;
+    left:0;
+    right:0;
+    bottom:0;
+    z-index:1400;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:16px;
+
+    padding:12px 16px;
+
+    background:rgba(248,245,240,.96);
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+
+    border-top:1px solid rgba(36,29,25,.10);
+    box-shadow:0 -10px 35px rgba(36,29,25,.10);
+  }
+
+  .mobileStickyCart > div{
+    min-width:0;
+  }
+
+  .mobileStickyCart span{
+    display:block;
+    max-width:180px;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+
+    color:#76685f;
+    font-size:11px;
+  }
+
+  .mobileStickyCart strong{
+    display:block;
+    margin-top:2px;
+
+    color:#241d19;
+    font-size:18px;
+  }
+
+  .mobileStickyCart button{
+    flex:0 0 auto;
+
+    min-width:120px;
+    min-height:46px;
+
+    border:none;
+    border-radius:999px;
+
+    background:#1d1714;
+    color:white;
+
+    font-weight:800;
+    cursor:pointer;
+
+    box-shadow:0 10px 24px rgba(36,29,25,.16);
+  }
+}
