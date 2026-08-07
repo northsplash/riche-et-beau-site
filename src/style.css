@@ -3095,3 +3095,272 @@ textarea:focus{
     border-bottom:none;
   }
 }
+
+/* =========================================================
+   REVIEWS + FUTURE DROPS
+========================================================= */
+
+.reviewsSection{
+  padding:110px 7%;
+  background:#f8f5f1;
+}
+
+.sectionHeading{
+  max-width:760px;
+  margin:0 auto 55px;
+  text-align:center;
+}
+
+.sectionIntro{
+  max-width:650px;
+  margin:0 auto;
+  color:#74675f;
+  font-size:16px;
+  line-height:1.8;
+  text-align:center;
+}
+
+.reviewGrid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
+  max-width:1250px;
+  margin:0 auto;
+}
+
+.reviewCard{
+  min-height:330px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  padding:38px;
+  border-radius:28px;
+  background:#fff;
+  border:1px solid rgba(36,29,25,.08);
+  box-shadow:0 18px 55px rgba(36,29,25,.08);
+  transition:.35s ease;
+}
+
+.reviewCard:hover{
+  transform:translateY(-7px);
+  box-shadow:0 28px 80px rgba(36,29,25,.13);
+}
+
+.featuredReview{
+  background:
+    linear-gradient(
+      145deg,
+      #1d1714,
+      #382920
+    );
+  color:white;
+}
+
+.featuredReview .reviewQuote,
+.featuredReview .reviewMeta{
+  color:white;
+}
+
+.reviewStars{
+  color:#b58a60;
+  letter-spacing:3px;
+  font-size:14px;
+}
+
+.reviewQuote{
+  margin:30px 0;
+  color:#2f2722;
+  font-family:'Playfair Display',Georgia,serif;
+  font-size:25px;
+  line-height:1.45;
+}
+
+.reviewMeta{
+  color:#8b7d73;
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+/* FUTURE DROPS */
+
+.futureSection{
+  padding:110px 7%;
+  background:#eae2d9;
+}
+
+.futureHeader{
+  display:grid;
+  grid-template-columns:1fr .8fr;
+  gap:50px;
+  align-items:end;
+  max-width:1250px;
+  margin:0 auto 55px;
+}
+
+.futureHeader h2{
+  margin:12px 0 0;
+  max-width:680px;
+  font-family:'Playfair Display',Georgia,serif;
+  font-size:54px;
+  line-height:1.05;
+}
+
+.futureHeader > p{
+  margin:0;
+  color:#70645c;
+  font-size:16px;
+  line-height:1.8;
+}
+
+.futureGrid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:18px;
+  max-width:1350px;
+  margin:0 auto;
+}
+
+.futureCard{
+  min-height:390px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  padding:28px;
+  border-radius:26px;
+  overflow:hidden;
+  position:relative;
+  box-shadow:0 20px 55px rgba(36,29,25,.12);
+}
+
+.futureCard > span{
+  color:rgba(255,255,255,.68);
+  font-size:11px;
+  font-weight:800;
+}
+
+.futureCard div p{
+  margin:0 0 6px;
+  color:rgba(255,255,255,.65);
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+.futureCard h3{
+  margin:0;
+  color:white;
+  font-family:'Playfair Display',Georgia,serif;
+  font-size:34px;
+}
+
+.futureCard button{
+  width:100%;
+  padding:13px 18px;
+  border:1px solid rgba(255,255,255,.28);
+  border-radius:999px;
+  background:rgba(255,255,255,.12);
+  color:white;
+  font-weight:800;
+  cursor:pointer;
+  backdrop-filter:blur(10px);
+  transition:.25s ease;
+}
+
+.futureCard button:hover{
+  background:white;
+  color:#241d19;
+}
+
+.burgundyDrop{
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0,0,0,.05),
+      rgba(0,0,0,.30)
+    ),
+    #641f2d;
+}
+
+.oliveDrop{
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0,0,0,.05),
+      rgba(0,0,0,.30)
+    ),
+    #5f6645;
+}
+
+.mochaDrop{
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0,0,0,.05),
+      rgba(0,0,0,.30)
+    ),
+    #806654;
+}
+
+.blueDrop{
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0,0,0,.05),
+      rgba(0,0,0,.30)
+    ),
+    #1f2e45;
+}
+
+/* TABLET */
+
+@media(max-width:950px){
+
+  .reviewGrid{
+    grid-template-columns:1fr;
+  }
+
+  .reviewCard{
+    min-height:260px;
+  }
+
+  .futureHeader{
+    grid-template-columns:1fr;
+  }
+
+  .futureGrid{
+    grid-template-columns:1fr 1fr;
+  }
+}
+
+/* MOBILE */
+
+@media(max-width:600px){
+
+  .reviewsSection,
+  .futureSection{
+    padding:75px 18px;
+  }
+
+  .reviewCard{
+    padding:28px;
+  }
+
+  .reviewQuote{
+    font-size:22px;
+  }
+
+  .futureHeader h2{
+    font-size:40px;
+  }
+
+  .futureGrid{
+    grid-template-columns:1fr;
+  }
+
+  .futureCard{
+    min-height:300px;
+  }
+}
