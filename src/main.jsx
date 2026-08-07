@@ -96,17 +96,25 @@ const products = [
       {
         name: "Black",
         images: [
-          "/images/leather-black-1.png",
-          "/images/leather-black-2.png",
-          "/images/leather-black-3.png",
+          "/images/noir-black-1.png",
+          "/images/noir-black-2.png",
+          "/images/noir-black-3.png",
         ],
       },
       {
+           name: "Cream",
+      images: [
+        "/images/Noir-cream-1.png",
+        "/images/Noir-cream-2.png",
+        "/images/Noir-cream-3.png",
+      ],
+    },
+    {
         name: "Chocolate",
         images: [
-          "/images/leather-chocolate-1.png",
-          "/images/leather-chocolate-2.png",
-          "/images/leather-chocolate-3.png",
+          "/images/noir-chocolate-1.png",
+          "/images/noir-chocolate-2.png",
+          "/images/noir-chocolate-3.png",
         ],
       },
     ],
