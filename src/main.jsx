@@ -387,17 +387,24 @@ function HomePage() {
         </motion.div>
       </section>
 
-    <section className="preorderBanner">
-  <span>Founder’s Preorder</span>
+   <section className="preorderBanner">
+  <div className="preorderInner">
+    <div>
+      <span className="preorderKicker">Founder’s Preorder</span>
 
-  <p>
-    The Première Collection is now available for preorder.
-    Shipping begins January 1, 2027.
-  </p>
+      <h3>The Première Collection is now open.</h3>
 
-  <a href="#collection">Shop the collection</a>
+      <p>
+        Reserve your favorite set today. Shipping begins January 1, 2027.
+      </p>
+    </div>
+
+    <a href="#collection" className="preorderLink">
+      Shop The Collection
+    </a>
+  </div>
 </section>
-
+      
 <Countdown />
 
 <section id="collection" className="collectionSection">
