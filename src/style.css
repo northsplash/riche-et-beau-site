@@ -4172,3 +4172,23 @@ textarea:focus{
     padding:0 25px 20px 2px;
   }
 }
+
+.checkoutNote{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:8px;
+
+  margin:13px 0 5px;
+
+  color:#81736a;
+  font-size:11px;
+  text-align:center;
+}
+
+@media(max-width:600px){
+  .checkoutNote{
+    font-size:10px;
+  }
+}
