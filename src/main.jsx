@@ -1386,13 +1386,17 @@ return (
         </div>
            </section>
 
-      <RelatedProducts currentSlug={item.slug} />
+     <RelatedProducts currentSlug={item.slug} />
 
 <ProductFAQ />
 
 {showSizeGuide && (
   <SizeGuide onClose={() => setShowSizeGuide(false)} />
 )}
+
+</Layout>
+);
+}
 
 function RelatedProducts({ currentSlug }) {
   const related = products.filter(
