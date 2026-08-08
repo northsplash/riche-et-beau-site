@@ -1364,12 +1364,63 @@ return (
             </p>
           </article>
         </div>
-      </section>
+           </section>
+
+      <RelatedProducts currentSlug={item.slug} />
 
       {showSizeGuide && (
         <SizeGuide onClose={() => setShowSizeGuide(false)} />
       )}
     </Layout>
+  );
+}
+
+function RelatedProducts({ currentSlug }) {
+  const related = products.filter(
+    (item) => item.slug !== currentSlug
+  );
+
+  return (
+    <section className="relatedSection">
+      <div className="relatedHeader">
+        <p className="sectionLabel">
+          Complete The Wardrobe
+        </p>
+
+        <h2>
+          You May Also Like
+        </h2>
+      </div>
+
+      <div className="relatedGrid">
+        {related.map((item) => (
+          <a
+            key={item.slug}
+            href={`/products/${item.slug}`}
+            className="relatedCard"
+          >
+            <div className="relatedImage">
+              <img
+                src={item.colors[0].images[0]}
+                alt={item.name}
+              />
+            </div>
+
+            <div className="relatedInfo">
+              <p>{item.name}</p>
+
+              <strong>
+                {item.salePrice}
+              </strong>
+
+              <span>
+                View Collection
+              </span>
+            </div>
+          </a>
+        ))}
+      </div>
+    </section>
   );
 }
 function Countdown() {
