@@ -970,19 +970,20 @@ function ProductCard({ item }) {
     setActiveImage(color.images[0]);
   }
 
- function handlePreorder() {
+function handlePreorder() {
   if (!selectedSize) {
     alert("Please choose a size before preorder.");
     return;
   }
 
-  if (!item.squareLink || item.squareLink === "#") {
+  if (
+    !item.squareLink ||
+    item.squareLink === "#" ||
+    item.squareLink.startsWith("PASTE_")
+  ) {
     alert("Square checkout isn't connected yet.");
     return;
   }
-
-  window.location.href = item.squareLink;
-}
 
   window.location.href = item.squareLink;
 }
