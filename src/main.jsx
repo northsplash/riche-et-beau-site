@@ -1368,12 +1368,11 @@ return (
 
       <RelatedProducts currentSlug={item.slug} />
 
-      {showSizeGuide && (
-        <SizeGuide onClose={() => setShowSizeGuide(false)} />
-      )}
-    </Layout>
-  );
-}
+<ProductFAQ />
+
+{showSizeGuide && (
+  <SizeGuide onClose={() => setShowSizeGuide(false)} />
+)}
 
 function RelatedProducts({ currentSlug }) {
   const related = products.filter(
