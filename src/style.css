@@ -6128,3 +6128,85 @@ textarea:focus{
     font-size:13px;
   }
 }
+
+/* =========================================================
+   HOMEPAGE CUSTOM REQUEST TEASER
+========================================================= */
+
+.homeCustomTeaser{
+  max-width:1180px;
+  margin:90px auto;
+  padding:72px 7%;
+
+  text-align:center;
+
+  border-radius:32px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #f2ebe4,
+      #e7ddd3
+    );
+
+  border:1px solid rgba(36,29,25,.07);
+
+  box-shadow:
+    0 25px 65px rgba(36,29,25,.08);
+}
+
+.homeCustomTeaser .sectionLabel{
+  margin-bottom:14px;
+  color:#a77b4f;
+}
+
+.homeCustomTeaser h2{
+  max-width:700px;
+  margin:0 auto 18px;
+
+  font-family:'Playfair Display',Georgia,serif;
+  font-size:48px;
+  line-height:1.05;
+  font-weight:500;
+
+  color:#241d19;
+}
+
+.homeCustomTeaser > p:not(.sectionLabel){
+  max-width:590px;
+  margin:0 auto 30px;
+
+  color:#74675f;
+  font-size:14px;
+  line-height:1.8;
+}
+
+.homeCustomTeaser .primaryBtn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+
+  padding:15px 30px;
+
+  border-radius:999px;
+
+  background:#241d19;
+  color:white;
+
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:1px;
+}
+
+@media(max-width:700px){
+
+  .homeCustomTeaser{
+    margin:60px 18px;
+    padding:55px 22px;
+    border-radius:26px;
+  }
+
+  .homeCustomTeaser h2{
+    font-size:36px;
+  }
+}
