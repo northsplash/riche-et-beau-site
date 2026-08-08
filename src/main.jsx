@@ -857,59 +857,18 @@ function HomePage() {
   </div>
 </section>
 
-<section id="vip" className="vipSection">
-  <div className="vipEditorial">
-    <div className="vipCopy">
-      <p className="sectionLabel left">Riche Et Beau VIP</p>
+<section className="homeVipTeaser">
+  <p className="sectionLabel">Riche Et Beau VIP</p>
 
-      <h2>
-        Access the brand before the rest of the world.
-      </h2>
+  <h2>Access the brand before the rest of the world.</h2>
 
-      <p>
-        VIP members receive first access to future drops, private promotions,
-        color voting, launch announcements, and limited releases.
-      </p>
+  <p>
+    Early access, private offers, color voting, and limited releases.
+  </p>
 
-      <div className="vipBenefits">
-        <div>
-          <span>01</span>
-          <strong>Early Access</strong>
-        </div>
-
-        <div>
-          <span>02</span>
-          <strong>Private Offers</strong>
-        </div>
-
-        <div>
-          <span>03</span>
-          <strong>Color Voting</strong>
-        </div>
-
-        <div>
-          <span>04</span>
-          <strong>Limited Drops</strong>
-        </div>
-      </div>
-
-      <a className="primaryBtn" href="#waitlist">
-        Join the Private List
-      </a>
-    </div>
-
-    <div className="vipVisual">
-      <img
-        src="/images/chocolate-set.png"
-        alt="Riche Et Beau Première Collection"
-      />
-
-      <div className="vipImageLabel">
-        <span>Private Access</span>
-        <p>Riche Et Beau VIP</p>
-      </div>
-    </div>
-  </div>
+  <a href="/vip" className="primaryBtn">
+    Enter The Private Club
+  </a>
 </section>
 
 <section id="custom" className="customSection">
