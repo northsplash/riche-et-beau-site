@@ -1052,7 +1052,7 @@ function ProductCard({ item }) {
         </div>
 
         <button className="cartBtn" onClick={handlePreorder}>
-          Preorder With Square
+         Secure My Preorder
         </button>
 
         <a className="viewProduct" href={`/products/${item.slug}`}>
@@ -1232,7 +1232,7 @@ return (
           type="button"
           onClick={handlePreorder}
         >
-          Preorder With Square
+          Secure My Preorder
         </button>
 
         <p className="selectionSummary">
