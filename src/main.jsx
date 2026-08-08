@@ -16,7 +16,7 @@ const products = [
     description: "Sports bra, high-waist leggings, and lightweight zip jacket.",
     details:
       "A sculpting activewear set designed for movement, comfort, errands, travel, and elevated everyday wear.",
-    squareLink: "#",
+    squareLink: "PASTE_ELAN_SQUARE_LINK_HERE",
     colors: [
       {
         name: "Cream",
@@ -53,7 +53,7 @@ const products = [
   description: "Cropped hoodie and high-waist joggers made for elevated comfort.",
   details:
     "A soft lounge set made for relaxed days, airport outfits, coffee runs, and casual luxury.",
-  squareLink: "#",
+  squareLink: "PASTE_SEREIN_SQUARE_LINK_HERE",
 
   colors: [
     {
@@ -91,7 +91,7 @@ const products = [
     description: "Statement faux leather set with a sleek luxury finish.",
     details:
       "A bold street-luxe look designed for statement styling, confidence, and elevated nights out.",
-    squareLink: "#",
+    squareLink: "PASTE_NOIR_SQUARE_LINK_HERE",
     colors: [
       {
         name: "Black",
