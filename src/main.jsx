@@ -971,16 +971,18 @@ function ProductCard({ item }) {
   }
 
   function handlePreorder() {
-    if (!selectedSize) {
-      alert("Please choose a size before preorder.");
-      return;
-    }
-
-    alert(
-      `Square checkout will be connected here for ${item.name} - ${selectedColor.name} - Size ${selectedSize}.`
-    );
+  if (!selectedSize) {
+    alert("Please choose a size before preorder.");
+    return;
   }
 
+  if (!item.squareLink || item.squareLink === "#") {
+    alert("Square checkout isn't connected yet.");
+    return;
+  }
+
+  window.location.href = item.squareLink;
+}
   return (
     <motion.div
       className="productCard"
