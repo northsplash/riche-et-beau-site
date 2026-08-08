@@ -6210,3 +6210,113 @@ textarea:focus{
     font-size:36px;
   }
 }
+
+/* =========================================================
+   HOMEPAGE ABOUT TEASER
+========================================================= */
+
+.homeAboutTeaser{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:0;
+
+  max-width:1180px;
+  margin:90px auto;
+
+  overflow:hidden;
+
+  border-radius:34px;
+
+  background:#f2ebe4;
+
+  box-shadow:
+    0 28px 70px rgba(36,29,25,.10);
+}
+
+.homeAboutCopy{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+
+  padding:70px 7%;
+}
+
+.homeAboutCopy .sectionLabel{
+  margin-bottom:14px;
+  color:#a77b4f;
+}
+
+.homeAboutCopy h2{
+  margin:0 0 20px;
+
+  font-family:'Playfair Display',Georgia,serif;
+  font-size:46px;
+  line-height:1.05;
+  font-weight:500;
+
+  color:#241d19;
+}
+
+.homeAboutCopy > p:not(.sectionLabel){
+  margin:0 0 28px;
+
+  color:#74675f;
+  font-size:14px;
+  line-height:1.8;
+}
+
+.homeAboutCopy .primaryBtn{
+  width:max-content;
+
+  padding:15px 28px;
+
+  border-radius:999px;
+
+  background:#241d19;
+  color:white;
+
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:1px;
+}
+
+.homeAboutImage{
+  min-height:430px;
+  overflow:hidden;
+}
+
+.homeAboutImage img{
+  width:100%;
+  height:100%;
+  min-height:430px;
+
+  object-fit:cover;
+
+  transition:transform .6s ease;
+}
+
+.homeAboutTeaser:hover .homeAboutImage img{
+  transform:scale(1.025);
+}
+
+@media(max-width:800px){
+
+  .homeAboutTeaser{
+    grid-template-columns:1fr;
+
+    margin:60px 18px;
+  }
+
+  .homeAboutCopy{
+    padding:50px 26px;
+  }
+
+  .homeAboutCopy h2{
+    font-size:38px;
+  }
+
+  .homeAboutImage,
+  .homeAboutImage img{
+    min-height:360px;
+  }
+}
