@@ -1423,6 +1423,81 @@ function RelatedProducts({ currentSlug }) {
     </section>
   );
 }
+
+function ProductFAQ() {
+  const [openFaq, setOpenFaq] = React.useState(null);
+
+  const faqs = [
+    {
+      question: "When will my preorder ship?",
+      answer:
+        "The Première Collection is scheduled to begin shipping January 1, 2027. Tracking information will be sent once your order leaves our facility.",
+    },
+    {
+      question: "When am I charged?",
+      answer:
+        "Payment is collected when you place your preorder so your item can be reserved from the first release.",
+    },
+    {
+      question: "Can I change my size or color after ordering?",
+      answer:
+        "Contact Riche Et Beau as soon as possible. Changes may be available before your order enters fulfillment, depending on inventory.",
+    },
+    {
+      question: "How should I choose my size?",
+      answer:
+        "Use the size guide on the product page before ordering. If you are between sizes or need help, contact customer care before placing your preorder.",
+    },
+    {
+      question: "Will sold-out colors come back?",
+      answer:
+        "Future restocks and colorways will be based on demand, VIP voting, and availability.",
+    },
+  ];
+
+  return (
+    <section className="productFaqSection">
+      <div className="faqHeader">
+        <p className="sectionLabel">Need To Know</p>
+        <h2>Preorder FAQ</h2>
+        <p>
+          Everything you need to know before reserving your Première Collection piece.
+        </p>
+      </div>
+
+      <div className="faqList">
+        {faqs.map((faq, index) => (
+          <div
+            className={
+              openFaq === index
+                ? "faqItem faqItemOpen"
+                : "faqItem"
+            }
+            key={faq.question}
+          >
+            <button
+              type="button"
+              onClick={() =>
+                setOpenFaq(openFaq === index ? null : index)
+              }
+            >
+              <span>{faq.question}</span>
+              <span className="faqPlus">
+                {openFaq === index ? "−" : "+"}
+              </span>
+            </button>
+
+            {openFaq === index && (
+              <div className="faqAnswer">
+                <p>{faq.answer}</p>
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
 function Countdown() {
   const [timeLeft, setTimeLeft] = React.useState(getTimeLeft());
 
