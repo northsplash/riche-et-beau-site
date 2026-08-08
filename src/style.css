@@ -4072,3 +4072,103 @@ textarea:focus{
     box-shadow:0 10px 24px rgba(36,29,25,.16);
   }
 }
+
+/* =========================================================
+   PRODUCT FAQ
+========================================================= */
+
+.productFaqSection{
+  padding:110px 7%;
+  background:#eee7df;
+}
+
+.faqHeader{
+  max-width:760px;
+  margin:0 auto 50px;
+  text-align:center;
+}
+
+.faqHeader h2{
+  margin:12px 0 18px;
+  font-family:'Playfair Display',Georgia,serif;
+  font-size:52px;
+  line-height:1.05;
+}
+
+.faqHeader > p:last-child{
+  color:#74675f;
+  line-height:1.8;
+}
+
+.faqList{
+  max-width:900px;
+  margin:0 auto;
+  border-top:1px solid rgba(36,29,25,.13);
+}
+
+.faqItem{
+  border-bottom:1px solid rgba(36,29,25,.13);
+}
+
+.faqItem > button{
+  width:100%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:30px;
+
+  padding:24px 4px;
+
+  border:none;
+  background:transparent;
+  color:#241d19;
+
+  font-family:'Playfair Display',Georgia,serif;
+  font-size:21px;
+  text-align:left;
+
+  cursor:pointer;
+}
+
+.faqPlus{
+  flex:0 0 auto;
+  color:#a77b4f;
+  font-family:Arial,sans-serif;
+  font-size:24px;
+  font-weight:300;
+}
+
+.faqAnswer{
+  padding:0 50px 24px 4px;
+}
+
+.faqAnswer p{
+  margin:0;
+  color:#71645c;
+  font-size:15px;
+  line-height:1.8;
+}
+
+.faqItemOpen{
+  background:rgba(255,255,255,.28);
+}
+
+@media(max-width:600px){
+
+  .productFaqSection{
+    padding:75px 18px;
+  }
+
+  .faqHeader h2{
+    font-size:39px;
+  }
+
+  .faqItem > button{
+    padding:20px 2px;
+    font-size:18px;
+  }
+
+  .faqAnswer{
+    padding:0 25px 20px 2px;
+  }
+}
