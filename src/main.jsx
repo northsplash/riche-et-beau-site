@@ -970,22 +970,43 @@ function ProductCard({ item }) {
     setActiveImage(color.images[0]);
   }
 
-function handlePreorder() {
+async function handlePreorder() {
   if (!selectedSize) {
     alert("Please choose a size before preorder.");
     return;
   }
 
-  if (
-    !item.squareLink ||
-    item.squareLink === "#" ||
-    item.squareLink.startsWith("PASTE_")
-  ) {
-    alert("Square checkout isn't connected yet.");
-    return;
-  }
+  try {
+    const response = await fetch("/api/create-checkout", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        product: item.name,
+        color: selectedColor.name,
+        size: selectedSize,
+      }),
+    });
 
-  window.location.href = item.squareLink;
+    const data = await response.json();
+
+    if (!response.ok) {
+      console.error("Checkout error:", data);
+      alert("We couldn't start checkout. Please try again.");
+      return;
+    }
+
+    if (!data.checkoutUrl) {
+      alert("Checkout link was not created. Please try again.");
+      return;
+    }
+
+    window.location.href = data.checkoutUrl;
+  } catch (error) {
+    console.error("Checkout request failed:", error);
+    alert("We couldn't connect to checkout. Please try again.");
+  }
 }
   return (
     <motion.div
