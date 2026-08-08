@@ -5693,3 +5693,304 @@ textarea:focus{
     font-size:25px;
   }
 }
+
+/* =========================================================
+   VIP SECTION - PRIVATE CLUB FEEL
+========================================================= */
+
+.vipSection{
+  position:relative;
+  overflow:hidden;
+
+  padding:120px 7%;
+
+  background:
+    linear-gradient(
+      135deg,
+      #1c1714,
+      #2b211c
+    );
+
+  color:#fff;
+}
+
+.vipSection::before{
+  content:"";
+
+  position:absolute;
+  inset:0;
+
+  background:
+    radial-gradient(
+      circle at 75% 25%,
+      rgba(199,161,120,.18),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 20% 80%,
+      rgba(255,255,255,.05),
+      transparent 24%
+    );
+
+  pointer-events:none;
+}
+
+.vipEditorial{
+  position:relative;
+  z-index:2;
+
+  display:grid;
+  grid-template-columns:minmax(0,.9fr) minmax(420px,1.1fr);
+  gap:70px;
+
+  max-width:1300px;
+  margin:0 auto;
+
+  align-items:center;
+}
+
+.vipCopy{
+  max-width:560px;
+}
+
+.vipCopy .sectionLabel{
+  margin-bottom:16px;
+
+  color:#d3ab82;
+}
+
+.vipCopy h2{
+  margin:0 0 22px;
+
+  font-family:'Playfair Display',Georgia,serif;
+  font-size:58px;
+  line-height:1.03;
+  font-weight:500;
+  letter-spacing:-1.2px;
+
+  color:#fff;
+}
+
+.vipCopy > p{
+  margin:0 0 30px;
+
+  color:#d7cec8;
+  font-size:15px;
+  line-height:1.8;
+}
+
+/* BENEFITS */
+
+.vipBenefits{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:12px;
+
+  margin-bottom:32px;
+}
+
+.vipBenefits > div{
+  padding:18px;
+
+  border-radius:18px;
+
+  background:rgba(255,255,255,.06);
+
+  border:1px solid rgba(255,255,255,.08);
+
+  backdrop-filter:blur(8px);
+}
+
+.vipBenefits span{
+  display:block;
+  margin-bottom:7px;
+
+  color:#c7a178;
+
+  font-size:9px;
+  font-weight:800;
+  letter-spacing:1.8px;
+}
+
+.vipBenefits strong{
+  display:block;
+
+  color:#fff;
+
+  font-size:13px;
+  font-weight:700;
+}
+
+/* CTA */
+
+.vipSection .primaryBtn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+
+  padding:15px 28px;
+
+  border-radius:999px;
+
+  background:#c7a178;
+  color:#1d1714;
+
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:1px;
+
+  box-shadow:
+    0 16px 35px rgba(0,0,0,.22);
+
+  transition:
+    transform .25s ease,
+    background .25s ease;
+}
+
+.vipSection .primaryBtn:hover{
+  transform:translateY(-3px);
+  background:#d9b68f;
+}
+
+/* IMAGE SIDE */
+
+.vipVisual{
+  position:relative;
+  overflow:hidden;
+
+  min-height:570px;
+
+  border-radius:32px;
+
+  box-shadow:
+    0 30px 80px rgba(0,0,0,.28);
+}
+
+.vipVisual img{
+  width:100%;
+  height:100%;
+
+  min-height:570px;
+
+  display:block;
+
+  object-fit:cover;
+
+  transition:transform .7s ease;
+}
+
+.vipVisual:hover img{
+  transform:scale(1.025);
+}
+
+.vipVisual::after{
+  content:"";
+
+  position:absolute;
+  inset:0;
+
+  background:
+    linear-gradient(
+      180deg,
+      transparent 55%,
+      rgba(20,15,12,.55)
+    );
+}
+
+/* FLOATING LABEL */
+
+.vipImageLabel{
+  position:absolute;
+  left:26px;
+  bottom:24px;
+
+  z-index:2;
+
+  padding:16px 18px;
+
+  border-radius:18px;
+
+  background:rgba(25,20,17,.72);
+
+  border:1px solid rgba(255,255,255,.12);
+
+  backdrop-filter:blur(12px);
+}
+
+.vipImageLabel span{
+  display:block;
+  margin-bottom:5px;
+
+  color:#c7a178;
+
+  font-size:9px;
+  font-weight:800;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+.vipImageLabel p{
+  margin:0;
+
+  color:#fff;
+
+  font-family:'Playfair Display',Georgia,serif;
+  font-size:22px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+  .vipSection{
+    padding:90px 5%;
+  }
+
+  .vipEditorial{
+    grid-template-columns:1fr;
+    gap:50px;
+  }
+
+  .vipCopy{
+    max-width:700px;
+  }
+
+  .vipCopy h2{
+    font-size:48px;
+  }
+
+  .vipVisual,
+  .vipVisual img{
+    min-height:500px;
+  }
+}
+
+@media(max-width:600px){
+
+  .vipSection{
+    padding:72px 18px;
+  }
+
+  .vipCopy h2{
+    font-size:39px;
+    letter-spacing:-.7px;
+  }
+
+  .vipBenefits{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .vipVisual,
+  .vipVisual img{
+    min-height:420px;
+  }
+
+  .vipVisual{
+    border-radius:24px;
+  }
+
+  .vipImageLabel{
+    left:18px;
+    bottom:18px;
+  }
+}
