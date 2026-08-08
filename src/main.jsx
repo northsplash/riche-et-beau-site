@@ -909,33 +909,23 @@ function CustomPage() {
   </a>
 </section>
 
-<section id="custom" className="customSection">
-  <div className="customLayout">
-    <div className="customIntro">
-      <p className="sectionLabel left">
-        The Design Conversation
-      </p>
+<section className="homeCustomTeaser">
+  <p className="sectionLabel">
+    The Design Conversation
+  </p>
 
-      <h2>
-        Tell us what you want to wear next.
-      </h2>
+  <h2>
+    Help shape what comes next.
+  </h2>
 
-      <p>
-        Future Riche Et Beau drops are influenced by the women wearing them.
-        Request new colors, extended sizing, personalization, restocks, and
-        future silhouettes.
-      </p>
+  <p>
+    Request future colors, extended sizing, restocks, personalization,
+    and new styles.
+  </p>
 
-      <div className="customNotes">
-        <span>New Colorways</span>
-        <span>Extended Sizing</span>
-        <span>Personalization</span>
-        <span>Future Styles</span>
-      </div>
-    </div>
-
-    <CustomRequestForm />
-  </div>
+  <a href="/custom" className="primaryBtn">
+    Make A Request
+  </a>
 </section>
       
 <section id="about" className="aboutSection">
