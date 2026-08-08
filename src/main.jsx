@@ -152,7 +152,9 @@ function App() {
   if (path === "/lookbook") {
     return <LookbookPage />;
   }
-  
+  if (path === "/about") {
+  return <AboutPage />;
+}
   return <HomePage />;
 }
 function LuxuryNav() {
