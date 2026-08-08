@@ -4292,3 +4292,15 @@ textarea:focus{
     font-size:34px;
   }
 }
+
+/* TIGHTEN COLLECTION SPACING */
+
+.collectionSection{
+  padding-top:85px;
+}
+
+@media(max-width:600px){
+  .collectionSection{
+    padding-top:60px;
+  }
+}
