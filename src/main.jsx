@@ -970,7 +970,7 @@ function ProductCard({ item }) {
     setActiveImage(color.images[0]);
   }
 
-  function handlePreorder() {
+ function handlePreorder() {
   if (!selectedSize) {
     alert("Please choose a size before preorder.");
     return;
@@ -980,6 +980,9 @@ function ProductCard({ item }) {
     alert("Square checkout isn't connected yet.");
     return;
   }
+
+  window.location.href = item.squareLink;
+}
 
   window.location.href = item.squareLink;
 }
