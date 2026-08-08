@@ -1234,7 +1234,12 @@ return (
         >
           Secure My Preorder
         </button>
-
+<div className="checkoutNote">
+  <span>Secure checkout powered by Square</span>
+  <span>•</span>
+  <span>Preorder ships January 1, 2027</span>
+</div>
+        
         <p className="selectionSummary">
           {selectedColor.name}
           {selectedSize
