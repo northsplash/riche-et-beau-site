@@ -1108,14 +1108,9 @@ function ProductPage({ item }) {
     setActiveImage(color.images[0]);
   }
 
- function handlePreorder() {
+ async function handlePreorder() {
   if (!selectedSize) {
     alert("Please choose a size before preorder.");
-    return;
-  }
-
-  if (!item.squareLink || item.squareLink === "#") {
-    alert("Square checkout is not connected yet.");
     return;
   }
 
@@ -1129,14 +1124,44 @@ Price: ${item.salePrice}
 
 Shipping begins January 1, 2027.
 
-Continue to secure Square checkout?`
+Continue to secure checkout?`
   );
 
   if (!confirmed) {
     return;
   }
 
-  window.location.href = item.squareLink;
+  try {
+    const response = await fetch("/api/create-checkout", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        product: item.name,
+        color: selectedColor.name,
+        size: selectedSize,
+      }),
+    });
+
+    const data = await response.json();
+
+    if (!response.ok) {
+      console.error("Checkout error:", data);
+      alert("We couldn't start checkout. Please try again.");
+      return;
+    }
+
+    if (!data.checkoutUrl) {
+      alert("Checkout link was not created. Please try again.");
+      return;
+    }
+
+    window.location.href = data.checkoutUrl;
+  } catch (error) {
+    console.error("Checkout request failed:", error);
+    alert("We couldn't connect to checkout. Please try again.");
+  }
 }
 
 return (
