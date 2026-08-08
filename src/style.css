@@ -4304,3 +4304,195 @@ textarea:focus{
     padding-top:60px;
   }
 }
+
+/* =========================================================
+   LUXURY PRODUCT CARD POLISH
+========================================================= */
+
+.productGrid{
+  align-items:start;
+}
+
+.productCard{
+  border-radius:30px;
+  background:#fff;
+  border:1px solid rgba(36,29,25,.08);
+  box-shadow:0 20px 55px rgba(36,29,25,.08);
+  overflow:hidden;
+}
+
+.productCard:hover{
+  transform:translateY(-6px);
+  box-shadow:0 30px 75px rgba(36,29,25,.13);
+}
+
+.imageWrap{
+  position:relative;
+  background:#eee7df;
+}
+
+.imageWrap img{
+  width:100%;
+  aspect-ratio:4 / 5;
+  height:auto;
+  object-fit:cover;
+  display:block;
+}
+
+.saleTag{
+  top:18px;
+  right:18px;
+  padding:9px 14px;
+
+  background:rgba(29,23,20,.92);
+  color:#fff;
+
+  font-size:10px;
+  letter-spacing:1.7px;
+  text-transform:uppercase;
+}
+
+.thumbRow{
+  padding:16px 22px 0;
+  gap:9px;
+}
+
+.thumbRow button{
+  width:72px;
+  height:82px;
+  border-radius:12px;
+  border:1px solid rgba(36,29,25,.10);
+  background:#f4efe9;
+  opacity:.65;
+}
+
+.thumbRow button:hover,
+.thumbRow .activeThumb{
+  opacity:1;
+  border-color:#a77b4f;
+  transform:none;
+}
+
+.productInfo{
+  padding:24px 26px 30px;
+}
+
+.colorName{
+  margin:0 0 7px;
+  color:#a77b4f;
+  font-size:10px;
+  letter-spacing:2.7px;
+}
+
+.productInfo h3{
+  margin:0 0 10px;
+  font-family:'Playfair Display',Georgia,serif;
+  font-size:30px;
+  font-weight:500;
+  line-height:1.08;
+}
+
+.productInfo > p:not(.colorName):not(.releaseDate):not(.optionLabel):not(.preorderNote){
+  color:#74675f;
+  font-size:14px;
+  line-height:1.7;
+}
+
+.releaseDate{
+  margin:14px 0 0;
+  padding:8px 12px;
+  background:#f3eee8;
+  color:#72513b;
+  font-size:10px;
+  letter-spacing:.5px;
+}
+
+.priceRow{
+  margin:20px 0 22px;
+}
+
+.priceRow span{
+  font-size:14px;
+}
+
+.priceRow strong{
+  font-size:24px;
+}
+
+.optionLabel{
+  margin:18px 0 9px;
+  font-size:9px;
+  letter-spacing:2px;
+}
+
+.colorChoiceRow{
+  gap:8px;
+}
+
+.colorChoice{
+  padding:10px 14px;
+  background:#fff;
+  border-radius:999px;
+  font-size:11px;
+}
+
+.sizeRow{
+  gap:8px;
+}
+
+.sizeRow button{
+  width:44px;
+  height:40px;
+  border-radius:12px;
+  background:#fff;
+}
+
+.cartBtn{
+  margin-top:4px;
+  min-height:50px;
+  border-radius:999px;
+  background:#1d1714;
+  letter-spacing:.4px;
+}
+
+.viewProduct{
+  display:block;
+  margin-top:14px;
+  text-align:center;
+  color:#8b684f;
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:1.3px;
+  text-transform:uppercase;
+}
+
+.preorderNote{
+  margin-top:14px;
+  text-align:center;
+  font-size:11px;
+  line-height:1.6;
+}
+
+@media(max-width:600px){
+
+  .productCard{
+    border-radius:24px;
+  }
+
+  .productInfo{
+    padding:22px 20px 26px;
+  }
+
+  .productInfo h3{
+    font-size:27px;
+  }
+
+  .thumbRow{
+    padding:14px 18px 0;
+  }
+
+  .thumbRow button{
+    width:68px;
+    height:76px;
+  }
+}
