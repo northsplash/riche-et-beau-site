@@ -681,6 +681,53 @@ function CustomPage() {
   );
 }
 
+function AboutPage() {
+  return (
+    <Layout>
+      <section className="aboutSection">
+        <div className="aboutEditorial">
+          <div className="aboutVisual">
+            <img
+              src="/images/cream-set.png"
+              alt="Riche Et Beau luxury athleisure"
+            />
+          </div>
+
+          <div className="aboutContent">
+            <p className="sectionLabel left">
+              The House of Riche Et Beau
+            </p>
+
+            <h2>
+              Rich in confidence. Beautiful in movement.
+            </h2>
+
+            <p className="aboutLead">
+              Riche Et Beau means rich and beautiful.
+            </p>
+
+            <p>
+              The brand was created around the idea that comfort and luxury do
+              not have to compete. Every collection is designed to feel polished,
+              wearable, feminine, and confident.
+            </p>
+
+            <p>
+              From sculpted activewear to elevated lounge pieces and statement
+              collections, Riche Et Beau is designed for the woman who wants her
+              everyday wardrobe to feel intentional.
+            </p>
+
+            <blockquote>
+              Luxury should not only be seen. It should be felt.
+            </blockquote>
+          </div>
+        </div>
+      </section>
+    </Layout>
+  );
+}
+
 function HomePage() {
   return (
     <Layout>
