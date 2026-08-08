@@ -1087,14 +1087,29 @@ function ProductPage({ item }) {
     return;
   }
 
-  if (item.squareLink && item.squareLink !== "#") {
-    window.location.href = item.squareLink;
+  if (!item.squareLink || item.squareLink === "#") {
+    alert("Square checkout is not connected yet.");
     return;
   }
 
-  alert(
-    `Square checkout will be connected here for ${item.name} - ${selectedColor.name} - Size ${selectedSize}.`
+  const confirmed = window.confirm(
+    `Confirm your preorder:
+
+${item.name}
+Color: ${selectedColor.name}
+Size: ${selectedSize}
+Price: ${item.salePrice}
+
+Shipping begins January 1, 2027.
+
+Continue to secure Square checkout?`
   );
+
+  if (!confirmed) {
+    return;
+  }
+
+  window.location.href = item.squareLink;
 }
 
 return (
