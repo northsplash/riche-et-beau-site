@@ -123,14 +123,37 @@ const products = [
 
 function App() {
   const path = window.location.pathname;
+
   const productSlug = path.replace("/products/", "");
-  const product = products.find((item) => item.slug === productSlug);
+  const product = products.find(
+    (item) => item.slug === productSlug
+  );
 
- if (path.startsWith("/products/") && product) {
-  return <ProductPage item={product} />;
-}
+  if (path.startsWith("/products/") && product) {
+    return <ProductPage item={product} />;
+  }
 
-return <HomePage />;
+  if (path === "/vip") {
+    return <VipPage />;
+  }
+
+  if (path === "/custom") {
+    return <CustomPage />;
+  }
+
+  if (path === "/about") {
+    return <AboutPage />;
+  }
+
+  if (path === "/future-drops") {
+    return <FutureDropsPage />;
+  }
+
+  if (path === "/lookbook") {
+    return <LookbookPage />;
+  }
+
+  return <HomePage />;
 }
 function LuxuryNav() {
   const [menuOpen, setMenuOpen] = React.useState(false);
