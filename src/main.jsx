@@ -153,9 +153,6 @@ function App() {
     return <LookbookPage />;
   }
   
-  if (path === "/custom") {
-  return <CustomPage />;
-}
   return <HomePage />;
 }
 function LuxuryNav() {
