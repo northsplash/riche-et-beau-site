@@ -4901,3 +4901,299 @@ textarea:focus{
     transform:scale(1.06);
   }
 }
+
+/* =========================================================
+   SIGNATURE SETS - EDITORIAL POLISH
+========================================================= */
+
+.brandSection{
+  position:relative;
+  overflow:hidden;
+
+  padding:110px 7% 120px;
+
+  background:
+    radial-gradient(
+      circle at top center,
+      rgba(255,255,255,.65),
+      transparent 34%
+    ),
+    #f6f1eb;
+}
+
+.brandSection .sectionHeading{
+  max-width:860px;
+  margin:0 auto 58px;
+  text-align:center;
+}
+
+.brandSection .sectionLabel{
+  margin-bottom:14px;
+  color:#a77b4f;
+}
+
+.brandSection .sectionTitle{
+  margin:0;
+
+  font-family:'Playfair Display',Georgia,serif;
+  font-size:58px;
+  line-height:1.03;
+  font-weight:500;
+  letter-spacing:-1.3px;
+
+  color:#241d19;
+}
+
+.brandSection .sectionIntro{
+  max-width:650px;
+  margin:26px auto 0;
+
+  color:#75675f;
+  font-size:14px;
+  line-height:1.8;
+}
+
+/* collection cards */
+
+.collectionStoryGrid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:22px;
+
+  max-width:1250px;
+  margin:0 auto;
+}
+
+.collectionStoryCard{
+  position:relative;
+
+  min-height:360px;
+
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+
+  padding:34px;
+
+  overflow:hidden;
+
+  border-radius:28px;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,.88),
+      rgba(246,240,234,.96)
+    );
+
+  border:1px solid rgba(36,29,25,.08);
+
+  box-shadow:
+    0 20px 55px rgba(36,29,25,.07);
+
+  transition:
+    transform .35s ease,
+    box-shadow .35s ease,
+    border-color .35s ease;
+}
+
+.collectionStoryCard:hover{
+  transform:translateY(-8px);
+
+  border-color:rgba(167,123,79,.25);
+
+  box-shadow:
+    0 30px 70px rgba(36,29,25,.12);
+}
+
+/* decorative oversized number */
+
+.collectionStoryCard::before{
+  position:absolute;
+  top:18px;
+  right:24px;
+
+  font-family:'Playfair Display',Georgia,serif;
+  font-size:92px;
+  line-height:1;
+  color:rgba(36,29,25,.045);
+}
+
+.collectionStoryCard:nth-child(1)::before{
+  content:"01";
+}
+
+.collectionStoryCard:nth-child(2)::before{
+  content:"02";
+}
+
+.collectionStoryCard:nth-child(3)::before{
+  content:"03";
+}
+
+/* top mood label */
+
+.collectionStoryCard > span{
+  position:absolute;
+  top:28px;
+  left:32px;
+
+  color:#a77b4f;
+
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:2.4px;
+  text-transform:uppercase;
+}
+
+.collectionStoryCard h3{
+  position:relative;
+  z-index:2;
+
+  margin:0 0 14px;
+
+  font-family:'Playfair Display',Georgia,serif;
+  font-size:31px;
+  line-height:1.08;
+  font-weight:500;
+
+  color:#241d19;
+}
+
+.collectionStoryCard p{
+  position:relative;
+  z-index:2;
+
+  margin:0 0 24px;
+
+  color:#74675f;
+  font-size:13px;
+  line-height:1.75;
+}
+
+.collectionStoryCard a{
+  position:relative;
+  z-index:2;
+
+  display:inline-flex;
+  align-items:center;
+  gap:9px;
+
+  width:max-content;
+
+  color:#241d19;
+
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:1.8px;
+  text-transform:uppercase;
+
+  transition:
+    color .25s ease,
+    transform .25s ease;
+}
+
+.collectionStoryCard a::after{
+  content:"→";
+
+  color:#a77b4f;
+  font-size:16px;
+
+  transition:transform .25s ease;
+}
+
+.collectionStoryCard:hover a{
+  color:#a77b4f;
+}
+
+.collectionStoryCard:hover a::after{
+  transform:translateX(5px);
+}
+
+/* subtle individual character */
+
+.collectionStoryCard:nth-child(1){
+  background:
+    linear-gradient(
+      160deg,
+      rgba(255,255,255,.94),
+      rgba(239,230,220,.92)
+    );
+}
+
+.collectionStoryCard:nth-child(2){
+  background:
+    linear-gradient(
+      160deg,
+      rgba(255,255,255,.94),
+      rgba(235,228,219,.92)
+    );
+}
+
+.collectionStoryCard:nth-child(3){
+  background:
+    linear-gradient(
+      160deg,
+      rgba(255,255,255,.94),
+      rgba(231,222,213,.92)
+    );
+}
+
+/* mobile */
+
+@media(max-width:900px){
+
+  .brandSection{
+    padding:90px 5%;
+  }
+
+  .brandSection .sectionTitle{
+    font-size:48px;
+  }
+
+  .collectionStoryGrid{
+    grid-template-columns:1fr;
+    max-width:720px;
+  }
+
+  .collectionStoryCard{
+    min-height:290px;
+  }
+}
+
+@media(max-width:600px){
+
+  .brandSection{
+    padding:72px 18px 80px;
+  }
+
+  .brandSection .sectionTitle{
+    font-size:39px;
+    letter-spacing:-.7px;
+  }
+
+  .brandSection .sectionIntro{
+    font-size:14px;
+  }
+
+  .collectionStoryCard{
+    min-height:260px;
+    padding:28px 24px;
+    border-radius:22px;
+  }
+
+  .collectionStoryCard > span{
+    top:24px;
+    left:24px;
+  }
+
+  .collectionStoryCard h3{
+    font-size:27px;
+  }
+
+  .collectionStoryCard::before{
+    font-size:72px;
+    top:18px;
+    right:20px;
+  }
+}
