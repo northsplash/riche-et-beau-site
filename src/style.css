@@ -7989,3 +7989,503 @@ textarea:focus{
   }
 }
 
+/* =========================================================
+   WAITLIST SECTION - PRIVATE LIST POLISH
+========================================================= */
+
+.waitlistSection{
+  position:relative;
+  overflow:hidden;
+
+  padding:110px 7% 120px;
+
+  background:
+    radial-gradient(
+      circle at top center,
+      rgba(199,161,120,.14),
+      transparent 30%
+    ),
+    linear-gradient(
+      135deg,
+      #211a16,
+      #35271f
+    );
+
+  color:white;
+}
+
+.waitlistEditorial{
+  position:relative;
+  z-index:2;
+
+  max-width:980px;
+  margin:0 auto;
+
+  text-align:center;
+}
+
+.waitlistCopy{
+  max-width:700px;
+  margin:0 auto 34px;
+}
+
+.waitlistCopy .sectionLabel{
+  margin-bottom:14px;
+  color:#d0a77d;
+}
+
+.waitlistCopy h2{
+  margin:0 0 18px;
+
+  font-family:'Playfair Display',Georgia,serif;
+  font-size:54px;
+  line-height:1.05;
+  font-weight:500;
+  letter-spacing:-1px;
+
+  color:#fff;
+}
+
+.waitlistCopy > p{
+  margin:0;
+
+  color:#d8cec7;
+  font-size:14px;
+  line-height:1.8;
+}
+
+/* FORM */
+
+.waitlistForm{
+  display:flex;
+  gap:10px;
+
+  max-width:680px;
+  margin:0 auto;
+
+  padding:8px;
+
+  border-radius:999px;
+
+  background:rgba(255,255,255,.09);
+
+  border:1px solid rgba(255,255,255,.12);
+
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+}
+
+.waitlistForm input{
+  flex:1;
+
+  min-height:52px;
+
+  padding:0 20px;
+
+  border:none;
+  border-radius:999px;
+
+  background:rgba(255,255,255,.95);
+
+  color:#241d19;
+
+  font-size:14px;
+}
+
+.waitlistForm input:focus{
+  outline:none;
+
+  box-shadow:
+    0 0 0 3px rgba(199,161,120,.22);
+}
+
+.waitlistForm button{
+  flex:0 0 auto;
+
+  min-height:52px;
+
+  padding:0 28px;
+
+  border:none;
+  border-radius:999px;
+
+  background:#c7a178;
+  color:#211a16;
+
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:.8px;
+
+  cursor:pointer;
+
+  transition:
+    transform .25s ease,
+    background .25s ease;
+}
+
+.waitlistForm button:hover{
+  transform:translateY(-2px);
+  background:#d8b58b;
+}
+
+.phoneText{
+  margin:22px 0 0;
+
+  color:#bfb3ab;
+  font-size:11px;
+}
+
+/* subtle glow */
+
+.waitlistSection::before{
+  content:"";
+
+  position:absolute;
+  width:420px;
+  height:420px;
+
+  top:-160px;
+  left:50%;
+
+  transform:translateX(-50%);
+
+  border-radius:50%;
+
+  background:rgba(199,161,120,.10);
+
+  filter:blur(70px);
+
+  pointer-events:none;
+}
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+  .waitlistSection{
+    padding:75px 18px 85px;
+  }
+
+  .waitlistCopy h2{
+    font-size:39px;
+  }
+
+  .waitlistForm{
+    flex-direction:column;
+
+    padding:10px;
+
+    border-radius:24px;
+  }
+
+  .waitlistForm input,
+  .waitlistForm button{
+    width:100%;
+    border-radius:16px;
+  }
+}
+
+/* =========================================================
+   LUXURY FOOTER
+========================================================= */
+
+.luxuryFooter{
+  position:relative;
+  overflow:hidden;
+
+  padding:85px 7% 30px;
+
+  background:
+    radial-gradient(
+      circle at 15% 0%,
+      rgba(199,161,120,.12),
+      transparent 28%
+    ),
+    linear-gradient(
+      135deg,
+      #171311,
+      #241b17
+    );
+
+  color:#fff;
+}
+
+.footerTop{
+  display:grid;
+  grid-template-columns:1.4fr repeat(3,1fr);
+  gap:55px;
+
+  max-width:1280px;
+  margin:0 auto;
+}
+
+.footerBrand h3{
+  margin:0 0 12px;
+
+  font-family:'Playfair Display',Georgia,serif;
+  font-size:30px;
+  font-weight:500;
+  letter-spacing:4px;
+
+  color:#fff;
+}
+
+.footerTagline{
+  margin:0 0 16px;
+
+  color:#c7a178;
+
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:2.5px;
+  text-transform:uppercase;
+}
+
+.footerStatement{
+  max-width:320px;
+
+  margin:0 0 24px;
+
+  color:#c8bdb6;
+  font-size:13px;
+  line-height:1.75;
+}
+
+.footerPhone{
+  display:inline-block;
+
+  color:#fff;
+
+  font-family:'Playfair Display',Georgia,serif;
+  font-size:20px;
+
+  transition:color .25s ease;
+}
+
+.footerPhone:hover{
+  color:#c7a178;
+}
+
+/* COLUMNS */
+
+.footerColumn{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+
+.footerHeading{
+  margin:0 0 8px;
+
+  color:#c7a178;
+
+  font-size:9px;
+  font-weight:800;
+  letter-spacing:2.3px;
+  text-transform:uppercase;
+}
+
+.footerColumn a{
+  width:max-content;
+
+  color:#d8cec7;
+
+  font-size:12px;
+
+  transition:
+    color .25s ease,
+    transform .25s ease;
+}
+
+.footerColumn a:hover{
+  color:#fff;
+  transform:translateX(4px);
+}
+
+/* BOTTOM */
+
+.footerBottom{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:30px;
+
+  max-width:1280px;
+  margin:60px auto 0;
+
+  padding-top:24px;
+
+  border-top:1px solid rgba(255,255,255,.09);
+}
+
+.footerBottom > p{
+  margin:0;
+
+  color:#92877f;
+  font-size:10px;
+}
+
+.footerBottomLinks{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:flex-end;
+  gap:16px;
+}
+
+.footerBottomLinks span{
+  color:#a99d95;
+
+  font-size:9px;
+  letter-spacing:.7px;
+}
+
+/* subtle top line */
+
+.luxuryFooter::before{
+  content:"";
+
+  position:absolute;
+  top:0;
+  left:10%;
+  right:10%;
+
+  height:1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(199,161,120,.55),
+      transparent
+    );
+}
+
+/* TABLET */
+
+@media(max-width:900px){
+
+  .footerTop{
+    grid-template-columns:1fr 1fr;
+    gap:45px;
+  }
+}
+
+/* MOBILE */
+
+@media(max-width:600px){
+
+  .luxuryFooter{
+    padding:65px 22px 25px;
+  }
+
+  .footerTop{
+    grid-template-columns:1fr;
+    gap:36px;
+  }
+
+  .footerBrand h3{
+    font-size:27px;
+  }
+
+  .footerBottom{
+    flex-direction:column;
+    align-items:flex-start;
+
+    margin-top:45px;
+  }
+
+  .footerBottomLinks{
+    justify-content:flex-start;
+  }
+}
+
+/* =========================================================
+   GLOBAL HOMEPAGE FLOW
+========================================================= */
+
+.homeVipTeaser,
+.homeCustomTeaser,
+.homeAboutTeaser,
+.homeFutureTeaser,
+.homeLookbookTeaser,
+.homeContactTeaser{
+  margin-top:80px;
+  margin-bottom:80px;
+}
+
+.collectionSection,
+.detailsSection,
+.reviewsSection,
+.brandSection,
+.waitlistSection{
+  scroll-margin-top:110px;
+}
+
+/* keep section transitions tight and intentional */
+
+.collectionSection + .trustBadges{
+  margin-top:-20px;
+}
+
+.trustBadges + .detailsSection{
+  margin-top:0;
+}
+
+.detailsSection + .reviewsSection{
+  margin-top:0;
+}
+
+.reviewsSection + .homeFutureTeaser{
+  margin-top:75px;
+}
+
+.brandSection + .homeVipTeaser{
+  margin-top:75px;
+}
+
+.homeVipTeaser + .homeCustomTeaser,
+.homeCustomTeaser + .homeAboutTeaser,
+.homeAboutTeaser + .homeLookbookTeaser{
+  margin-top:55px;
+}
+
+.homeLookbookTeaser + .waitlistSection{
+  margin-top:90px;
+}
+
+/* remove accidental giant empty areas */
+
+section{
+  box-sizing:border-box;
+}
+
+.homeVipTeaser,
+.homeCustomTeaser,
+.homeAboutTeaser,
+.homeFutureTeaser,
+.homeLookbookTeaser,
+.homeContactTeaser{
+  width:calc(100% - 36px);
+}
+
+/* MOBILE FLOW */
+
+@media(max-width:700px){
+
+  .homeVipTeaser,
+  .homeCustomTeaser,
+  .homeAboutTeaser,
+  .homeFutureTeaser,
+  .homeLookbookTeaser,
+  .homeContactTeaser{
+    margin-top:48px;
+    margin-bottom:48px;
+  }
+
+  .reviewsSection + .homeFutureTeaser,
+  .brandSection + .homeVipTeaser,
+  .homeLookbookTeaser + .waitlistSection{
+    margin-top:50px;
+  }
+}
+
