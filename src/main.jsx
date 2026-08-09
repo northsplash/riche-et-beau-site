@@ -728,6 +728,28 @@ function AboutPage() {
   );
 }
 
+function FutureDropsPage() {
+  return (
+    <Layout>
+     <section className="homeFutureTeaser">
+  <p className="sectionLabel">Future Drops</p>
+
+  <h2>
+    You help decide what comes next.
+  </h2>
+
+  <p>
+    Vote on future colorways and help shape the next Riche Et Beau release.
+  </p>
+
+  <a href="/future-drops" className="primaryBtn">
+    Explore Future Drops
+  </a>
+</section>
+    </Layout>
+  );
+}
+
 function HomePage() {
   return (
     <Layout>
