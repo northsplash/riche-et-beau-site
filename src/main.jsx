@@ -310,8 +310,9 @@ function Layout({ children }) {
 
       {children}
 
-     <footer className="footer luxuryFooter">
+    <footer className="footer luxuryFooter">
   <div className="footerTop">
+
     <div className="footerBrand">
       <h3>RICHE ET BEAU</h3>
 
@@ -331,29 +332,67 @@ function Layout({ children }) {
     <div className="footerColumn">
       <p className="footerHeading">Shop</p>
 
-      <a href="/#collection">The Première Collection</a>
-      <a href="/products/sports-set">Élan Sculpt Set</a>
-      <a href="/products/hoodie-set">Serein Lounge Set</a>
-      <a href="/products/leather-set">Noir Luxe Leather Set</a>
+      <a href="/#collection">
+        The Première Collection
+      </a>
+
+      <a href="/products/sports-set">
+        Élan Sculpt Set
+      </a>
+
+      <a href="/products/hoodie-set">
+        Serein Lounge Set
+      </a>
+
+      <a href="/products/leather-set">
+        Noir Luxe Leather Set
+      </a>
     </div>
 
     <div className="footerColumn">
-      <p className="footerHeading">Customer Care</p>
+      <p className="footerHeading">
+        Explore
+      </p>
 
-      <a href="/contact">Contact</a>
-      <a href="/custom">Custom Requests</a>
-      <a href="/#waitlist">VIP List</a>
-      <a href="/#collection">Size Guide</a>
+      <a href="/vip">
+        VIP Club
+      </a>
+
+      <a href="/future-drops">
+        Future Drops
+      </a>
+
+      <a href="/lookbook">
+        Lookbook
+      </a>
+
+      <a href="/custom">
+        Custom Requests
+      </a>
     </div>
 
     <div className="footerColumn">
-      <p className="footerHeading">Company</p>
+      <p className="footerHeading">
+        Company
+      </p>
 
-      <a href="/about">About Riche Et Beau</a>
-      <a href="/vip">VIP Club</a>
-      <a href="/#collections">Collections</a>
-      <a href="/#waitlist">Future Drops</a>
+      <a href="/about">
+        About Riche Et Beau
+      </a>
+
+      <a href="/contact">
+        Customer Care
+      </a>
+
+      <a href="/#waitlist">
+        Private List
+      </a>
+
+      <a href="/#collection">
+        Size Guide
+      </a>
     </div>
+
   </div>
 
   <div className="footerBottom">
@@ -362,7 +401,7 @@ function Layout({ children }) {
     </p>
 
     <div className="footerBottomLinks">
-      <span>Secure Square Checkout</span>
+      <span>Secure Checkout</span>
       <span>Founder’s Preorder</span>
       <span>Shipping January 1, 2027</span>
     </div>
