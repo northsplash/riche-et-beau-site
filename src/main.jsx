@@ -956,12 +956,21 @@ function HomePage() {
   </div>
 
   <div className="productGrid">
-    {products.map((item) => (
-      <ProductCard key={item.slug} item={item} />
-    ))}
-  </div>
-</section>
-
+  {products.map((item, index) => (
+    <motion.div
+      key={item.slug}
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.15 }}
+      transition={{
+        duration: 0.6,
+        delay: index * 0.12,
+      }}
+    >
+      <ProductCard item={item} />
+    </motion.div>
+  ))}
+</div>
 <section className="trustBadges">
   <div className="trustBadge">
     <span className="trustNumber">01</span>
