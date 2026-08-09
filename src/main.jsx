@@ -1691,14 +1691,13 @@ function RelatedProducts({ currentSlug }) {
 
   return (
     <section className="relatedSection">
+
       <div className="relatedHeader">
         <p className="sectionLabel">
           Complete The Wardrobe
         </p>
 
-        <h2>
-          You May Also Like
-        </h2>
+        <h2>You May Also Like</h2>
       </div>
 
       <div className="relatedGrid">
@@ -1718,17 +1717,14 @@ function RelatedProducts({ currentSlug }) {
             <div className="relatedInfo">
               <p>{item.name}</p>
 
-              <strong>
-                {item.salePrice}
-              </strong>
+              <strong>{item.salePrice}</strong>
 
-              <span>
-                View Collection
-              </span>
+              <span>View Collection</span>
             </div>
           </a>
         ))}
       </div>
+
     </section>
   );
 }
