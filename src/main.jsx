@@ -761,6 +761,7 @@ function LookbookPage() {
     </Layout>
   );
 }
+
 function ContactPage() {
   return (
     <Layout>
@@ -830,6 +831,102 @@ function RevealSection({ children, className = "" }) {
   );
 }
 
+function HomePage() {
+  return (
+    <Layout>
+      <section className="hero">
+        <div className="heroSlide heroCream"></div>
+        <div className="heroSlide heroBlack"></div>
+        <div className="heroSlide heroChocolate"></div>
+
+        <motion.div
+          className="heroContent"
+          initial={{ opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
+        >
+          <p className="eyebrow">The Première Collection</p>
+
+          <h2>The Première Collection.</h2>
+
+          <p>
+            Introducing the debut collection from Riche Et Beau, featuring the
+            Élan Sculpt Set, Serein Lounge Set, and Noir Luxe Leather Set.
+            Designed for women who want confidence, comfort, and luxury in
+            every moment.
+          </p>
+
+          <div className="heroButtons">
+            <a href="#collection" className="primaryBtn">
+              Preorder Now
+            </a>
+
+            <a href="#waitlist" className="secondaryBtn">
+              Join Waitlist
+            </a>
+          </div>
+        </motion.div>
+      </section>
+
+      <section className="preorderBanner">
+        <div className="preorderInner">
+          <div>
+            <span className="preorderKicker">
+              Founder’s Preorder
+            </span>
+
+            <h3>
+              The Première Collection is now open.
+            </h3>
+
+            <p>
+              Reserve your favorite set today. Shipping begins January 1, 2027.
+            </p>
+          </div>
+
+          <a href="#collection" className="preorderLink">
+            Shop The Collection
+          </a>
+        </div>
+      </section>
+
+      <Countdown />
+
+      <RevealSection>
+        <section id="collection" className="collectionSection">
+          <div className="sectionHeading">
+            <p className="sectionLabel">
+              The Debut Collection
+            </p>
+
+            <h2 className="sectionTitle">
+              The Première Collection
+            </h2>
+
+            <p className="sectionIntro">
+              Three signature sets. Three elevated moods. Designed to move from
+              everyday comfort to unforgettable moments.
+            </p>
+          </div>
+
+          <div className="productGrid">
+            {products.map((item, index) => (
+              <motion.div
+                key={item.slug}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.15 }}
+                transition={{
+                  duration: 0.6,
+                  delay: index * 0.12,
+                }}
+              >
+                <ProductCard item={item} />
+              </motion.div>
+            ))}
+          </div>
+        </section>
+      </RevealSection>
 function HomePage() {
   return (
     <Layout>
