@@ -753,7 +753,38 @@ function FutureDropsPage() {
 function LookbookPage() {
   return (
     <Layout>
-      <Lookbook />
+      <section className="homeLookbookTeaser">
+  <div className="homeLookbookCopy">
+    <p className="sectionLabel left">
+      The Lookbook
+    </p>
+
+    <h2>
+      Styled in the world of Riche Et Beau.
+    </h2>
+
+    <p>
+      Explore the silhouettes, textures, and signature neutral tones
+      defining the Première Collection.
+    </p>
+
+    <a href="/lookbook" className="primaryBtn">
+      View The Lookbook
+    </a>
+  </div>
+
+  <div className="homeLookbookImages">
+    <img
+      src="/images/elan-cream-1.png"
+      alt="Élan Sculpt Set"
+    />
+
+    <img
+      src="/images/serein-chocolate-1.png"
+      alt="Serein Lounge Set"
+    />
+  </div>
+</section>
     </Layout>
   );
 }
