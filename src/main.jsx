@@ -258,7 +258,7 @@ function LuxuryNav() {
           </a>
 
           <a
-            href="/#vip"
+            href="/vip"
             onClick={closeMenu}
           >
             <span>03</span>
@@ -266,7 +266,7 @@ function LuxuryNav() {
           </a>
 
           <a
-            href="/#custom"
+            href="/custom"
             onClick={closeMenu}
           >
             <span>04</span>
@@ -274,7 +274,7 @@ function LuxuryNav() {
           </a>
 
           <a
-            href="/#about"
+            href="/about"
             onClick={closeMenu}
           >
             <span>05</span>
@@ -282,7 +282,7 @@ function LuxuryNav() {
           </a>
 
           <a
-            href="/#contact"
+            href="/contact"
             onClick={closeMenu}
           >
             <span>06</span>
@@ -340,8 +340,8 @@ function Layout({ children }) {
     <div className="footerColumn">
       <p className="footerHeading">Customer Care</p>
 
-      <a href="/#contact">Contact</a>
-      <a href="/#custom">Custom Requests</a>
+      <a href="/contact">Contact</a>
+      <a href="/custom">Custom Requests</a>
       <a href="/#waitlist">VIP List</a>
       <a href="/#collection">Size Guide</a>
     </div>
@@ -349,8 +349,8 @@ function Layout({ children }) {
     <div className="footerColumn">
       <p className="footerHeading">Company</p>
 
-      <a href="/#about">About Riche Et Beau</a>
-      <a href="/#vip">VIP Club</a>
+      <a href="/about">About Riche Et Beau</a>
+      <a href="/vip">VIP Club</a>
       <a href="/#collections">Collections</a>
       <a href="/#waitlist">Future Drops</a>
     </div>
