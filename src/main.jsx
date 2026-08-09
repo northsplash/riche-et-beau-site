@@ -1145,38 +1145,26 @@ function HomePage() {
   </div>
 </section>
 
-<section id="contact" className="contactSection">
-  <div className="contactEditorial">
-    <div className="contactCopy">
-      <p className="sectionLabel left">Customer Care</p>
+<section className="homeContactTeaser">
+  <p className="sectionLabel">
+    Customer Care
+  </p>
 
-      <h2>Questions before your preorder?</h2>
+  <h2>
+    Need help before your preorder?
+  </h2>
 
-      <p>
-        We can help with sizing, color selection, preorder timing,
-        and general product questions.
-      </p>
+  <p>
+    Sizing, color selection, preorder questions, and product support are
+    just a click away.
+  </p>
 
-      <a className="contactPhone" href={`tel:${phone}`}>
-        {phone}
-      </a>
-    </div>
-
-    <div className="contactCard">
-      <span>Riche Et Beau Support</span>
-
-      <h3>We’re here to help.</h3>
-
-      <p>
-        Reach out before ordering and we’ll help you choose the best fit,
-        color, and collection.
-      </p>
-
-      <a className="secondaryBtn" href={`tel:${phone}`}>
-        Call Customer Care
-      </a>
-    </div>
-  </div>
+  <a
+    href="/contact"
+    className="primaryBtn"
+  >
+    Visit Customer Care
+  </a>
 </section>
     </Layout>
   );
