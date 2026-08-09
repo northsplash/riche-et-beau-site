@@ -6604,3 +6604,273 @@ textarea:focus{
   }
 }
 
+/* =========================================================
+   COMPLETE THE WARDROBE - LUXURY RELATED PRODUCTS
+========================================================= */
+
+.relatedSection{
+  position:relative;
+  padding:110px 7% 125px;
+  background:#f7f3ee;
+  overflow:hidden;
+}
+
+/* HEADER */
+
+.relatedHeader{
+  max-width:760px;
+  margin:0 auto 55px;
+  text-align:center;
+}
+
+.relatedHeader .sectionLabel{
+  margin:0 0 12px;
+
+  color:#a77b4f;
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:3px;
+  text-transform:uppercase;
+}
+
+.relatedHeader h2{
+  margin:0;
+
+  font-family:'Playfair Display', Georgia, serif;
+  font-size:52px;
+  line-height:1.05;
+  font-weight:500;
+  letter-spacing:-1px;
+
+  color:#241d19;
+}
+
+/* PRODUCT GRID */
+
+.relatedGrid{
+  display:grid;
+  grid-template-columns:repeat(2, minmax(0, 1fr));
+  gap:26px;
+
+  max-width:1050px;
+  margin:0 auto;
+}
+
+/* CARD */
+
+.relatedCard{
+  position:relative;
+  display:block;
+
+  overflow:hidden;
+  border-radius:28px;
+
+  background:#fff;
+  color:#241d19;
+  text-decoration:none;
+
+  border:1px solid rgba(36,29,25,.07);
+
+  box-shadow:
+    0 20px 55px rgba(36,29,25,.08);
+
+  transition:
+    transform .35s ease,
+    box-shadow .35s ease;
+}
+
+.relatedCard:hover{
+  transform:translateY(-7px);
+
+  box-shadow:
+    0 32px 75px rgba(36,29,25,.14);
+}
+
+/* IMAGE */
+
+.relatedImage{
+  position:relative;
+  height:470px;
+
+  overflow:hidden;
+  background:#e9e1d9;
+}
+
+.relatedImage::after{
+  content:"";
+
+  position:absolute;
+  inset:0;
+
+  background:
+    linear-gradient(
+      180deg,
+      transparent 65%,
+      rgba(30,23,19,.12)
+    );
+
+  pointer-events:none;
+}
+
+.relatedImage img{
+  width:100%;
+  height:100%;
+  display:block;
+
+  object-fit:cover;
+  object-position:center;
+
+  transition:transform .65s ease;
+}
+
+.relatedCard:hover .relatedImage img{
+  transform:scale(1.035);
+}
+
+/* SMALL COLLECTION LABEL */
+
+.relatedImage::before{
+  content:"THE PREMIÈRE COLLECTION";
+
+  position:absolute;
+  z-index:2;
+
+  top:20px;
+  left:20px;
+
+  padding:9px 13px;
+
+  border-radius:999px;
+
+  background:rgba(248,245,240,.88);
+  backdrop-filter:blur(8px);
+
+  color:#5c493d;
+
+  font-size:8px;
+  font-weight:800;
+  letter-spacing:1.6px;
+
+  pointer-events:none;
+}
+
+/* PRODUCT INFORMATION */
+
+.relatedInfo{
+  position:relative;
+  padding:25px 27px 28px;
+}
+
+.relatedInfo p{
+  margin:0 0 10px;
+
+  font-family:'Playfair Display', Georgia, serif;
+  font-size:27px;
+  line-height:1.1;
+  font-weight:500;
+
+  color:#241d19;
+}
+
+.relatedInfo strong{
+  display:block;
+
+  margin-bottom:22px;
+
+  color:#9a704b;
+
+  font-family:'Playfair Display', Georgia, serif;
+  font-size:20px;
+  font-weight:500;
+}
+
+/* VIEW COLLECTION CTA */
+
+.relatedInfo span{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+
+  padding-top:18px;
+
+  border-top:1px solid rgba(36,29,25,.09);
+
+  color:#4b3c34;
+
+  font-size:9px;
+  font-weight:800;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+.relatedInfo span::after{
+  content:"→";
+
+  color:#a77b4f;
+  font-size:18px;
+
+  transition:transform .25s ease;
+}
+
+.relatedCard:hover .relatedInfo span::after{
+  transform:translateX(6px);
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media(max-width:800px){
+
+  .relatedSection{
+    padding:85px 5% 95px;
+  }
+
+  .relatedHeader h2{
+    font-size:44px;
+  }
+
+  .relatedImage{
+    height:400px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:600px){
+
+  .relatedSection{
+    padding:70px 18px 80px;
+  }
+
+  .relatedHeader{
+    margin-bottom:36px;
+  }
+
+  .relatedHeader h2{
+    font-size:37px;
+  }
+
+  .relatedGrid{
+    grid-template-columns:1fr;
+    gap:22px;
+  }
+
+  .relatedCard{
+    border-radius:23px;
+  }
+
+  .relatedImage{
+    height:430px;
+  }
+
+  .relatedInfo{
+    padding:22px;
+  }
+
+  .relatedInfo p{
+    font-size:25px;
+  }
+}
