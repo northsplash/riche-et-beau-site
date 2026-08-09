@@ -750,6 +750,14 @@ function FutureDropsPage() {
   );
 }
 
+function LookbookPage() {
+  return (
+    <Layout>
+      <Lookbook />
+    </Layout>
+  );
+}
+
 function HomePage() {
   return (
     <Layout>
