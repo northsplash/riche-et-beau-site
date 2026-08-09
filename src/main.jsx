@@ -149,16 +149,14 @@ function App() {
     return <FutureDropsPage />;
   }
 
-if (path === "/contact") {
-  return <ContactPage />;
-}
-  
   if (path === "/lookbook") {
     return <LookbookPage />;
   }
-  if (path === "/about") {
-  return <AboutPage />;
-}
+
+  if (path === "/contact") {
+    return <ContactPage />;
+  }
+
   return <HomePage />;
 }
 function LuxuryNav() {
@@ -200,16 +198,16 @@ function LuxuryNav() {
           </p>
         </a>
 
-     <div className="desktopNavLinks">
-  <a href="/#collection">Shop</a>
-  <a href="/#collections">Collections</a>
-  <a href="/vip">VIP Club</a>
-  <a href="/custom">Custom Requests</a>
-  <a href="/about">About</a>
-  <a href="/future-drops">Future Drops</a>
-  <a href="/lookbook">Lookbook</a>
-  <a href="/contact">Contact</a>
-</div>
+        <div className="desktopNavLinks">
+          <a href="/#collection">Shop</a>
+          <a href="/#collections">Collections</a>
+          <a href="/vip">VIP Club</a>
+          <a href="/custom">Custom Requests</a>
+          <a href="/about">About</a>
+          <a href="/future-drops">Future Drops</a>
+          <a href="/lookbook">Lookbook</a>
+          <a href="/contact">Contact</a>
+        </div>
 
         <button
           className={
@@ -240,45 +238,46 @@ function LuxuryNav() {
           <p className="mobileMenuLabel">
             Explore Riche Et Beau
           </p>
-<a href="/#collection" onClick={closeMenu}>
-  <span>01</span>
-  Shop
-</a>
 
-<a href="/#collections" onClick={closeMenu}>
-  <span>02</span>
-  Collections
-</a>
+          <a href="/#collection" onClick={closeMenu}>
+            <span>01</span>
+            Shop
+          </a>
 
-<a href="/vip" onClick={closeMenu}>
-  <span>03</span>
-  VIP Club
-</a>
+          <a href="/#collections" onClick={closeMenu}>
+            <span>02</span>
+            Collections
+          </a>
 
-<a href="/custom" onClick={closeMenu}>
-  <span>04</span>
-  Custom Requests
-</a>
+          <a href="/vip" onClick={closeMenu}>
+            <span>03</span>
+            VIP Club
+          </a>
 
-<a href="/about" onClick={closeMenu}>
-  <span>05</span>
-  About
-</a>
+          <a href="/custom" onClick={closeMenu}>
+            <span>04</span>
+            Custom Requests
+          </a>
 
-<a href="/future-drops" onClick={closeMenu}>
-  <span>06</span>
-  Future Drops
-</a>
+          <a href="/about" onClick={closeMenu}>
+            <span>05</span>
+            About
+          </a>
 
-<a href="/lookbook" onClick={closeMenu}>
-  <span>07</span>
-  Lookbook
-</a>
+          <a href="/future-drops" onClick={closeMenu}>
+            <span>06</span>
+            Future Drops
+          </a>
 
-<a href="/contact" onClick={closeMenu}>
-  <span>08</span>
-  Customer Care
-</a>
+          <a href="/lookbook" onClick={closeMenu}>
+            <span>07</span>
+            Lookbook
+          </a>
+
+          <a href="/contact" onClick={closeMenu}>
+            <span>08</span>
+            Customer Care
+          </a>
 
           <div className="mobileMenuFooter">
             <p>Questions?</p>
