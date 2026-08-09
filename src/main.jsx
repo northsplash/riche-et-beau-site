@@ -200,31 +200,16 @@ function LuxuryNav() {
           </p>
         </a>
 
-        <div className="desktopNavLinks">
-          <a href="/#collection">
-            Shop
-          </a>
-
-          <a href="/#collections">
-            Collections
-          </a>
-
-          <a href="/#vip">
-            VIP Club
-          </a>
-
-          <a href="/#custom">
-            Custom Requests
-          </a>
-
-          <a href="/#about">
-            About
-          </a>
-
-          <a href="/#contact">
-            Contact
-          </a>
-        </div>
+     <div className="desktopNavLinks">
+  <a href="/#collection">Shop</a>
+  <a href="/#collections">Collections</a>
+  <a href="/vip">VIP Club</a>
+  <a href="/custom">Custom Requests</a>
+  <a href="/about">About</a>
+  <a href="/future-drops">Future Drops</a>
+  <a href="/lookbook">Lookbook</a>
+  <a href="/contact">Contact</a>
+</div>
 
         <button
           className={
