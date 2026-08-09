@@ -7035,3 +7035,957 @@ textarea:focus{
     height:30px;
   }
 }
+
+/* =========================================================
+   COMPLETE LOOK / BRAND STANDARD POLISH
+========================================================= */
+
+.completeLookSection{
+  position:relative;
+  overflow:hidden;
+
+  padding:110px 7% 120px;
+
+  background:
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(255,255,255,.55),
+      transparent 32%
+    ),
+    #f4eee8;
+
+  text-align:center;
+}
+
+.completeLookSection .sectionLabel{
+  margin-bottom:14px;
+  color:#a77b4f;
+}
+
+.completeLookSection h2{
+  max-width:720px;
+  margin:0 auto 50px;
+
+  font-family:'Playfair Display',Georgia,serif;
+  font-size:52px;
+  line-height:1.05;
+  font-weight:500;
+  letter-spacing:-1px;
+
+  color:#241d19;
+}
+
+.completeLookGrid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:22px;
+
+  max-width:1180px;
+  margin:0 auto;
+}
+
+.completeLookGrid article{
+  position:relative;
+
+  min-height:260px;
+
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+
+  padding:30px 28px;
+
+  overflow:hidden;
+
+  border-radius:26px;
+
+  background:
+    linear-gradient(
+      160deg,
+      rgba(255,255,255,.92),
+      rgba(239,231,223,.94)
+    );
+
+  border:1px solid rgba(36,29,25,.08);
+
+  box-shadow:
+    0 18px 48px rgba(36,29,25,.07);
+
+  text-align:left;
+
+  transition:
+    transform .3s ease,
+    box-shadow .3s ease,
+    border-color .3s ease;
+}
+
+.completeLookGrid article:hover{
+  transform:translateY(-6px);
+
+  border-color:rgba(167,123,79,.24);
+
+  box-shadow:
+    0 28px 65px rgba(36,29,25,.12);
+}
+
+.completeLookGrid article::before{
+  content:"";
+
+  position:absolute;
+  top:0;
+  left:0;
+
+  width:100%;
+  height:4px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #8f6848,
+      #c7a178,
+      transparent
+    );
+}
+
+.completeLookGrid article > span{
+  position:absolute;
+  top:24px;
+  left:28px;
+
+  color:#a77b4f;
+
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:2px;
+}
+
+.completeLookGrid h3{
+  margin:0 0 12px;
+
+  font-family:'Playfair Display',Georgia,serif;
+  font-size:28px;
+  line-height:1.1;
+  font-weight:500;
+
+  color:#241d19;
+}
+
+.completeLookGrid p{
+  margin:0;
+
+  color:#74675f;
+  font-size:13px;
+  line-height:1.75;
+}
+
+/* subtle oversized numbers */
+
+.completeLookGrid article::after{
+  position:absolute;
+  top:18px;
+  right:22px;
+
+  font-family:'Playfair Display',Georgia,serif;
+  font-size:72px;
+  line-height:1;
+
+  color:rgba(36,29,25,.04);
+}
+
+.completeLookGrid article:nth-child(1)::after{
+  content:"01";
+}
+
+.completeLookGrid article:nth-child(2)::after{
+  content:"02";
+}
+
+.completeLookGrid article:nth-child(3)::after{
+  content:"03";
+}
+
+@media(max-width:900px){
+
+  .completeLookSection{
+    padding:90px 5%;
+  }
+
+  .completeLookSection h2{
+    font-size:46px;
+  }
+
+  .completeLookGrid{
+    grid-template-columns:1fr;
+    max-width:720px;
+  }
+
+  .completeLookGrid article{
+    min-height:220px;
+  }
+}
+
+@media(max-width:600px){
+
+  .completeLookSection{
+    padding:72px 18px 80px;
+  }
+
+  .completeLookSection h2{
+    font-size:38px;
+    margin-bottom:36px;
+  }
+
+  .completeLookGrid article{
+    min-height:210px;
+    padding:26px 24px;
+    border-radius:22px;
+  }
+
+  .completeLookGrid article > span{
+    top:21px;
+    left:24px;
+  }
+
+  .completeLookGrid h3{
+    font-size:25px;
+  }
+
+  .completeLookGrid article::after{
+    font-size:60px;
+  }
+}
+
+/* =========================================================
+   PRODUCT PURCHASE PANEL - LUXURY POLISH
+========================================================= */
+
+.luxuryProductPanel{
+  position:sticky;
+  top:120px;
+
+  padding:34px;
+
+  border-radius:28px;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,.96),
+      rgba(248,244,239,.94)
+    );
+
+  border:1px solid rgba(36,29,25,.08);
+
+  box-shadow:
+    0 24px 70px rgba(36,29,25,.09);
+}
+
+.productEyebrow{
+  margin:0 0 12px;
+
+  color:#a77b4f;
+
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:2.6px;
+  text-transform:uppercase;
+}
+
+.luxuryProductPanel h1{
+  margin:0 0 10px;
+
+  font-family:'Playfair Display',Georgia,serif;
+  font-size:48px;
+  line-height:1.02;
+  font-weight:500;
+  letter-spacing:-1px;
+
+  color:#241d19;
+}
+
+.selectedColorLabel{
+  margin:0 0 18px;
+
+  color:#74675f;
+  font-size:13px;
+}
+
+.selectedColorLabel strong{
+  color:#241d19;
+}
+
+.luxuryPriceRow{
+  display:flex;
+  align-items:center;
+  gap:12px;
+
+  margin:20px 0 22px;
+}
+
+.luxuryPriceRow span{
+  color:#9d9189;
+  font-size:16px;
+  text-decoration:line-through;
+}
+
+.luxuryPriceRow strong{
+  color:#9a704b;
+
+  font-family:'Playfair Display',Georgia,serif;
+  font-size:30px;
+  font-weight:500;
+}
+
+.luxuryProductDescription{
+  margin:0 0 26px;
+
+  color:#74675f;
+  font-size:14px;
+  line-height:1.8;
+}
+
+/* PREORDER MESSAGE */
+
+.releaseMessage{
+  display:flex;
+  align-items:flex-start;
+  gap:14px;
+
+  margin-bottom:28px;
+  padding:16px;
+
+  border-radius:18px;
+
+  background:#f0e8df;
+
+  border:1px solid rgba(36,29,25,.06);
+}
+
+.releaseMessage > span{
+  flex:0 0 auto;
+
+  padding:7px 10px;
+
+  border-radius:999px;
+
+  background:#241d19;
+  color:#fff;
+
+  font-size:8px;
+  font-weight:800;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+}
+
+.releaseMessage strong{
+  display:block;
+  margin-bottom:4px;
+
+  color:#241d19;
+  font-size:12px;
+}
+
+.releaseMessage p{
+  margin:0;
+
+  color:#7b6d64;
+  font-size:11px;
+  line-height:1.5;
+}
+
+/* OPTION SECTIONS */
+
+.productOptionSection{
+  margin-top:24px;
+}
+
+.optionHeading{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  margin-bottom:12px;
+}
+
+.optionHeading p{
+  margin:0;
+
+  color:#241d19;
+
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:1.7px;
+  text-transform:uppercase;
+}
+
+.optionHeading > span{
+  color:#8d7b70;
+  font-size:11px;
+}
+
+/* COLOR BUTTONS */
+
+.luxuryColorOptions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:9px;
+}
+
+.luxuryColorButton{
+  display:flex;
+  align-items:center;
+  gap:8px;
+
+  min-height:42px;
+  padding:9px 14px;
+
+  border:1px solid rgba(36,29,25,.10);
+  border-radius:999px;
+
+  background:#fff;
+  color:#544840;
+
+  font-size:11px;
+
+  cursor:pointer;
+
+  transition:
+    border-color .2s ease,
+    background .2s ease,
+    transform .2s ease;
+}
+
+.luxuryColorButton:hover{
+  transform:translateY(-1px);
+}
+
+.activeLuxuryColor{
+  border-color:#a77b4f;
+  background:#f4eee8;
+  color:#241d19;
+}
+
+.colorSwatch{
+  width:14px;
+  height:14px;
+
+  border-radius:50%;
+
+  border:1px solid rgba(36,29,25,.12);
+}
+
+.swatchCream{
+  background:#eee1cf;
+}
+
+.swatchBlack{
+  background:#1b1816;
+}
+
+.swatchChocolate{
+  background:#5f3d2c;
+}
+
+/* SIZE BUTTONS */
+
+.luxurySizeOptions{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:8px;
+}
+
+.luxurySizeButton{
+  min-height:44px;
+
+  border:1px solid rgba(36,29,25,.10);
+  border-radius:12px;
+
+  background:#fff;
+  color:#544840;
+
+  font-size:12px;
+  font-weight:700;
+
+  cursor:pointer;
+
+  transition:
+    background .2s ease,
+    color .2s ease,
+    border-color .2s ease;
+}
+
+.luxurySizeButton:hover{
+  border-color:#a77b4f;
+}
+
+.activeLuxurySize{
+  background:#241d19;
+  color:#fff;
+  border-color:#241d19;
+}
+
+.inlineSizeGuide{
+  border:none;
+  background:transparent;
+
+  color:#9a704b;
+
+  font-size:10px;
+  font-weight:700;
+  text-decoration:underline;
+
+  cursor:pointer;
+}
+
+/* PREORDER BUTTON */
+
+.luxuryPreorderButton{
+  width:100%;
+  min-height:56px;
+
+  margin-top:28px;
+
+  border:none;
+  border-radius:999px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #241d19,
+      #3b2e27
+    );
+
+  color:#fff;
+
+  font-size:12px;
+  font-weight:800;
+  letter-spacing:.7px;
+
+  cursor:pointer;
+
+  box-shadow:
+    0 16px 34px rgba(36,29,25,.18);
+
+  transition:
+    transform .25s ease,
+    box-shadow .25s ease;
+}
+
+.luxuryPreorderButton:hover{
+  transform:translateY(-2px);
+
+  box-shadow:
+    0 20px 42px rgba(36,29,25,.24);
+}
+
+.checkoutNote{
+  margin-top:12px;
+}
+
+.selectionSummary{
+  margin:14px 0 0;
+
+  text-align:center;
+
+  color:#887970;
+  font-size:11px;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+  .luxuryProductPanel{
+    position:static;
+    padding:28px;
+  }
+}
+
+@media(max-width:600px){
+
+  .luxuryProductPanel{
+    padding:24px 20px;
+    border-radius:24px;
+  }
+
+  .luxuryProductPanel h1{
+    font-size:38px;
+  }
+
+  .luxuryPriceRow strong{
+    font-size:27px;
+  }
+
+  .luxurySizeOptions{
+    gap:7px;
+  }
+
+  .luxurySizeButton{
+    min-height:42px;
+  }
+}
+
+/* =========================================================
+   PRODUCT GALLERY - LUXURY POLISH
+========================================================= */
+
+.luxuryProductGallery{
+  min-width:0;
+}
+
+.mainImageFrame{
+  position:relative;
+  overflow:hidden;
+
+  border-radius:30px;
+
+  background:#ece5dc;
+
+  box-shadow:
+    0 28px 75px rgba(36,29,25,.12);
+}
+
+.luxuryMainImage{
+  width:100%;
+  display:block;
+
+  aspect-ratio:4 / 5;
+
+  object-fit:cover;
+  object-position:center;
+
+  transition:
+    transform .65s ease,
+    filter .4s ease;
+}
+
+.mainImageFrame:hover .luxuryMainImage{
+  transform:scale(1.025);
+}
+
+.productPageBadge{
+  position:absolute;
+  top:22px;
+  right:22px;
+
+  padding:9px 14px;
+
+  border-radius:999px;
+
+  background:rgba(29,23,20,.90);
+  color:white;
+
+  font-size:9px;
+  font-weight:800;
+  letter-spacing:1.6px;
+  text-transform:uppercase;
+
+  backdrop-filter:blur(8px);
+  -webkit-backdrop-filter:blur(8px);
+
+  box-shadow:
+    0 8px 22px rgba(0,0,0,.14);
+}
+
+/* THUMBNAILS */
+
+.luxuryThumbnailRow{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:12px;
+
+  margin-top:14px;
+}
+
+.luxuryThumbnail{
+  position:relative;
+
+  padding:0;
+
+  overflow:hidden;
+
+  border:1px solid rgba(36,29,25,.10);
+  border-radius:16px;
+
+  background:#f2ece6;
+
+  cursor:pointer;
+
+  opacity:.72;
+
+  transition:
+    opacity .25s ease,
+    transform .25s ease,
+    border-color .25s ease,
+    box-shadow .25s ease;
+}
+
+.luxuryThumbnail:hover{
+  opacity:1;
+
+  transform:translateY(-3px);
+
+  border-color:rgba(167,123,79,.28);
+
+  box-shadow:
+    0 12px 28px rgba(36,29,25,.08);
+}
+
+.luxuryThumbnail img{
+  width:100%;
+  display:block;
+
+  aspect-ratio:4 / 5;
+
+  object-fit:cover;
+}
+
+.activeLuxuryThumbnail{
+  opacity:1;
+
+  border-color:#a77b4f;
+
+  box-shadow:
+    0 0 0 1px rgba(167,123,79,.18);
+}
+
+.activeLuxuryThumbnail::after{
+  content:"";
+
+  position:absolute;
+  left:16px;
+  right:16px;
+  bottom:8px;
+
+  height:2px;
+
+  border-radius:999px;
+
+  background:#a77b4f;
+}
+
+/* subtle image counter feel */
+
+.luxuryThumbnail::before{
+  position:absolute;
+  top:9px;
+  left:10px;
+
+  z-index:2;
+
+  color:rgba(255,255,255,.92);
+
+  font-size:8px;
+  font-weight:800;
+  letter-spacing:1px;
+
+  text-shadow:0 1px 8px rgba(0,0,0,.28);
+}
+
+.luxuryThumbnail:nth-child(1)::before{
+  content:"01";
+}
+
+.luxuryThumbnail:nth-child(2)::before{
+  content:"02";
+}
+
+.luxuryThumbnail:nth-child(3)::before{
+  content:"03";
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+  .mainImageFrame{
+    border-radius:26px;
+  }
+}
+
+@media(max-width:600px){
+
+  .mainImageFrame{
+    border-radius:22px;
+  }
+
+  .productPageBadge{
+    top:16px;
+    right:16px;
+
+    padding:8px 12px;
+
+    font-size:8px;
+  }
+
+  .luxuryThumbnailRow{
+    gap:8px;
+  }
+
+  .luxuryThumbnail{
+    border-radius:12px;
+  }
+
+  .activeLuxuryThumbnail::after{
+    left:12px;
+    right:12px;
+    bottom:6px;
+  }
+}
+
+/* =========================================================
+   TRUST BADGES - PREMIUM REASSURANCE STRIP
+========================================================= */
+
+.trustBadges{
+  max-width:1180px;
+  margin:0 auto 90px;
+
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+
+  overflow:hidden;
+
+  border-radius:28px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255,255,255,.96),
+      rgba(245,239,233,.96)
+    );
+
+  border:1px solid rgba(36,29,25,.07);
+
+  box-shadow:
+    0 22px 60px rgba(36,29,25,.08);
+}
+
+.trustBadge{
+  position:relative;
+
+  display:flex;
+  align-items:flex-start;
+  gap:14px;
+
+  padding:28px 24px;
+
+  border-right:1px solid rgba(36,29,25,.08);
+}
+
+.trustBadge:last-child{
+  border-right:none;
+}
+
+.trustNumber{
+  flex:0 0 auto;
+
+  width:34px;
+  height:34px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  border-radius:50%;
+
+  background:#241d19;
+  color:#fff;
+
+  font-family:'Playfair Display',Georgia,serif;
+  font-size:10px;
+}
+
+.trustBadge strong{
+  display:block;
+
+  margin-bottom:5px;
+
+  color:#241d19;
+
+  font-size:12px;
+  font-weight:800;
+}
+
+.trustBadge p{
+  margin:0;
+
+  color:#7c6e65;
+
+  font-size:10px;
+  line-height:1.55;
+}
+
+.trustBadge::after{
+  content:"";
+
+  position:absolute;
+  left:24px;
+  right:24px;
+  bottom:0;
+
+  height:2px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(167,123,79,.45),
+      transparent
+    );
+
+  opacity:0;
+
+  transition:opacity .25s ease;
+}
+
+.trustBadge:hover::after{
+  opacity:1;
+}
+
+/* TABLET */
+
+@media(max-width:900px){
+
+  .trustBadges{
+    grid-template-columns:repeat(2,1fr);
+    margin:0 5% 75px;
+  }
+
+  .trustBadge:nth-child(2){
+    border-right:none;
+  }
+
+  .trustBadge:nth-child(-n+2){
+    border-bottom:1px solid rgba(36,29,25,.08);
+  }
+}
+
+/* MOBILE */
+
+@media(max-width:600px){
+
+  .trustBadges{
+    grid-template-columns:1fr;
+
+    margin:0 18px 65px;
+
+    border-radius:22px;
+  }
+
+  .trustBadge{
+    border-right:none;
+    border-bottom:1px solid rgba(36,29,25,.08);
+
+    padding:22px 20px;
+  }
+
+  .trustBadge:last-child{
+    border-bottom:none;
+  }
+
+  .trustBadge:nth-child(-n+2){
+    border-bottom:1px solid rgba(36,29,25,.08);
+  }
+}
+
