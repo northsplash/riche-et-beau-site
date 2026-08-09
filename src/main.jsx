@@ -149,6 +149,10 @@ function App() {
     return <FutureDropsPage />;
   }
 
+if (path === "/contact") {
+  return <ContactPage />;
+}
+  
   if (path === "/lookbook") {
     return <LookbookPage />;
   }
@@ -785,6 +789,58 @@ function LookbookPage() {
     />
   </div>
 </section>
+    </Layout>
+  );
+}
+
+function ContactPage() {
+  return (
+    <Layout>
+      <section className="contactSection">
+        <div className="contactEditorial">
+          <div className="contactCopy">
+            <p className="sectionLabel left">
+              Customer Care
+            </p>
+
+            <h2>
+              Questions before your preorder?
+            </h2>
+
+            <p>
+              We can help with sizing, color selection, preorder timing,
+              and general product questions.
+            </p>
+
+            <a
+              className="contactPhone"
+              href={`tel:${phone}`}
+            >
+              {phone}
+            </a>
+          </div>
+
+          <div className="contactCard">
+            <span>Riche Et Beau Support</span>
+
+            <h3>
+              We’re here to help.
+            </h3>
+
+            <p>
+              Reach out before ordering and we’ll help you choose the best fit,
+              color, and collection.
+            </p>
+
+            <a
+              className="secondaryBtn"
+              href={`tel:${phone}`}
+            >
+              Call Customer Care
+            </a>
+          </div>
+        </div>
+      </section>
     </Layout>
   );
 }
