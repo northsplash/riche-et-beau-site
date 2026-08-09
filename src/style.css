@@ -6874,3 +6874,164 @@ textarea:focus{
     font-size:25px;
   }
 }
+
+/* =========================================================
+   PREORDER FAQ - LUXURY ACCORDION
+========================================================= */
+
+.productFaqSection{
+  padding:105px 7% 115px;
+  background:#efe7df;
+}
+
+.faqHeader{
+  max-width:760px;
+  margin:0 auto 46px;
+  text-align:center;
+}
+
+.faqHeader .sectionLabel{
+  margin-bottom:12px;
+  color:#a77b4f;
+}
+
+.faqHeader h2{
+  margin:0 0 16px;
+
+  font-family:'Playfair Display',Georgia,serif;
+  font-size:50px;
+  line-height:1.05;
+  font-weight:500;
+
+  color:#241d19;
+}
+
+.faqHeader > p:last-child{
+  max-width:620px;
+  margin:0 auto;
+
+  color:#75685f;
+  font-size:14px;
+  line-height:1.8;
+}
+
+.faqList{
+  max-width:900px;
+  margin:0 auto;
+}
+
+.faqItem{
+  overflow:hidden;
+
+  margin-bottom:12px;
+
+  border:1px solid rgba(36,29,25,.08);
+  border-radius:18px;
+
+  background:rgba(255,255,255,.64);
+
+  box-shadow:
+    0 10px 28px rgba(36,29,25,.04);
+
+  transition:
+    background .25s ease,
+    border-color .25s ease,
+    transform .25s ease;
+}
+
+.faqItem:hover{
+  transform:translateY(-2px);
+  border-color:rgba(167,123,79,.22);
+}
+
+.faqItemOpen{
+  background:rgba(255,255,255,.88);
+}
+
+.faqItem > button{
+  width:100%;
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:28px;
+
+  padding:22px 24px;
+
+  border:none;
+  background:transparent;
+
+  color:#241d19;
+
+  font-family:'Playfair Display',Georgia,serif;
+  font-size:20px;
+  text-align:left;
+
+  cursor:pointer;
+}
+
+.faqPlus{
+  flex:0 0 auto;
+
+  width:34px;
+  height:34px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  border-radius:50%;
+
+  background:#241d19;
+  color:#fff;
+
+  font-family:Arial,sans-serif;
+  font-size:18px;
+  font-weight:300;
+
+  transition:
+    transform .25s ease,
+    background .25s ease;
+}
+
+.faqItemOpen .faqPlus{
+  background:#a77b4f;
+  transform:rotate(180deg);
+}
+
+.faqAnswer{
+  padding:0 65px 24px 24px;
+}
+
+.faqAnswer p{
+  margin:0;
+
+  color:#71645c;
+  font-size:14px;
+  line-height:1.8;
+}
+
+@media(max-width:600px){
+
+  .productFaqSection{
+    padding:70px 18px 80px;
+  }
+
+  .faqHeader h2{
+    font-size:38px;
+  }
+
+  .faqItem > button{
+    padding:19px 18px;
+    font-size:18px;
+  }
+
+  .faqAnswer{
+    padding:0 20px 20px 18px;
+  }
+
+  .faqPlus{
+    width:30px;
+    height:30px;
+  }
+}
