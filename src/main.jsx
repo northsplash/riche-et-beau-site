@@ -749,21 +749,7 @@ function AboutPage() {
 function FutureDropsPage() {
   return (
     <Layout>
-     <section className="homeFutureTeaser">
-  <p className="sectionLabel">Future Drops</p>
-
-  <h2>
-    You help decide what comes next.
-  </h2>
-
-  <p>
-    Vote on future colorways and help shape the next Riche Et Beau release.
-  </p>
-
-  <a href="/future-drops" className="primaryBtn">
-    Explore Future Drops
-  </a>
-</section>
+      <FutureDrops />
     </Layout>
   );
 }
@@ -771,42 +757,10 @@ function FutureDropsPage() {
 function LookbookPage() {
   return (
     <Layout>
-      <section className="homeLookbookTeaser">
-  <div className="homeLookbookCopy">
-    <p className="sectionLabel left">
-      The Lookbook
-    </p>
-
-    <h2>
-      Styled in the world of Riche Et Beau.
-    </h2>
-
-    <p>
-      Explore the silhouettes, textures, and signature neutral tones
-      defining the Première Collection.
-    </p>
-
-    <a href="/lookbook" className="primaryBtn">
-      View The Lookbook
-    </a>
-  </div>
-
-  <div className="homeLookbookImages">
-    <img
-      src="/images/elan-cream-1.png"
-      alt="Élan Sculpt Set"
-    />
-
-    <img
-      src="/images/serein-chocolate-1.png"
-      alt="Serein Lounge Set"
-    />
-  </div>
-</section>
+      <Lookbook />
     </Layout>
   );
 }
-
 function ContactPage() {
   return (
     <Layout>
