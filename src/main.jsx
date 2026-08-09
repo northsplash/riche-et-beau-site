@@ -240,54 +240,45 @@ function LuxuryNav() {
           <p className="mobileMenuLabel">
             Explore Riche Et Beau
           </p>
+<a href="/#collection" onClick={closeMenu}>
+  <span>01</span>
+  Shop
+</a>
 
-          <a
-            href="/#collection"
-            onClick={closeMenu}
-          >
-            <span>01</span>
-            Shop
-          </a>
+<a href="/#collections" onClick={closeMenu}>
+  <span>02</span>
+  Collections
+</a>
 
-          <a
-            href="/#collections"
-            onClick={closeMenu}
-          >
-            <span>02</span>
-            Collections
-          </a>
+<a href="/vip" onClick={closeMenu}>
+  <span>03</span>
+  VIP Club
+</a>
 
-          <a
-            href="/vip"
-            onClick={closeMenu}
-          >
-            <span>03</span>
-            VIP Club
-          </a>
+<a href="/custom" onClick={closeMenu}>
+  <span>04</span>
+  Custom Requests
+</a>
 
-          <a
-            href="/custom"
-            onClick={closeMenu}
-          >
-            <span>04</span>
-            Custom Requests
-          </a>
+<a href="/about" onClick={closeMenu}>
+  <span>05</span>
+  About
+</a>
 
-          <a
-            href="/about"
-            onClick={closeMenu}
-          >
-            <span>05</span>
-            About
-          </a>
+<a href="/future-drops" onClick={closeMenu}>
+  <span>06</span>
+  Future Drops
+</a>
 
-          <a
-            href="/contact"
-            onClick={closeMenu}
-          >
-            <span>06</span>
-            Contact
-          </a>
+<a href="/lookbook" onClick={closeMenu}>
+  <span>07</span>
+  Lookbook
+</a>
+
+<a href="/contact" onClick={closeMenu}>
+  <span>08</span>
+  Customer Care
+</a>
 
           <div className="mobileMenuFooter">
             <p>Questions?</p>
