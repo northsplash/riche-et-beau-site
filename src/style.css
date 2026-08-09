@@ -8489,3 +8489,835 @@ section{
   }
 }
 
+/* =========================================================
+   RICHE ET BEAU
+   COMPLETE MOBILE EXPERIENCE
+========================================================= */
+
+@media (max-width: 700px) {
+
+  /* ---------- GLOBAL ---------- */
+
+  html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  .page {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  section {
+    width: 100%;
+  }
+
+  .sectionLabel {
+    font-size: 9px;
+    letter-spacing: 2.2px;
+  }
+
+  .sectionTitle {
+    font-size: 36px;
+    line-height: 1.05;
+    letter-spacing: -0.5px;
+  }
+
+  .sectionIntro {
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+
+  /* =====================================================
+     MOBILE NAV
+  ===================================================== */
+
+  .nav {
+    height: 72px;
+    padding: 0 18px;
+  }
+
+  .brand {
+    font-size: 17px;
+    letter-spacing: 2.5px;
+  }
+
+  .tag {
+    margin-top: 3px;
+    font-size: 7px;
+    letter-spacing: 1.4px;
+  }
+
+  .desktopNavLinks {
+    display: none;
+  }
+
+
+  /* =====================================================
+     HERO
+  ===================================================== */
+
+  .hero {
+    min-height: 88svh;
+
+    display: flex;
+    align-items: flex-end;
+
+    padding: 110px 20px 54px;
+  }
+
+  .hero::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+      linear-gradient(
+        to bottom,
+        rgba(20,15,12,.06) 20%,
+        rgba(20,15,12,.30) 55%,
+        rgba(20,15,12,.82) 100%
+      );
+
+    pointer-events: none;
+  }
+
+  .heroContent {
+    position: relative;
+    z-index: 3;
+
+    width: 100%;
+    max-width: 100%;
+
+    padding: 0;
+  }
+
+  .heroContent .eyebrow {
+    margin-bottom: 10px;
+
+    font-size: 9px;
+    letter-spacing: 2.3px;
+  }
+
+  .heroContent h2 {
+    max-width: 330px;
+
+    margin-bottom: 16px;
+
+    font-size: clamp(43px, 13vw, 58px);
+    line-height: .95;
+    letter-spacing: -1.5px;
+  }
+
+  .heroContent > p {
+    max-width: 330px;
+
+    margin-bottom: 24px;
+
+    font-size: 13px;
+    line-height: 1.65;
+  }
+
+  .heroButtons {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+
+    width: 100%;
+  }
+
+  .heroButtons a {
+    width: 100%;
+    min-height: 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+  /* =====================================================
+     PREORDER BANNER
+  ===================================================== */
+
+  .preorderBanner {
+    padding: 0 14px;
+
+    transform: translateY(-18px);
+
+    position: relative;
+    z-index: 5;
+  }
+
+  .preorderInner {
+    display: block;
+
+    padding: 22px 20px;
+
+    border-radius: 20px;
+
+    box-shadow:
+      0 18px 45px rgba(36,29,25,.12);
+  }
+
+  .preorderKicker {
+    font-size: 8px;
+  }
+
+  .preorderInner h3 {
+    margin-top: 8px;
+
+    font-size: 22px;
+    line-height: 1.1;
+  }
+
+  .preorderInner p {
+    margin: 8px 0 18px;
+
+    font-size: 11px;
+    line-height: 1.6;
+  }
+
+  .preorderLink {
+    display: inline-flex;
+
+    font-size: 10px;
+  }
+
+
+  /* =====================================================
+     COUNTDOWN
+  ===================================================== */
+
+  .countdownSection {
+    padding: 50px 18px 65px;
+  }
+
+  .countdownSection h2 {
+    max-width: 340px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    font-size: 30px;
+    line-height: 1.1;
+  }
+
+  .countdownGrid {
+    gap: 7px;
+
+    margin-top: 28px;
+  }
+
+  .countdownGrid > div {
+    min-width: 0;
+
+    padding: 17px 5px;
+
+    border-radius: 14px;
+  }
+
+  .countdownGrid strong {
+    font-size: 25px;
+  }
+
+  .countdownGrid span {
+    font-size: 7px;
+    letter-spacing: 1px;
+  }
+
+
+  /* =====================================================
+     COLLECTION
+  ===================================================== */
+
+  .collectionSection {
+    padding: 70px 16px;
+  }
+
+  .collectionSection .sectionHeading {
+    margin-bottom: 35px;
+  }
+
+  .productGrid {
+    grid-template-columns: 1fr !important;
+
+    gap: 28px;
+
+    max-width: 430px;
+    margin: 0 auto;
+  }
+
+  .productCard {
+    border-radius: 24px;
+
+    overflow: hidden;
+
+    box-shadow:
+      0 18px 48px rgba(36,29,25,.09);
+  }
+
+  .productCard .imageWrap img {
+    aspect-ratio: 4 / 4.7;
+    object-fit: cover;
+  }
+
+  .productInfo {
+    padding: 22px 18px 24px;
+  }
+
+  .productInfo h3 {
+    font-size: 27px;
+  }
+
+  .colorChoiceRow {
+    display: flex;
+    overflow-x: auto;
+
+    gap: 8px;
+
+    padding-bottom: 4px;
+
+    scrollbar-width: none;
+  }
+
+  .colorChoiceRow::-webkit-scrollbar {
+    display: none;
+  }
+
+  .colorChoice {
+    flex: 0 0 auto;
+  }
+
+  .sizeRow {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+
+    gap: 6px;
+  }
+
+  .sizeRow button {
+    min-width: 0;
+    padding: 12px 2px;
+  }
+
+  .cartBtn {
+    min-height: 54px;
+
+    margin-top: 20px;
+
+    border-radius: 999px;
+  }
+
+
+  /* =====================================================
+     TRUST BADGES
+  ===================================================== */
+
+  .trustBadges {
+    width: calc(100% - 28px);
+
+    margin: 10px auto 65px;
+
+    grid-template-columns: 1fr 1fr;
+
+    border-radius: 22px;
+  }
+
+  .trustBadge {
+    min-width: 0;
+
+    display: block;
+
+    padding: 20px 16px;
+  }
+
+  .trustBadge:nth-child(odd) {
+    border-right: 1px solid rgba(36,29,25,.08);
+  }
+
+  .trustBadge:nth-child(-n+2) {
+    border-bottom: 1px solid rgba(36,29,25,.08);
+  }
+
+  .trustNumber {
+    width: 28px;
+    height: 28px;
+
+    margin-bottom: 12px;
+  }
+
+  .trustBadge strong {
+    font-size: 11px;
+  }
+
+  .trustBadge p {
+    margin-top: 5px;
+
+    font-size: 9px;
+  }
+
+
+  /* =====================================================
+     DETAILS
+  ===================================================== */
+
+  .detailsSection {
+    padding: 72px 18px;
+  }
+
+  .detailsIntro {
+    margin-bottom: 32px;
+  }
+
+  .detailsIntro h2 {
+    font-size: 35px;
+    line-height: 1.05;
+  }
+
+  .detailsIntro > p:last-child {
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  .detailsGrid {
+    grid-template-columns: 1fr;
+
+    gap: 12px;
+  }
+
+  .detailCard {
+    min-height: auto;
+
+    padding: 22px;
+
+    border-radius: 18px;
+  }
+
+  .detailCard h3 {
+    font-size: 22px;
+  }
+
+
+  /* =====================================================
+     REVIEWS
+  ===================================================== */
+
+  .reviewsSection {
+    padding: 70px 16px;
+  }
+
+  .reviewGrid {
+    display: flex;
+
+    overflow-x: auto;
+
+    gap: 12px;
+
+    padding: 4px 2px 20px;
+
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+  }
+
+  .reviewGrid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .reviewCard {
+    flex: 0 0 88%;
+
+    scroll-snap-align: center;
+
+    padding: 26px 22px;
+
+    border-radius: 22px;
+  }
+
+
+  /* =====================================================
+     BRAND / COLLECTION STORY
+  ===================================================== */
+
+  .brandSection {
+    padding: 72px 16px;
+  }
+
+  .collectionStoryGrid {
+    grid-template-columns: 1fr;
+
+    gap: 14px;
+  }
+
+  .collectionStoryCard {
+    min-height: 220px;
+
+    padding: 24px;
+
+    border-radius: 22px;
+  }
+
+  .collectionStoryCard h3 {
+    font-size: 27px;
+  }
+
+
+  /* =====================================================
+     HOMEPAGE TEASERS
+  ===================================================== */
+
+  .homeFutureTeaser,
+  .homeVipTeaser,
+  .homeCustomTeaser,
+  .homeContactTeaser {
+    width: calc(100% - 28px);
+
+    margin: 22px auto;
+
+    padding: 58px 22px;
+
+    border-radius: 26px;
+  }
+
+  .homeFutureTeaser h2,
+  .homeVipTeaser h2,
+  .homeCustomTeaser h2,
+  .homeContactTeaser h2 {
+    font-size: 34px;
+    line-height: 1.05;
+  }
+
+  .homeFutureTeaser > p,
+  .homeVipTeaser > p,
+  .homeCustomTeaser > p,
+  .homeContactTeaser > p {
+    font-size: 12px;
+    line-height: 1.7;
+  }
+
+  .homeFutureTeaser .primaryBtn,
+  .homeVipTeaser .primaryBtn,
+  .homeCustomTeaser .primaryBtn,
+  .homeContactTeaser .primaryBtn {
+    width: 100%;
+
+    min-height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 22px;
+  }
+
+
+  /* =====================================================
+     ABOUT TEASER
+  ===================================================== */
+
+  .homeAboutTeaser {
+    width: calc(100% - 28px);
+
+    margin: 55px auto;
+
+    display: flex;
+    flex-direction: column-reverse;
+
+    overflow: hidden;
+
+    border-radius: 26px;
+  }
+
+  .homeAboutCopy {
+    padding: 32px 22px 36px;
+  }
+
+  .homeAboutCopy h2 {
+    font-size: 35px;
+    line-height: 1.04;
+  }
+
+  .homeAboutImage {
+    width: 100%;
+    height: 390px;
+  }
+
+  .homeAboutImage img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center top;
+  }
+
+  .homeAboutCopy .primaryBtn {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 22px;
+  }
+
+
+  /* =====================================================
+     LOOKBOOK
+  ===================================================== */
+
+  .homeLookbookTeaser {
+    width: calc(100% - 28px);
+
+    margin: 55px auto;
+
+    display: flex;
+    flex-direction: column;
+
+    overflow: hidden;
+
+    border-radius: 26px;
+  }
+
+  .homeLookbookCopy {
+    padding: 34px 22px;
+  }
+
+  .homeLookbookCopy h2 {
+    font-size: 35px;
+    line-height: 1.05;
+  }
+
+  .homeLookbookImages {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    height: 310px;
+  }
+
+  .homeLookbookImages img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+  }
+
+
+  /* =====================================================
+     WAITLIST
+  ===================================================== */
+
+  .waitlistSection {
+    margin-top: 65px;
+
+    padding: 75px 18px;
+
+    border-radius: 28px 28px 0 0;
+  }
+
+  .waitlistCopy {
+    text-align: center;
+  }
+
+  .waitlistCopy .sectionLabel {
+    text-align: center;
+  }
+
+  .waitlistCopy h2 {
+    font-size: 39px;
+    line-height: 1.02;
+  }
+
+  .waitlistCopy > p {
+    font-size: 12px;
+  }
+
+  .waitlistForm {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+
+    padding: 8px;
+
+    border-radius: 20px;
+  }
+
+  .waitlistForm input,
+  .waitlistForm button {
+    width: 100%;
+    min-height: 52px;
+
+    border-radius: 14px;
+  }
+
+
+  /* =====================================================
+     PRODUCT PAGE MOBILE
+  ===================================================== */
+
+  .luxuryProductPage {
+    display: block;
+
+    padding: 90px 14px 60px;
+  }
+
+  .mainImageFrame {
+    border-radius: 22px;
+  }
+
+  .luxuryMainImage {
+    aspect-ratio: 4 / 5;
+  }
+
+  .luxuryThumbnailRow {
+    gap: 7px;
+
+    margin-top: 9px;
+  }
+
+  .luxuryProductPanel {
+    position: static;
+
+    margin-top: 18px;
+
+    padding: 27px 20px;
+
+    border-radius: 24px;
+  }
+
+  .luxuryProductPanel h1 {
+    font-size: 39px;
+    line-height: 1;
+  }
+
+  .luxuryColorOptions {
+    gap: 7px;
+  }
+
+  .luxuryColorButton {
+    padding: 9px 11px;
+  }
+
+  .luxurySizeOptions {
+    grid-template-columns: repeat(5, 1fr);
+
+    gap: 6px;
+  }
+
+  .luxuryPreorderButton {
+    min-height: 56px;
+  }
+
+
+  /* =====================================================
+     RELATED PRODUCTS
+  ===================================================== */
+
+  .relatedSection {
+    padding: 70px 14px;
+  }
+
+  .relatedHeader h2 {
+    font-size: 38px;
+  }
+
+  .relatedGrid {
+    display: flex;
+
+    overflow-x: auto;
+
+    gap: 12px;
+
+    padding-bottom: 18px;
+
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+  }
+
+  .relatedGrid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .relatedCard {
+    flex: 0 0 82%;
+
+    scroll-snap-align: center;
+  }
+
+
+  /* =====================================================
+     FAQ
+  ===================================================== */
+
+  .productFaqSection {
+    padding: 70px 14px 80px;
+  }
+
+  .faqHeader h2 {
+    font-size: 38px;
+  }
+
+  .faqItem {
+    border-radius: 16px;
+  }
+
+  .faqItem > button {
+    padding: 19px 16px;
+
+    font-size: 17px;
+  }
+
+
+  /* =====================================================
+     FOOTER
+  ===================================================== */
+
+  .luxuryFooter {
+    padding: 65px 22px 28px;
+  }
+
+  .footerTop {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 35px 20px;
+  }
+
+  .footerBrand {
+    grid-column: 1 / -1;
+
+    padding-bottom: 10px;
+  }
+
+  .footerBrand h3 {
+    font-size: 25px;
+  }
+
+  .footerStatement {
+    max-width: 290px;
+  }
+
+  .footerColumn:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .footerBottom {
+    display: block;
+
+    margin-top: 42px;
+  }
+
+  .footerBottomLinks {
+    justify-content: flex-start;
+
+    margin-top: 15px;
+  }
+}
