@@ -385,21 +385,25 @@ function Layout({ children }) {
 
   </div>
 
-  <div className="footerBottom">
-    <p>
-      © 2026 Riche Et Beau. All rights reserved.
-    </p>
+ ```jsx
+<div className="footerBottom">
+  <p>
+    © 2026 Riche Et Beau. All rights reserved.
+  </p>
 
-    <div className="footerBottomLinks">
-      <span>Secure Checkout</span>
-      <span>Founder’s Preorder</span>
-      <span>Shipping January 1, 2027</span>
-    </div>
+  <div className="footerBottomLinks">
+    <span>Secure Checkout</span>
+    <span>Founder’s Preorder</span>
+    <span>Shipping January 1, 2027</span>
+    <span>Powered by NS Venture Works</span>
   </div>
+</div>
 </footer>
-    </div>
-  );
+</div>
+);
 }
+```
+
 
 function WaitlistForm() {
   const [email, setEmail] = React.useState("");
